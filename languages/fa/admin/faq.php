@@ -29,23 +29,23 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_faq'=>'add FAQ',
-  'answer'=>'Answer',
-  'category'=>'Category',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_faq'=>'edit FAQ',
-  'faq'=>'FAQ',
-  'information_incomplete'=>'Some information is missing.',
-  'new_faq'=>'new FAQ',
-  'no_category_selected'=>'You forgot to select a Category',
-  'no_faq_selected'=>'No FAQ Category selected',
-  'really_delete'=>'Really delete this FAQ?',
-  'sort'=>'Sort',
-  'to_sort'=>'sort',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'tags'=>'Tags'
+  'access_denied'=>'دسترسی مجاز نیست',
+  'actions'=>'اعمال',
+  'add_faq'=>'افزودن سوالات متداول',
+  'answer'=>'پاسخ',
+  'category'=>'دسته بندی',
+  'delete'=>'پاک کردن',
+  'edit'=>'ویرایش',
+  'edit_faq'=>'ویرایش سوالات متداول',
+  'faq'=>'سوالات متداول',
+  'information_incomplete'=>'بعضی اطلاعات گم شده اند.',
+  'new_faq'=>'سوالات متداول جدید',
+  'no_category_selected'=>'شما فراموش کردید تا دسته بندی ای را انتخاب کنید',
+  'no_faq_selected'=>'هیچ دسته بندی برای سوالات متداول انتخاب نشد',
+  'really_delete'=>'واقعاً این سوالات متداول را پاک شود؟',
+  'sort'=>'مرتب سازی',
+  'to_sort'=>'مرتب کردن',
+  'transaction_invalid'=>'شناسه معامله نا معتبر است',
+  'tags'=>'برچسب‌ها'
 );
 

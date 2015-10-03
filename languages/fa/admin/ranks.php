@@ -29,20 +29,20 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'add_rank'=>'add Rank',
-  'actions'=>'Actions',
-  'delete'=>'delete',
-  'edit_rank'=>'edit Rank',
-  'information_incomplete'=>'Some information is missing.',
-  'max_posts'=>'max. Posts',
-  'min_posts'=>'min. Posts',
-  'new_rank'=>'new Rank',
-  'rank_icon'=>'Rank Icon',
-  'rank_name'=>'Rank Name',
-  'really_delete'=>'Really delete this Rank?',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'update'=>'update',
-  'user_ranks'=>'User Ranks'
+  'access_denied'=>'دسترسی مجاز نیست',
+  'add_rank'=>'افزودن رتبه',
+  'actions'=>'اعمال',
+  'delete'=>'پاک کردن',
+  'edit_rank'=>'ویرایش رتبه',
+  'information_incomplete'=>'بعضی اطلاعات گم شده اند.',
+  'max_posts'=>'حداکثر پست ها',
+  'min_posts'=>'حد اقل پست ها',
+  'new_rank'=>'رتبه جدید',
+  'rank_icon'=>'آیکون رتبه',
+  'rank_name'=>'نام رتبه',
+  'really_delete'=>'وقعاً این رتبه پاک شود؟',
+  'transaction_invalid'=>'شناسه معامله نا معتبر است',
+  'update'=>'به روز رسانی',
+  'user_ranks'=>'رتبه های کاربر'
 );
 

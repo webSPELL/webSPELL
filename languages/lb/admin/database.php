@@ -29,18 +29,18 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'allowed_commands'=>'<b>Allowed commands:</b> insert, alter table, select',
-  'backup_file'=>'Backup File',
-  'database'=>'Database',
-  'export'=>'Export/Download Backup',
-  'import_info'=>'Select a file where to import sql data from.<br><br><b>Important:</b> Create a backup before import another one!',
-  'optimize'=>'Optimize Database',
-  'select_option'=>'Please select Option',
-  'submit'=>'Submit',
-  'sql_query'=>'SQL Query',
-  'syntax_not_allowed'=>'Syntax not allowed!',
-  'upload'=>'Upload',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Zugriff verwehrt',
+  'allowed_commands'=>'<b>Erlaabten Befehler:</b> insert, alter table, select',
+  'backup_file'=>'Sécherungsdatei',
+  'database'=>'Datenbänk',
+  'export'=>'Sécherungsdatei exportéieren/eroflueden',
+  'import_info'=>'Wiel eng Sécherungsdatei aus, vun der s du d\'SQL Daten importéieren wëlls.<br><br><b>Wichteg:</b> Erstelle eng Sécherungsdatei iirts du eng aner importéiers!',
+  'optimize'=>'Datenbänk importéieren',
+  'select_option'=>'W.e.g. wiel eng Optioun',
+  'submit'=>'Ofschlécken',
+  'sql_query'=>'SQL Offro',
+  'syntax_not_allowed'=>'Syntax net erlaabt!',
+  'upload'=>'Eroplueden',
+  'transaction_invalid'=>'Transactiouns ID net gülteg'
 );
 

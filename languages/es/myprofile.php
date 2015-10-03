@@ -47,9 +47,8 @@ $language_array = array(
     'cpu'=>'CPU',
     'date_of_birth' => 'Cupleaños',
     'deactivated' => 'desactivado',
-    'delete_max_90_90' => 'borrar (max90/90)',
-    'delete_max_230_210' => 'borrar (max230/210)',
-    'e-mail'=>'E-mail',
+    'delete' => 'borrar',
+    'e-mail'=>'E-Mail',
     'edit_mail' => 'cambian e-mail',
     'edit_password' => 'cambian Contraseña',
     'equipment-info' => 'Info Equipamiento',
@@ -119,7 +118,7 @@ Muchas gracias para su interés
     'repeat_new_email' => 'repetir nuevo e-mail',
     'repeat_new_password' => 'repite nueva contraseña',
     'repeated_pw_not_valid' => 'la contraseña repetida no es válida!',
-    'repeated_mail_not_valid'=>'your repeated e-mail is not equal!',
+    'repeated_mail_not_valid'=>'su dirección de correo repetida no es igual!',
     'sexuality' => 'Sexo',
     'signature' => 'Signo',
     'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Emoticonos\',\'scrollbars=yes,width=340,height=500\')">Emoticonos</a> están ON',
@@ -138,6 +137,6 @@ Muchas gracias para su interés
     'you_have_to_nickname' => 'Tienes que insertar tu apodo!',
     'you_have_to_username' => 'Tienes que insertar tu nombre de usuario!',
     'you_have_to_valid_email' => 'Tu email no es válido!',
-    'wrong_password'=>'Wrong password'
+    'wrong_password'=>'Contraseña incorrecta'
 );
 

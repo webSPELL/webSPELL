@@ -82,7 +82,7 @@ $language_array = array(
     'newreply_image' => '<img src="images/icons/newreply.gif" alt="Відповісти">',
     'newtopic_image' => '<img src="images/icons/newtopic.gif" alt="Новий топік">',
     'next_7_days' => 'Наступні 7 днів',
-    'n_a'=>'n/a',
+    'n_a'=>'н/д',
     'no_access' => 'Немає доступу',
     'no_access_write' => 'Немає доступу на цей форум.',
     'no_icon' => 'Немає іконки',

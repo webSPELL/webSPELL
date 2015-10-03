@@ -44,12 +44,11 @@ $language_array = array(
     'clan-name' => 'Clannumm',
     'clan-tag' => 'Clantagch',
     'country' => 'Land',
-    'cpu'=>'CPU',
+    'cpu'=>'Prozessor',
     'date_of_birth' => 'Gebuertsdatum',
     'deactivated' => 'deaktivéiert',
-    'delete_max_90_90' => 'löschen (max 90/90)',
-    'delete_max_230_210' => 'läschen (max 230/210)',
-    'e-mail'=>'E-mail',
+    'delete' => 'läschen',
+    'e-mail'=>'E-Mail',
     'edit_mail' => 'E-Mail beaarbechten',
     'edit_password' => 'Passwuert beaarbechten',
     'equipment-info' => 'Ausrüstungsinformatiounen',
@@ -108,7 +107,7 @@ $language_array = array(
     'repeat_new_email' => 'E-Mail widderhuelen',
     'repeat_new_password' => 'neit  Passwuert widderhuelen',
     'repeated_pw_not_valid' => 'Deng Passwuertwidderhuelung stëmmt net!',
-    'repeated_mail_not_valid'=>'your repeated e-mail is not equal!',
+    'repeated_mail_not_valid'=>'Är widderhuelten E-Mail ass net gläich!',
     'sexuality' => 'Geschlecht',
     'signature' => 'Ënnerschrëft',
     'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> ass UN',
@@ -127,6 +126,6 @@ $language_array = array(
     'you_have_to_nickname' => 'Du muss en Nicknumm aginn!',
     'you_have_to_username' => 'Du muss en Benotzernumm aginn!',
     'you_have_to_valid_email' => 'D\'E-Mail Adress ass net korrekt!',
-    'wrong_password'=>'Wrong password'
+    'wrong_password'=>'Falscht Passwuert'
 );
 

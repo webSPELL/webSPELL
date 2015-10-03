@@ -29,19 +29,19 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_group'=>'add Group',
-  'back'=>'back',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_group'=>'edit Group',
-  'error_group'=>'ERROR: No Group Name',
-  'error_groupid'=>'ERROR: Missing fgrID',
-  'group_name'=>'Group Name',
-  'groups'=>'Forum User Groups',
-  'new_group'=>'new Group',
-  'really_delete'=>'Really delete this Forum Group?',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'غير مسموح بالدخول',
+  'actions'=>'اجراءات',
+  'add_group'=>'إضافة مجموعة',
+  'back'=>'العوده',
+  'delete'=>'حذف',
+  'edit'=>'تعديل',
+  'edit_group'=>'تعديل مجموعة',
+  'error_group'=>'خطأ: لا يوجد اسم المجموعة',
+  'error_groupid'=>'خطأ: مفقود fgrID',
+  'group_name'=>'اسم المجموعة',
+  'groups'=>'منتدى مجموعات المستخدمين',
+  'new_group'=>'مجموعة جديدة',
+  'really_delete'=>'فعلا حذف هذا المنتدى المجموعة ؟ ',
+  'transaction_invalid'=>'إجراء ID غير صالح'
 );
 

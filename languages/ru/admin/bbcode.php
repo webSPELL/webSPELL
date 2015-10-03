@@ -72,16 +72,16 @@ $language_array = Array(
 	'notSameAmount'=>'Количество открывающих и закрывающих тэгов разное',
 	'wrongNesting'=>'Ошибочное позиционирование тэгов BBcode',
 	'listguide'=>'введите \'1\' чтобы открыть меню цифр, \'a\' чтобы открыть список букв или \'\' чтобы закончить список',
-	'listpoint'=>'Enter a List-Point. Enter nothing or click \'Cancel\' to finish the list.',
+	'listpoint'=>'Введите следующий элемент списка . Ничего не вводите иои нажмите \'Отмена\' , что бы закончить список.',
 	'addcode'=>'Введите позицию',
 	'read_more'=>'прочитать более',
 	'mc_you_have'=>'У вас есть',
 	'mc_new_messages'=>'Новое(ые) сообщение(я).Хотите прочитать сейчас?',
 	'na'=>'недоступно',
 	'wrote'=>'написал',
-	'auto_resize'=>'Auto resize',
-	'code'=>'Code',
-	'large_picture'=>'Large Picture',
-	'show_original'=>'show original'
+	'auto_resize'=>'Автоматически изменить размер',
+	'code'=>'Код',
+	'large_picture'=>'Большая картинка',
+	'show_original'=>'показать оригинал'
 );
 

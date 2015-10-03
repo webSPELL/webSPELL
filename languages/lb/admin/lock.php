@@ -29,16 +29,16 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'lock'=>'lock',
-  'locked_since'=>'The Page ist locked since',
-  'pagelock'=>'Pagelock',
-  'page_locked'=>'<b>Page locked!</b><br>Only Admins can access the Page now.',
-  'page_unlocked'=>'<b>Page unlocked!</b>',
-  'settings'=>'Settings',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'unlock'=>'unlock',
-  'unlock_page'=>'Do you want to unlock the Page?',
-  'you_can_use_html'=>'You can use HTML-Tags'
+  'access_denied'=>'Zugriff verwehrt',
+  'lock'=>'spären',
+  'locked_since'=>'D\'Säit ass gespaart zënter',
+  'pagelock'=>'Säit spären',
+  'page_locked'=>'<b>Säit gespaart!</b><br>Nëmmen d\'Admins hunn lo Zougrëff op d\'Säit.',
+  'page_unlocked'=>'<b>Säit entspaart!</b>',
+  'settings'=>'Astellungen',
+  'transaction_invalid'=>'Transactiouns ID net gülteg',
+  'unlock'=>'entspären',
+  'unlock_page'=>'Wëlls du dës Säit entspären?',
+  'you_can_use_html'=>'Dir kënnt HTML-Tags benotzen'
 );
 

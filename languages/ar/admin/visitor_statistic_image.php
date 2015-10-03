@@ -29,9 +29,9 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'max'=>'Maximum',
-  'min'=>'Minimum',
-  'not_logged_in'=>'You are not logged in'
+  'access_denied'=>'غير مسموح بالدخول',
+  'max'=>'الحد الاقصى',
+  'min'=>'الحد الادنى',
+  'not_logged_in'=>'لم تقم بتسجيل الدخول'
 );
 

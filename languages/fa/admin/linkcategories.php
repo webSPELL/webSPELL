@@ -29,17 +29,17 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_category'=>'add Category',
-  'category_name'=>'Category Name',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_category'=>'edit Category',
-  'information_incomplete'=>'Some information is missing.',
-  'link_categories'=>'Link Categories',
-  'new_category'=>'new Category',
-  'really_delete'=>'Really delete this Category and the Category Links?',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'دسترسی مجاز نیست',
+  'actions'=>'اعمال',
+  'add_category'=>'دسته را اضافه کن',
+  'category_name'=>'نام دسته',
+  'delete'=>'پاک کردن',
+  'edit'=>'ویرایش',
+  'edit_category'=>'ویرایش دسته بندی',
+  'information_incomplete'=>'بعضی اطلاعات گم شده اند.',
+  'link_categories'=>'لینک دسته ها',
+  'new_category'=>'دسته جدید',
+  'really_delete'=>'واقعاً این دسته و دسته ی سوالات متداول پاک شود؟',
+  'transaction_invalid'=>'شناسه معامله نا معتبر است'
 );
 

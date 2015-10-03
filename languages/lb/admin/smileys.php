@@ -29,25 +29,25 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_smiley'=>'add Smiley',
-  'back'=>'back',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_smiley'=>'edit Smiley',
-  'example'=>'(f.e.: ":oO:")',
-  'fill_form'=>'Please fill in the form correctly.',
-  'format_incorrect'=>'The format of the icon was incorrect. Please Upload only icons in *.gif format.',
+  'access_denied'=>'Zugriff verwehrt',
+  'actions'=>'Aktiounen',
+  'add_smiley'=>'Smiley bäifügen',
+  'back'=>'zeréck',
+  'delete'=>'ewechhuelen',
+  'edit'=>'beaarbechten',
+  'edit_smiley'=>'Smiley änneren',
+  'example'=>'(z.B.: ":oO:")',
+  'fill_form'=>'W.e.g. fëllt Formular korrekt aus.',
+  'format_incorrect'=>'Format vum Icon ass net korrekt. W.e.g. lued en Icon am *.gif format erop.',
   'icon'=>'Icon',
   'icons'=>'Icons',
-  'new_smiley'=>'new Smiley',
-  'no_entries'=>'No entries',
-  'pattern'=>'Pattern',
-  'present_icon'=>'Present Icon',
-  'really_delete'=>'Really delete this Smiley?',
-  'smilies'=>'Smilies',
-  'smiley_name'=>'Smiley Name',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'new_smiley'=>'neien Smiley',
+  'no_entries'=>'Keen Antrag',
+  'pattern'=>'Muster',
+  'present_icon'=>'Aktuell Icon',
+  'really_delete'=>'Dësen Smiley wierklech läschen?',
+  'smilies'=>'Smilieen',
+  'smiley_name'=>'Smiley Numm',
+  'transaction_invalid'=>'Transactiouns ID net gülteg'
 );
 

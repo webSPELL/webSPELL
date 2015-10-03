@@ -29,24 +29,24 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'accesslevel'=>'Accesslevel',
-  'actions'=>'Actions',
-  'add_static_page'=>'add Static Page',
-  'clanmember_only'=>'Clanmembers only',
-  'content'=>'Content',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_static_page'=>'edit Static Page',
-  'title'=>'Title',
+  'access_denied'=>'غير مسموح بالدخول',
+  'accesslevel'=>'صلاحيات الدخول',
+  'actions'=>'اجراءات',
+  'add_static_page'=>'إضافة صفحة ثابتة',
+  'clanmember_only'=>'اعضاء الفريق فقط',
+  'content'=>'محتويات',
+  'delete'=>'حذف',
+  'edit'=>'تعديل',
+  'edit_static_page'=>'تحرير صفحة ثابتة',
+  'title'=>'العنوان',
   'id'=>'ID',
-  'new_static_page'=>'new Static Page',
-  'public'=>'Public',
-  'really_delete'=>'Really delete this Static Page?',
-  'registered_only'=>'registered Users only',
-  'static_pages'=>'Static Pages',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'you_can_use_html'=>'You can use HTML-Tags',
-  'tags'=>'Tags'
+  'new_static_page'=>'جديد صفحة ثابتة',
+  'public'=>'جمهور',
+  'really_delete'=>'فعلا حذف هذا ثابت الصفحة ؟ ',
+  'registered_only'=>'للمستخدمين المسجلين فقط',
+  'static_pages'=>'صفحات ثابتة',
+  'transaction_invalid'=>'إجراء ID غير صالح',
+  'you_can_use_html'=>'يمكنك استخدام وسم HTML',
+  'tags'=>'وسوم'
 );
 

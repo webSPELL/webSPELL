@@ -29,18 +29,18 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'allowed_commands'=>'<b>Allowed commands:</b> insert, alter table, select',
-  'backup_file'=>'Backup File',
-  'database'=>'Database',
-  'export'=>'Export/Download Backup',
-  'import_info'=>'Select a file where to import sql data from.<br><br><b>Important:</b> Create a backup before import another one!',
-  'optimize'=>'Optimize Database',
-  'select_option'=>'Please select Option',
-  'submit'=>'Submit',
+  'access_denied'=>'Dostop zavrnjen',
+  'allowed_commands'=>'<b>Dovoljeno ukazi:</b>  insert, alter table, select',
+  'backup_file'=>'Backup Datoteka',
+  'database'=>'Baza podatkov',
+  'export'=>'Izvozi/Prenesi Backup',
+  'import_info'=>'Izberite datoteko s katere želite uvoziti sql podatke.<br><br><b>Pomembno:</b>Ustvari varnostno kopijo preden uvozite naslednje!',
+  'optimize'=>'Optimizraj Podatkovno Bazo',
+  'select_option'=>'Prosimo izberite možnost',
+  'submit'=>'Začni',
   'sql_query'=>'SQL Query',
-  'syntax_not_allowed'=>'Syntax not allowed!',
-  'upload'=>'Upload',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'syntax_not_allowed'=>'Sintaksa ni dovoljena!',
+  'upload'=>'Naloži',
+  'transaction_invalid'=>'Neveljaven transakcijski ID'
 );
 

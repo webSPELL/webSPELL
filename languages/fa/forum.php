@@ -82,7 +82,7 @@ $language_array = array(
     'newreply_image' => '<img src="images/icons/newreply.gif" alt="پاسخ">',
     'newtopic_image' => '<img src="images/icons/newtopic.gif" alt="تاپیک جدید">',
     'next_7_days' => 'روز اینده7',
-    'n_a'=>'n/a',
+    'n_a'=>'ناموجود',
     'no_access' => 'غیر قابل دسترسی',
     'no_access_write' => '.شما نمیتوانید در این صفحه بنویسید',
     'no_icon' => 'هیچ نشانه ای',

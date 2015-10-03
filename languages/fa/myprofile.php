@@ -44,12 +44,11 @@ $language_array = array(
     'clan-name' => 'نام کلن',
     'clan-tag' => 'تگ کلن',
     'country' => 'کشور',
-    'cpu'=>'CPU',
+    'cpu'=>'پردازنده',
     'date_of_birth' => 'تاریخ تولد',
     'deactivated' => 'غیر فعال',
-    'delete_max_90_90' => 'حذف (max90/90)',
-    'delete_max_230_210' => 'حذف (max230/210)',
-    'e-mail'=>'E-mail',
+    'delete' => 'پاک کردن',
+    'e-mail'=>'ایمیل',
     'edit_mail' => 'ادیت ایمیل',
     'edit_password' => 'ادیت پسورد',
     'equipment-info' => 'اطلاعات تجهيزات',
@@ -108,7 +107,7 @@ $language_array = array(
     'repeat_new_email' => 'ایمیل جدید را تکرار کنید',
     'repeat_new_password' => 'پسورد جدید را تکرار کنید',
     'repeated_pw_not_valid' => '!پسورد اشتباه وارد شده',
-    'repeated_mail_not_valid'=>'your repeated e-mail is not equal!',
+    'repeated_mail_not_valid'=>'تکرار ایمیل شما با اصل آن مطابق نیست!',
     'sexuality' => 'جنس',
     'signature' => 'امضا',
     'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">شکلک ها</a> روشن',
@@ -127,6 +126,6 @@ $language_array = array(
     'you_have_to_nickname' => '!شما باید نام مخفف را وارد کنید',
     'you_have_to_username' => '!شما باید نام کاربری را وارد کنید',
     'you_have_to_valid_email' => '!ایمیل شما معتبر نیست',
-    'wrong_password'=>'Wrong password'
+    'wrong_password'=>'رمز عبور اشتباه'
 );
 

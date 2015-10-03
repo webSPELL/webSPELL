@@ -29,22 +29,22 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'add_server'=>'add Server',
-  'actions'=>'Actions',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_server'=>'edit Server',
-  'game'=>'Game',
-  'info'=>'Info',
-  'ip_port'=>'Server IP:Port',
-  'new_server'=>'new Server',
-  'no_server'=>'No Servers available',
-  'really_delete'=>'Really delete this Server?',
-  'servers'=>'Servers',
-  'server_name'=>'Server Name',
-  'sort'=>'Sort',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'to_sort'=>'sort'
+  'access_denied'=>'دسترسی مجاز نیست',
+  'add_server'=>'افزودن سرور',
+  'actions'=>'اعمال',
+  'delete'=>'پاک کردن',
+  'edit'=>'ویرایش',
+  'edit_server'=>'ویرایش سرور',
+  'game'=>'بازی',
+  'info'=>'اطلاعات',
+  'ip_port'=>'سرور IP:Port',
+  'new_server'=>'سرور جدید',
+  'no_server'=>'هیچ سروری موجود نیست',
+  'really_delete'=>'واقعاً این سرور پاک شود؟',
+  'servers'=>'سرور ها',
+  'server_name'=>'نام سرور',
+  'sort'=>'مرتب سازی',
+  'transaction_invalid'=>'شناسه معامله نا معتبر است',
+  'to_sort'=>'مرتب کردن'
 );
 

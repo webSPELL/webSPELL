@@ -29,23 +29,23 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_faq'=>'add FAQ',
-  'answer'=>'Answer',
-  'category'=>'Category',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_faq'=>'edit FAQ',
-  'faq'=>'FAQ',
-  'information_incomplete'=>'Some information is missing.',
-  'new_faq'=>'new FAQ',
-  'no_category_selected'=>'You forgot to select a Category',
-  'no_faq_selected'=>'No FAQ Category selected',
-  'really_delete'=>'Really delete this FAQ?',
-  'sort'=>'Sort',
-  'to_sort'=>'sort',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'tags'=>'Tags'
+  'access_denied'=>'Erişim Engellendi',
+  'actions'=>'Eylemler',
+  'add_faq'=>'SSS ekle',
+  'answer'=>'Cevap',
+  'category'=>'Kategori',
+  'delete'=>'sil',
+  'edit'=>'düzenle',
+  'edit_faq'=>'SSS düzenle',
+  'faq'=>'S.S.S',
+  'information_incomplete'=>'Bazı bilgiler eksik.',
+  'new_faq'=>'yeni SSS',
+  'no_category_selected'=>'Bir Kategori seçmeyi unuttun',
+  'no_faq_selected'=>'Hiç bir SSS kategorisi seçilmedi',
+  'really_delete'=>'Bu SSS\'i silmek istediğinden emin misin?',
+  'sort'=>'Sırala',
+  'to_sort'=>'Sırala',
+  'transaction_invalid'=>'İşlem kimliği/ID geçersiz',
+  'tags'=>'Etiketler'
 );
 

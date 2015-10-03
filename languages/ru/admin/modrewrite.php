@@ -45,8 +45,8 @@ $language_array = Array(
 	'modrewrite_is_disabled'=>'mod_rewrite не включен в httpd.conf',
 	'apache_with_cgi'=>'Apache с PHP CGI и',
 	'unsupported_webserver'=>'Неподдерживаемый веб-сервер',
-	'can_not_write_file'=>'Can\'t write %s<br>Check chmod and try again',
-	'fopen_disabled'=>'url_fopen is disabled. Bypassed by ajax test',
+	'can_not_write_file'=>'Не можете написать %s <br> Проверьте CHMOD и попробуйте еще раз',
+	'fopen_disabled'=>'url_fopen отключена. Обойден AJAX тест',
 	'modrewrite_failed'=>'mod_rewrite не удалось',
 	'htaccess_failed'=>'Сбой .htaccess / Ошибка сервера',
 	'test_successful'=>'Тест прошёл успешно',
@@ -66,9 +66,9 @@ $language_array = Array(
 	'delete'=>'удалить',
 	'really_delete'=>'Действительно удалить?',
 	'no_entries'=>'нет данных',
-	'test_support'=>'test support',
+	'test_support'=>'тестовая поддержка',
 	'rebuild'=>'Перестроить адреса',
-	'add_apache_options'=>'Add the following line to your apache config:<br>Options -MultiViews',
+	'add_apache_options'=>'Добавьте следующую строку в файл конфигурации Apache:<br>из опций- multiviews',
 	'modrewrite_available_but_multiview_enabled'=>'mod_rewrite доступен, но опция multiviews в Apache включена и запрещает работу модуля mod_rewrite'
 	);
 

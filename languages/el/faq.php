@@ -29,7 +29,6 @@ $language_array = array(
 
 /* do not edit above this line */
 
-    'faq' => 'Συχνές Ερωτήσεις',
     'admin_button' => 'FAQ Administration',
     'answer' => 'Απαντηση',
     'categories' => 'Κατηγοριες',

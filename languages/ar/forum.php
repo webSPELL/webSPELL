@@ -82,7 +82,7 @@ $language_array = array(
     'newreply_image' => '<img src="images/icons/newreply.gif" alt="الرد">',
     'newtopic_image' => '<img src="images/icons/newtopic.gif" alt="موضوع جديد">',
     'next_7_days' => 'الاسبوع القادم',
-    'n_a'=>'n/a',
+    'n_a'=>'لا يوجد',
     'no_access' => 'ممنوع الدخول',
     'no_access_write' => '.لا تملك صلاحية الكتابة في هذا القسم',
     'no_icon' => 'لا توجد ايقونة',

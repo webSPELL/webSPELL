@@ -44,11 +44,10 @@ $language_array = array(
     'clan-name' => 'Клан-Имя',
     'clan-tag' => 'Клан-Таг',
     'country' => 'Страна',
-    'cpu'=>'CPU',
+    'cpu'=>'ЦП',
     'date_of_birth' => 'Дата рождения',
     'deactivated' => 'дезактивированный',
-    'delete_max_90_90' => 'Удалить (макс90/90)',
-    'delete_max_230_210' => 'Удалить (макс230/210)',
+    'delete' => 'удалить',
     'e-mail'=>'E-mail',
     'edit_mail' => 'редактировать E-Mail',
     'edit_password' => 'редактировать пароль',
@@ -119,7 +118,7 @@ $language_array = array(
     'repeat_new_email' => 'повторить новый E-Mail',
     'repeat_new_password' => 'повторить новый Пароль',
     'repeated_pw_not_valid' => 'повторный пароль неверный!',
-    'repeated_mail_not_valid'=>'your repeated e-mail is not equal!',
+    'repeated_mail_not_valid'=>'Адреса электронной почты не совпадают!',
     'sexuality' => 'Пол',
     'signature' => 'Подпись',
     'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Смайлы</a> включены',
@@ -138,6 +137,6 @@ $language_array = array(
     'you_have_to_nickname' => 'Вы должны ввести ваш Ник!',
     'you_have_to_username' => 'Вы должны ввести имя пользователя!',
     'you_have_to_valid_email' => 'Ваш адрес почты неверен!',
-    'wrong_password'=>'Wrong password'
+    'wrong_password'=>'Неверный пароль'
 );
 

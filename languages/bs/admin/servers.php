@@ -29,22 +29,22 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'add_server'=>'add Server',
-  'actions'=>'Actions',
-  'delete'=>'delete',
-  'edit'=>'edit',
+  'access_denied'=>'Pristup zabranjen',
+  'add_server'=>'dodaj Server',
+  'actions'=>'Akcije',
+  'delete'=>'izbriši',
+  'edit'=>'izmjeni',
   'edit_server'=>'edit Server',
-  'game'=>'Game',
-  'info'=>'Info',
+  'game'=>'Igra',
+  'info'=>'Informacije',
   'ip_port'=>'Server IP:Port',
-  'new_server'=>'new Server',
-  'no_server'=>'No Servers available',
-  'really_delete'=>'Really delete this Server?',
-  'servers'=>'Servers',
-  'server_name'=>'Server Name',
-  'sort'=>'Sort',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'to_sort'=>'sort'
+  'new_server'=>'novi Server',
+  'no_server'=>'Nema dostupnih servera',
+  'really_delete'=>'Stvarno izbrisati ovaj Server?',
+  'servers'=>'Serveri',
+  'server_name'=>'Server Ime',
+  'sort'=>'Razvrstaj',
+  'transaction_invalid'=>'ID Transakcija nevažeća',
+  'to_sort'=>'Razvrstaj'
 );
 

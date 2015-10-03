@@ -29,7 +29,6 @@ $language_array = array(
 
 /* do not edit above this line */
 
-    'faq' => 'Algemene Vrae',
     'admin_button' => 'Vrae Administrasie',
     'answer' => 'Beantwoord',
     'categories' => 'Kategorieë',

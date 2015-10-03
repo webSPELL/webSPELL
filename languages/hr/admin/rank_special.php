@@ -26,8 +26,8 @@
 */
 
 $language_array = Array(
-	'used_for'=>'Used for',
-	'special_rank'=>'special rank',
-	'no_special_rank'=>'no special rank'
+	'used_for'=>'Koristi se za',
+	'special_rank'=>'posebna rang',
+	'no_special_rank'=>'ne postoji poseban čin'
  );
  

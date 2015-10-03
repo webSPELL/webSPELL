@@ -29,7 +29,6 @@ $language_array = array(
 
 /* do not edit above this line */
 
-    'faq' => 'Biežāk uzdotie jautājumi',
     'admin_button' => 'BUJ Administrācija',
     'answer' => 'Atbilde',
     'categories' => 'Kategorija',

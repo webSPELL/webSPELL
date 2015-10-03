@@ -29,18 +29,18 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'allowed_commands'=>'<b>Allowed commands:</b> insert, alter table, select',
-  'backup_file'=>'Backup File',
-  'database'=>'Database',
-  'export'=>'Export/Download Backup',
-  'import_info'=>'Select a file where to import sql data from.<br><br><b>Important:</b> Create a backup before import another one!',
-  'optimize'=>'Optimize Database',
-  'select_option'=>'Please select Option',
-  'submit'=>'Submit',
-  'sql_query'=>'SQL Query',
-  'syntax_not_allowed'=>'Syntax not allowed!',
-  'upload'=>'Upload',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Toegang geweier',
+  'allowed_commands'=>'<b> Toegelate opdragte: </ b> insetsel, verander tafel, kies',
+  'backup_file'=>'Backup lêer',
+  'database'=>'Databasis',
+  'export'=>'Uitvoer / Download Backup',
+  'import_info'=>'Kies \'n lêer waar sql data van invoer <br> <b> Belangrike:. </ B> Skep \'n back-up voordat invoer van ander een!',
+  'optimize'=>'Optimaliseer databasis',
+  'select_option'=>'Kies opsie',
+  'submit'=>'Stuur',
+  'sql_query'=>'SQL Navraag',
+  'syntax_not_allowed'=>'Sintaksis nie toegelaat nie!',
+  'upload'=>'Oplaai',
+  'transaction_invalid'=>'Transaksie ID ongeldig'
 );
 

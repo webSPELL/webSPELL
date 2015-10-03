@@ -29,20 +29,20 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'add_rank'=>'add Rank',
-  'actions'=>'Actions',
-  'delete'=>'delete',
-  'edit_rank'=>'edit Rank',
-  'information_incomplete'=>'Some information is missing.',
-  'max_posts'=>'max. Posts',
-  'min_posts'=>'min. Posts',
-  'new_rank'=>'new Rank',
-  'rank_icon'=>'Rank Icon',
-  'rank_name'=>'Rank Name',
-  'really_delete'=>'Really delete this Rank?',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'update'=>'update',
-  'user_ranks'=>'User Ranks'
+  'access_denied'=>'Toegang verbied',
+  'add_rank'=>'voeg Rang',
+  'actions'=>'Aksies',
+  'delete'=>'verwyder',
+  'edit_rank'=>'wysig Rang',
+  'information_incomplete'=>'Sommige inligting ontbreek.',
+  'max_posts'=>'max. Bydraes',
+  'min_posts'=>'min. Bydraes',
+  'new_rank'=>'nuwe Rang',
+  'rank_icon'=>'Rang ikoon',
+  'rank_name'=>'Rang Naam',
+  'really_delete'=>'Verwyder hierdie skakel Regtig?',
+  'transaction_invalid'=>'Transaksie ID ongeldig',
+  'update'=>'opdatering',
+  'user_ranks'=>'Gebruiker-Range'
 );
 

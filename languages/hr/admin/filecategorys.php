@@ -29,20 +29,20 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_category'=>'add Category',
-  'category'=>'Category',
-  'category_name'=>'Category Name',
-  'delete'=>'delete',
-  'enter_name'=>'You must enter a Name',
-  'edit'=>'edit',
-  'edit_category'=>'edit Category',
-  'file_categories'=>'File Categories',
-  'main'=>'Main',
-  'new_category'=>'new Category',
-  'really_delete'=>'Really delete this Category?',
-  'sub_category'=>'Sub-Category of',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Pristup nije dozvoljen',
+  'actions'=>'Radnje',
+  'add_category'=>'Dodaj kategoriju',
+  'category'=>'Kategorija',
+  'category_name'=>'Ime kategorije',
+  'delete'=>'izbrisati',
+  'enter_name'=>'Morate unijeti naziv',
+  'edit'=>'uredi',
+  'edit_category'=>'Uredi Kategoriju',
+  'file_categories'=>'Kategorije dokumenata',
+  'main'=>'Početna',
+  'new_category'=>'Nova kategorija',
+  'really_delete'=>'Zaista izbrisati ovu kategoriju?',
+  'sub_category'=>'Pod-kategorije',
+  'transaction_invalid'=>'ID Transakcija Nevažeća'
 );
 

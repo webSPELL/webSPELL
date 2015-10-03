@@ -29,21 +29,21 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_category'=>'add Category',
-  'category'=>'Category',
-  'category_name'=>'Category Name',
-  'delete'=>'delete',
-  'description'=>'Description',
-  'edit'=>'edit',
-  'edit_category'=>'edit Category',
-  'faq_categories'=>'FAQ Categories',
-  'information_incomplete'=>'Some information is missing.',
-  'new_category'=>'new Category',
-  'really_delete'=>'Really delete this Category and the Category FAQs?',
-  'sort'=>'Sort',
-  'to_sort'=>'sort',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Erişim Engellendi',
+  'actions'=>'Eylemler',
+  'add_category'=>'Kategori ekle',
+  'category'=>'Kategori',
+  'category_name'=>'Kategori adı',
+  'delete'=>'sil',
+  'description'=>'Tanım',
+  'edit'=>'düzenle',
+  'edit_category'=>'Kategoriyi düzenle',
+  'faq_categories'=>'SSS Kategorileri',
+  'information_incomplete'=>'Bazı bilgiler eksik.',
+  'new_category'=>'Yeni kategori',
+  'really_delete'=>'Gerçekten bu kategori ve SSS kategorisi silinsin mi?',
+  'sort'=>'Sırala',
+  'to_sort'=>'Sırala',
+  'transaction_invalid'=>'İşlem kimliği/ID geçersiz'
 );
 

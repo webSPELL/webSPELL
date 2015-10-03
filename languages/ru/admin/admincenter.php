@@ -80,8 +80,8 @@ $language_array = Array(
   'spam'=>'СПАМ',
   'spam_forum'=>'Посты / Темы',
   'spam_user'=>'Удалить пользователя',
-  'multiaccounts'=>'Multi-Accounts',
-  'api_log'=>'API Log',
+  'multiaccounts'=>'Мульти-Аккаунты',
+  'api_log'=>'Лог API ',
   'blocked_content'=>'Заблокированное содержимое',
   'modrewrite'=>'Mod-Rewrite'
 );

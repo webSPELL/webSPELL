@@ -29,20 +29,20 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_language'=>'add Language',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_language'=>'edit Language',
-  'flag'=>'Flags',
-  'information_incomplete'=>'Some information is missing.',
-  'language'=>'Language',
-  'news_languages'=>'News-Languages',
-  'new_language'=>'new Language',
-  'preview'=>'Preview',
-  'really_delete'=>'Really delete this Language?',
-  'title'=>'Title',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'دسترسی مجاز نیست',
+  'actions'=>'اعمال',
+  'add_language'=>'افزودن زبان',
+  'delete'=>'پاک کردن',
+  'edit'=>'ویرایش',
+  'edit_language'=>'ویرایش زبان',
+  'flag'=>'پرچم ها',
+  'information_incomplete'=>'بعضی اطلاعات گم شده اند.',
+  'language'=>'زبان',
+  'news_languages'=>'زبان های جدید',
+  'new_language'=>'زبان جدید',
+  'preview'=>'پیش نمایش',
+  'really_delete'=>'واقعاً این زبان پاک شود؟',
+  'title'=>'عنوان',
+  'transaction_invalid'=>'شناسه معامله نا معتبر است'
 );
 

@@ -29,20 +29,20 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_contact'=>'add Contact',
-  'contact'=>'Contacts',
-  'contact_name'=>'Contact Name',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_contact'=>'edit Contact',
-  'email'=>'E-Mail',
-  'information_incomplete'=>'Some information is missing.',
-  'new_contact'=>'new Contact',
-  'really_delete'=>'really delete this Contact?',
-  'sort'=>'Sort',
-  'to_sort'=>'sort',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Erişim Engellendi',
+  'actions'=>'Eylemler',
+  'add_contact'=>'Kişi Ekle',
+  'contact'=>'Kişiler',
+  'contact_name'=>'Kişi adı',
+  'delete'=>'sil',
+  'edit'=>'düzenle',
+  'edit_contact'=>'Kişiyi düzenle',
+  'email'=>'E-Posta',
+  'information_incomplete'=>'Bazı bilgiler eksik.',
+  'new_contact'=>'yeni kişi',
+  'really_delete'=>'gerçekten bu kişiyi silmek istiyor musunuz?',
+  'sort'=>'Sırala',
+  'to_sort'=>'Sırala',
+  'transaction_invalid'=>'İşlem kimliği/ID geçersiz'
 );
 

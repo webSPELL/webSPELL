@@ -29,25 +29,25 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'error_send'=>'ERROR: Newsletter could not be send (Mailserver available?)',
-  'html_mail'=>'HTML-Mail',
-  'newsletter'=>'Newsletter',
-  'no_htmlmail'=>'Hello!
-Your System doesn\'t support HTML Mails.
-Your received following Message:',
-  'profile'=>'Profile',
-  'receptionists'=>'Newsletter was send!<br><br>Receptionist(s):',
-  'remove'=>'You can remove yourself from the mailing-list at your',
-  'send'=>'send Newsletter',
-  'send_to'=>'Send to',
+  'access_denied'=>'Erişim Engellendi',
+  'error_send'=>'HATA: Haber bülteni gönderilemedi (e-posta sunucusu aktif?)',
+  'html_mail'=>'HTML-Posta',
+  'newsletter'=>'Haber bülteni',
+  'no_htmlmail'=>'Merhaba!
+Sisteminiz HTML Mailleri desteklemiyor.
+Aşağıdaki mesajı aldınız:',
+  'profile'=>'Profil',
+  'receptionists'=>'Haber bülteni gönderildi!<br><br>Alıcı(lar):',
+  'remove'=>'Profilinizdeki ilgili bölümden kendinizi mailing listesinden çıkarabilirsiniz',
+  'send'=>'Haber bülteni gönder',
+  'send_to'=>'Gönderilecekler',
   'test'=>'test',
-  'test_newsletter'=>'Test Newsletter',
-  'title'=>'Title',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'user_clanmembers'=>'Clanmembers',
-  'user_newsletter'=>'Newsletter Subscriber',
-  'user_registered'=>'registered Users (incl. Clanmembers) ',
-  'users'=>'Users'
+  'test_newsletter'=>'Test Haber bülteni',
+  'title'=>'Başlık',
+  'transaction_invalid'=>'İşlem kimliği/ID geçersiz',
+  'user_clanmembers'=>'Klan üyeleri',
+  'user_newsletter'=>'Haber Bülteni Aboneleri',
+  'user_registered'=>'kayıtlı Kullanıcılar (Klan üyeleri dahil.) ',
+  'users'=>'Kullanıcılar'
 );
 

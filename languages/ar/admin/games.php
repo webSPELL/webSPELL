@@ -29,24 +29,24 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_game'=>'add Game',
-  'back'=>'back',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_game'=>'edit Game',
-  'fill_correctly'=>'Please fill in the form correctly.',
-  'format_incorrect'=>'The format of the icon was incorrect. Please upload only icons in *.gif format.',
-  'game_icon'=>'Game Icon',
-  'game_name'=>'Game Name',
-  'game_tag'=>'Game Tag',
-  'games'=>'Games',
-  'icons'=>'Icons',
-  'new_game'=>'new Game',
-  'no_entries'=>'No entries',
-  'present_icon'=>'present Icon',
-  'really_delete'=>'Really delete this Game?',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'غير مسموح بالدخول',
+  'actions'=>'اجراءات',
+  'add_game'=>'أضف لعبة',
+  'back'=>'العوده',
+  'delete'=>'حذف',
+  'edit'=>'تعديل',
+  'edit_game'=>'تحرير اللعبة',
+  'fill_correctly'=>'يرجى تعبئة النموذج بشكل صحيح.',
+  'format_incorrect'=>'تنسيق الرمز غير صحيحة. يرجى تحميل الرموز فقط في * gif. تنسيق.',
+  'game_icon'=>'رمز اللعبة',
+  'game_name'=>'اسم اللعبة',
+  'game_tag'=>'لعبة العلامة',
+  'games'=>'ألعاب',
+  'icons'=>'أيقونات',
+  'new_game'=>'لعبة جديدة',
+  'no_entries'=>'لا توجد ادخالات',
+  'present_icon'=>'الايقونة الحالية',
+  'really_delete'=>'حقا حذف هذه اللعبة ؟ ',
+  'transaction_invalid'=>'إجراء ID غير صالح'
 );
 

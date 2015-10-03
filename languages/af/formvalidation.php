@@ -29,15 +29,15 @@ $language_array = Array(
 
 /* do not edit above this line */
     'file_too_big'=>'File too big',
-    'incomplete_upload'=>'Incomplete upload',
-    'no_file_uploaded'=>'No file uploaded',
-    'no_temp_folder_available'=>'No temporary folder available. Please contact the administrator',
-    'cant_write_temp_file'=>'Can\'t write temporary file. Please contact the administrator',
-    'unexpected_error'=>'Unexpected error',
-    'cant_copy_file'=>'Can\'t copy file. Please contact the administrator',
-    'image_too_big'=>'The image is too big (max size %1$d px & %2$d px)',
-    'broken_image'=>'The image file seems to be broken',
-    'unsupported_image_type'=>'Unsupported image type',
-    'errors_there'=>'There are errors',
-    'file_already_exists'=>'file already exists'
+    'incomplete_upload'=>'Onvolledige oplaai',
+    'no_file_uploaded'=>'Geen lêer opgelaai',
+    'no_temp_folder_available'=>'Geen tydelike gids beskikbaar. Kontak asseblief die administrateur',
+    'cant_write_temp_file'=>'Kan nie tydelike lêer skryf nie. Kontak asseblief die administrateur',
+    'unexpected_error'=>'Onverwagse fout',
+    'cant_copy_file'=>'Kan nie lêer kopieer nie. Kontak asseblief die administrateur',
+    'image_too_big'=>'Die beeld is te groot (maksimum grootte %1$d px & %2$d px)',
+    'broken_image'=>'Die beeld lêer lyk asof dit gebroke is',
+    'unsupported_image_type'=>'Nie ondersteunde beeld tipe',
+    'errors_there'=>'Daar is foute',
+    'file_already_exists'=>'lêer bestaan alreeds'
 );

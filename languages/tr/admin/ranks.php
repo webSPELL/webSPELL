@@ -29,20 +29,20 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'add_rank'=>'add Rank',
-  'actions'=>'Actions',
-  'delete'=>'delete',
-  'edit_rank'=>'edit Rank',
-  'information_incomplete'=>'Some information is missing.',
-  'max_posts'=>'max. Posts',
-  'min_posts'=>'min. Posts',
-  'new_rank'=>'new Rank',
-  'rank_icon'=>'Rank Icon',
-  'rank_name'=>'Rank Name',
-  'really_delete'=>'Really delete this Rank?',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'update'=>'update',
-  'user_ranks'=>'User Ranks'
+  'access_denied'=>'Erişim Engellendi',
+  'add_rank'=>'Rütbe ekle',
+  'actions'=>'Eylemler',
+  'delete'=>'sil',
+  'edit_rank'=>'Rütbe düzenle',
+  'information_incomplete'=>'Bazı bilgiler eksik.',
+  'max_posts'=>'max. Post',
+  'min_posts'=>'min. Post',
+  'new_rank'=>'yeni Rütbe',
+  'rank_icon'=>'Rütbe Simgesi',
+  'rank_name'=>'Rütbe Adı',
+  'really_delete'=>'Gerçekten bu Rütbe silinsin mi?',
+  'transaction_invalid'=>'İşlem kimliği/ID geçersiz',
+  'update'=>'güncelle',
+  'user_ranks'=>'Kullanıcı Rütbeleri'
 );
 

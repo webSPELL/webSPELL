@@ -29,7 +29,6 @@ $language_array = array(
 
 /* do not edit above this line */
 
-    'faq' => 'ხშირად დასმული კითხვები',
     'admin_button' => 'FAQ ადმინისტრაცია',
     'answer' => 'პასუხი',
     'categories' => 'კატეგორიები',

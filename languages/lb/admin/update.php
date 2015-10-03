@@ -29,16 +29,16 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'error'=>'Server not update-compatible or File not available at',
-  'filename'=>'Filename',
-  'get_new_version'=>'Get the newest webSPELL Version here!',
-  'information'=>'Information',
-  'new_functions'=>'New Functions for webSPELL available',
-  'new_updates'=>'New Updates for webSPELL available',
-  'new_version'=>'New webSPELL Version available',
-  'no_updates'=>'No Updates available!',
-  'version'=>'Version',
-  'webspell_update'=>'webSPELL Update'
+  'access_denied'=>'Zugriff verwehrt',
+  'error'=>'Server ass net Update Kompatibel oder d\'Datei ass net do op',
+  'filename'=>'Dateinumm',
+  'get_new_version'=>'Huel dir hei déi néisten webSPELL Versioun!',
+  'information'=>'Informatioun',
+  'new_functions'=>'Néi Funktiounen vir webSPELL do',
+  'new_updates'=>'Néi Updates vir webSPELL do',
+  'new_version'=>'Néi webSPELL Versioun do',
+  'no_updates'=>'Keng Updates do!',
+  'version'=>'Versioun',
+  'webspell_update'=>'webSPELL update'
 );
 

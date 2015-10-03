@@ -29,18 +29,18 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'allowed_commands'=>'<b>Allowed commands:</b> insert, alter table, select',
-  'backup_file'=>'Backup File',
-  'database'=>'Database',
-  'export'=>'Export/Download Backup',
-  'import_info'=>'Select a file where to import sql data from.<br><br><b>Important:</b> Create a backup before import another one!',
-  'optimize'=>'Optimize Database',
-  'select_option'=>'Please select Option',
-  'submit'=>'Submit',
-  'sql_query'=>'SQL Query',
-  'syntax_not_allowed'=>'Syntax not allowed!',
-  'upload'=>'Upload',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Pristup nije dozvoljen',
+  'allowed_commands'=>'<b>Dopuštene naredbe:</b> umetak, mijenjaju tablice, izaberite',
+  'backup_file'=>'Backup datoteke',
+  'database'=>'Baza podataka',
+  'export'=>'Izvoz / Preuzmite Backup',
+  'import_info'=>'Izaberite datoteku u kojoj se uvozi SQL podataka iz. <br><br> <b>Važno:</b> Napravite sigurnosnu kopiju prije uvoza jedan!',
+  'optimize'=>'Optimiziraj bazu podataka',
+  'select_option'=>'Molimo izaberite opciju',
+  'submit'=>'Pošaljite',
+  'sql_query'=>'SQL upit',
+  'syntax_not_allowed'=>'Sintaksa nije dozvoljena!',
+  'upload'=>'dodaj',
+  'transaction_invalid'=>'ID transakcija nevažeća'
 );
 

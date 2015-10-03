@@ -29,12 +29,12 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'automatic'=>'Automatically',
-  'imprint'=>'Imprint',
-  'manual'=>'Manually (use the Textfield below)',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'update'=>'update',
-  'you_can_use_html'=>'You can use HTML-Tags'
+  'access_denied'=>'غير مسموح بالدخول',
+  'automatic'=>'تلقائياً',
+  'imprint'=>'بصمة',
+  'manual'=>'يدويا (باستخدام حقل النص أدناه)',
+  'transaction_invalid'=>'إجراء ID غير صالح',
+  'update'=>'تحديث',
+  'you_can_use_html'=>'يمكنك استخدام وسم HTML'
 );
 

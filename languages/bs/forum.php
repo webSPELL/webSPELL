@@ -82,7 +82,7 @@ $language_array = array(
     'newreply_image' => '<img src="images/icons/newreply.gif" alt="Odgovor">',
     'newtopic_image' => '<img src="images/icons/newtopic.gif" alt="Nova tema">',
     'next_7_days' => 'Sljedećih 7 dana',
-    'n_a'=>'n/a',
+    'n_a'=>'Nije dostupno',
     'no_access' => 'Nemate pristup',
     'no_access_write' => 'Nemate dopuštenje pisat u ovoj temi.',
     'no_icon' => 'nema ikone',

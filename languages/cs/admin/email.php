@@ -29,9 +29,9 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
+  'access_denied'=>'Přístup odepřen',
   'auth'=>'Authentication',
-  'debug'=>'Debug Level',
+  'debug'=>'Úroveň Ladění',
   'debug_0'=>'None',
   'debug_1'=>'Commands',
   'debug_2'=>'Commands + Data',

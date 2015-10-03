@@ -29,25 +29,25 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'error_send'=>'ERROR: Newsletter could not be send (Mailserver available?)',
-  'html_mail'=>'HTML-Mail',
-  'newsletter'=>'Newsletter',
-  'no_htmlmail'=>'Hello!
-Your System doesn\'t support HTML Mails.
-Your received following Message:',
-  'profile'=>'Profile',
-  'receptionists'=>'Newsletter was send!<br><br>Receptionist(s):',
-  'remove'=>'You can remove yourself from the mailing-list at your',
-  'send'=>'send Newsletter',
-  'send_to'=>'Send to',
-  'test'=>'test',
-  'test_newsletter'=>'Test Newsletter',
-  'title'=>'Title',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'user_clanmembers'=>'Clanmembers',
-  'user_newsletter'=>'Newsletter Subscriber',
-  'user_registered'=>'registered Users (incl. Clanmembers) ',
-  'users'=>'Users'
+  'access_denied'=>'دسترسی مجاز نیست',
+  'error_send'=>'خطا: خبرنامه قابل فرستادن نیست ( آیا سرور ایمیل موجود است؟)',
+  'html_mail'=>'ایمیل HTML',
+  'newsletter'=>'خبرنامه',
+  'no_htmlmail'=>'سلام!
+سیستم شما ایمیل های HTML را پشتیبانی نمی کند.
+شما پیام زیر را دریافت کرده اید:',
+  'profile'=>'حساب کاربری',
+  'receptionists'=>'خبرنامه فرستاده شد!<br><br> دریافت کنندگان:',
+  'remove'=>'شما می توانید خود را از لیست ایمیل پاک کنید در',
+  'send'=>'خبرنامه را بفرست',
+  'send_to'=>'ارسال به',
+  'test'=>'تست',
+  'test_newsletter'=>'تست خبرنامه',
+  'title'=>'عنوان',
+  'transaction_invalid'=>'شناسه معامله نا معتبر است',
+  'user_clanmembers'=>'اعضای کلن',
+  'user_newsletter'=>'مشترکین خبرنامه',
+  'user_registered'=>'کاربران ثبت نام کرده ( شامل اعضای کلن)',
+  'users'=>'کاربران'
 );
 

@@ -29,25 +29,25 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'back'=>'back',
-  'edit_group_users'=>'edit Group Users',
-  'error_group'=>'ERROR: User Group doesn\'t exist',
+  'access_denied'=>'Pristup nije dozvoljen',
+  'back'=>'Povratak',
+  'edit_group_users'=>'uredi korisničke grupe',
+  'error_group'=>'Greška: Grupa korisnika ne postoji',
   'filter'=>'Filter',
-  'filter_anyadmin'=>'any Admin Filter',
-  'filter_clanmember'=>'Clanmembers Filter',
-  'filter_registered'=>'registered Filter',
+  'filter_anyadmin'=>'bilo koji Admin filter',
+  'filter_clanmember'=>' Filter Članova klana',
+  'filter_registered'=>'registrirani filter',
   'filter_superadmin'=>'Super Admin Filter',
-  'go'=>'go',
-  'group_users'=>'Group Users',
-  'groups'=>'Forum User Groups',
-  'or_just'=>'or just',
-  'save'=>'save',
-  'save_and_jump'=>'jump to Page',
-  'select_all'=>'select all',
-  'show'=>'show',
-  'user_filter'=>'User Filter',
-  'users_from_group'=>'Users from Group',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'go'=>'idi',
+  'group_users'=>'Grupe Korisnika',
+  'groups'=>'Forum Grupe Korisnika',
+  'or_just'=>'ili jednostavno',
+  'save'=>'Spremi',
+  'save_and_jump'=>'idi na stranicu',
+  'select_all'=>'Označi sve',
+  'show'=>'prikaži',
+  'user_filter'=>'Korisnički Filter',
+  'users_from_group'=>'Korisnici iz grupe',
+  'transaction_invalid'=>'ID Transakcija Nevažeća'
 );
 

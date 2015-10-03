@@ -29,20 +29,20 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_category'=>'add Category',
-  'category'=>'Category',
-  'category_name'=>'Category Name',
-  'delete'=>'delete',
-  'enter_name'=>'You must enter a Name',
-  'edit'=>'edit',
-  'edit_category'=>'edit Category',
-  'file_categories'=>'File Categories',
-  'main'=>'Main',
-  'new_category'=>'new Category',
-  'really_delete'=>'Really delete this Category?',
-  'sub_category'=>'Sub-Category of',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Erişim Engellendi',
+  'actions'=>'Eylemler',
+  'add_category'=>'Kategori ekle',
+  'category'=>'Kategori',
+  'category_name'=>'Kategori adı',
+  'delete'=>'sil',
+  'enter_name'=>'Bir isim girmelisiniz',
+  'edit'=>'düzenle',
+  'edit_category'=>'Kategoriyi düzenle',
+  'file_categories'=>'Dosya Kategorileri',
+  'main'=>'Ana',
+  'new_category'=>'Yeni kategori',
+  'really_delete'=>'Bu kategori gerçekten silinsin mi?',
+  'sub_category'=>'Alt Kategori',
+  'transaction_invalid'=>'İşlem kimliği/ID geçersiz'
 );
 

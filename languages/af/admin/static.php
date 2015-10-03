@@ -29,24 +29,24 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'accesslevel'=>'Accesslevel',
-  'actions'=>'Actions',
-  'add_static_page'=>'add Static Page',
-  'clanmember_only'=>'Clanmembers only',
-  'content'=>'Content',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_static_page'=>'edit Static Page',
-  'title'=>'Title',
+  'access_denied'=>'Toegang verbied',
+  'accesslevel'=>'Toegangs Vlak',
+  'actions'=>'Aksies',
+  'add_static_page'=>'voeg Statiese bladsy',
+  'clanmember_only'=>'Slegs klan lede',
+  'content'=>'Inhoud',
+  'delete'=>'verwyder',
+  'edit'=>'wysig',
+  'edit_static_page'=>'wysig Statiese bladsy',
+  'title'=>'Titel',
   'id'=>'ID',
-  'new_static_page'=>'new Static Page',
-  'public'=>'Public',
-  'really_delete'=>'Really delete this Static Page?',
-  'registered_only'=>'registered Users only',
-  'static_pages'=>'Static Pages',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'you_can_use_html'=>'You can use HTML-Tags',
-  'tags'=>'Tags'
+  'new_static_page'=>'nuwe Statiese bladsy',
+  'public'=>'Publiek',
+  'really_delete'=>'Regtig hierde Statiese bladsy verwyder?',
+  'registered_only'=>'slegs geregistreerde gebruikers',
+  'static_pages'=>'Statiese bladsye',
+  'transaction_invalid'=>'Transaksie ID ongeldig',
+  'you_can_use_html'=>'Jy kan HTML-tags gebruik',
+  'tags'=>'Etikette'
 );
 

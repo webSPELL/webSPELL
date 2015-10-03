@@ -29,19 +29,19 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_group'=>'add Group',
-  'back'=>'back',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_group'=>'edit Group',
-  'error_group'=>'ERROR: No Group Name',
-  'error_groupid'=>'ERROR: Missing fgrID',
-  'group_name'=>'Group Name',
-  'groups'=>'Forum User Groups',
-  'new_group'=>'new Group',
-  'really_delete'=>'Really delete this Forum Group?',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'دسترسی مجاز نیست',
+  'actions'=>'اعمال',
+  'add_group'=>'افزودن گروه',
+  'back'=>'برگشت',
+  'delete'=>'پاک کردن',
+  'edit'=>'ویرایش',
+  'edit_group'=>'ویرایش گروه',
+  'error_group'=>'خطا:  هیچ نام گروهی وجود ندارد',
+  'error_groupid'=>'خطا: fgrID گم شده است',
+  'group_name'=>'نام گروه',
+  'groups'=>'فروم گروه های کاربر',
+  'new_group'=>'گروه جدید',
+  'really_delete'=>'واقعاً این فروم گروه پاک شود؟',
+  'transaction_invalid'=>'شناسه معامله نا معتبر است'
 );
 

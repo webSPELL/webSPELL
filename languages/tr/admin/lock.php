@@ -29,16 +29,16 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'lock'=>'lock',
-  'locked_since'=>'The Page ist locked since',
-  'pagelock'=>'Pagelock',
-  'page_locked'=>'<b>Page locked!</b><br>Only Admins can access the Page now.',
-  'page_unlocked'=>'<b>Page unlocked!</b>',
-  'settings'=>'Settings',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'unlock'=>'unlock',
-  'unlock_page'=>'Do you want to unlock the Page?',
-  'you_can_use_html'=>'You can use HTML-Tags'
+  'access_denied'=>'Erişim Engellendi',
+  'lock'=>'kilitle',
+  'locked_since'=>'Sayfa şu zamandan beri kilitli',
+  'pagelock'=>'sayfa kilidi',
+  'page_locked'=>'<b>Sayfa kilitli</b><br>Sadece Adminler Sayfayı şimdi erişebilir.',
+  'page_unlocked'=>'<b>Sayfa kilidi kaldırıldı</b>',
+  'settings'=>'Ayarlar',
+  'transaction_invalid'=>'İşlem kimliği/ID geçersiz',
+  'unlock'=>'kilidi aç',
+  'unlock_page'=>'Sayfa açmak ister misiniz?',
+  'you_can_use_html'=>'HTML Etiketlerini kullanabilirsiniz'
 );
 

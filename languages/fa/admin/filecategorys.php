@@ -29,20 +29,20 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_category'=>'add Category',
-  'category'=>'Category',
-  'category_name'=>'Category Name',
-  'delete'=>'delete',
-  'enter_name'=>'You must enter a Name',
-  'edit'=>'edit',
-  'edit_category'=>'edit Category',
-  'file_categories'=>'File Categories',
-  'main'=>'Main',
-  'new_category'=>'new Category',
-  'really_delete'=>'Really delete this Category?',
-  'sub_category'=>'Sub-Category of',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'دسترسی مجاز نیست',
+  'actions'=>'اعمال',
+  'add_category'=>'دسته را اضافه کن',
+  'category'=>'دسته بندی',
+  'category_name'=>'نام دسته',
+  'delete'=>'پاک کردن',
+  'enter_name'=>'شما باید یک نام وارد کنید',
+  'edit'=>'ویرایش',
+  'edit_category'=>'ویرایش دسته بندی',
+  'file_categories'=>'دسته های فایل ها',
+  'main'=>'اصلی',
+  'new_category'=>'دسته جدید',
+  'really_delete'=>'وقعاً این دسته پاک شود؟',
+  'sub_category'=>'زیر مجموعه ی ',
+  'transaction_invalid'=>'شناسه معامله نا معتبر است'
 );
 

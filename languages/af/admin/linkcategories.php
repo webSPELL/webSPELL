@@ -29,17 +29,17 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_category'=>'add Category',
-  'category_name'=>'Category Name',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_category'=>'edit Category',
-  'information_incomplete'=>'Some information is missing.',
-  'link_categories'=>'Link Categories',
-  'new_category'=>'new Category',
-  'really_delete'=>'Really delete this Category and the Category Links?',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Toegang verbied',
+  'actions'=>'Aksies',
+  'add_category'=>'voeg Kategorie',
+  'category_name'=>'Kategorie Naam',
+  'delete'=>'verwyder',
+  'edit'=>'wysig',
+  'edit_category'=>'wysig Kategorie',
+  'information_incomplete'=>'Sommige inligting ontbreek.',
+  'link_categories'=>'Skakel kategorieë',
+  'new_category'=>'nuwe Kategorie',
+  'really_delete'=>'Regtig hierdie kategorie en die kategorie Faqs verwyder?',
+  'transaction_invalid'=>'Transaksie ID ongeldig'
 );
 

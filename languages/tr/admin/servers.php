@@ -29,22 +29,22 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'add_server'=>'add Server',
-  'actions'=>'Actions',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_server'=>'edit Server',
-  'game'=>'Game',
-  'info'=>'Info',
-  'ip_port'=>'Server IP:Port',
-  'new_server'=>'new Server',
-  'no_server'=>'No Servers available',
-  'really_delete'=>'Really delete this Server?',
-  'servers'=>'Servers',
-  'server_name'=>'Server Name',
-  'sort'=>'Sort',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'to_sort'=>'sort'
+  'access_denied'=>'Erişim Engellendi',
+  'add_server'=>'Sunucu Ekle',
+  'actions'=>'Eylemler',
+  'delete'=>'sil',
+  'edit'=>'düzenle',
+  'edit_server'=>'Sunucuyu düzenle',
+  'game'=>'Oyun',
+  'info'=>'Bilgi',
+  'ip_port'=>'Sunucu IP:Port',
+  'new_server'=>'Yeni Sunucu',
+  'no_server'=>'sunucu yok',
+  'really_delete'=>'Gerçekten bu Sunucu silinsin mi?',
+  'servers'=>'Sunucular',
+  'server_name'=>'Sunucu Adı',
+  'sort'=>'Sırala',
+  'transaction_invalid'=>'İşlem kimliği/ID geçersiz',
+  'to_sort'=>'Sırala'
 );
 

@@ -29,21 +29,21 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_rubric'=>'add Rubric',
-  'back'=>'back',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_rubric'=>'edit Rubric',
-  'format_incorrect'=>'The format of the icon was incorrect. Please upload only banner in *.gif, *.jpg and *.png format.',
-  'information_incomplete'=>'Some information is missing.',
-  'new_rubric'=>'new Rubric',
-  'news_rubrics'=>'News Rubrics',
-  'picture'=>'Picture',
-  'picture_upload'=>'Picture Upload',
-  'really_delete'=>'Really delete this Rubric?',
-  'rubric_name'=>'Rubric Name',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'غير مسموح بالدخول',
+  'actions'=>'اجراءات',
+  'add_rubric'=>'إضافة عنوان',
+  'back'=>'العوده',
+  'delete'=>'حذف',
+  'edit'=>'تعديل',
+  'edit_rubric'=>'تحرير عنوان',
+  'format_incorrect'=>'نوع ملف الرمز غير صحيحة. يرجى تحميل الانواع *gif, *.jpg. و *png. فقط.',
+  'information_incomplete'=>'بعض المعلومات مفقودة.',
+  'new_rubric'=>'الجديد عنوان',
+  'news_rubrics'=>'أخبار العناوين',
+  'picture'=>'صورة',
+  'picture_upload'=>'تحميل صورة',
+  'really_delete'=>'فعلا حذف هذا الموضوع؟',
+  'rubric_name'=>'اسم العنوان',
+  'transaction_invalid'=>'إجراء ID غير صالح'
 );
 

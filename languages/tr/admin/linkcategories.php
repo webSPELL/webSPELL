@@ -29,17 +29,17 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_category'=>'add Category',
-  'category_name'=>'Category Name',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_category'=>'edit Category',
-  'information_incomplete'=>'Some information is missing.',
-  'link_categories'=>'Link Categories',
-  'new_category'=>'new Category',
-  'really_delete'=>'Really delete this Category and the Category Links?',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Erişim Engellendi',
+  'actions'=>'Eylemler',
+  'add_category'=>'Kategori ekle',
+  'category_name'=>'Kategori adı',
+  'delete'=>'sil',
+  'edit'=>'düzenle',
+  'edit_category'=>'Kategoriyi düzenle',
+  'information_incomplete'=>'Bazı bilgiler eksik.',
+  'link_categories'=>'Bağlantı kategorileri',
+  'new_category'=>'Yeni kategori',
+  'really_delete'=>'Gerçekten bu kategori ve kategori bağlantıları silinsin mi?',
+  'transaction_invalid'=>'İşlem kimliği/ID geçersiz'
 );
 

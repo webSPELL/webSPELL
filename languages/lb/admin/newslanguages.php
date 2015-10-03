@@ -29,20 +29,20 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_language'=>'add Language',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_language'=>'edit Language',
-  'flag'=>'Flags',
-  'information_incomplete'=>'Some information is missing.',
-  'language'=>'Language',
-  'news_languages'=>'News-Languages',
-  'new_language'=>'new Language',
-  'preview'=>'Preview',
-  'really_delete'=>'Really delete this Language?',
-  'title'=>'Title',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Zugriff verwehrt',
+  'actions'=>'Aktiounen',
+  'add_language'=>'Sprooch bäifügen',
+  'delete'=>'ewechhuelen',
+  'edit'=>'beaarbechten',
+  'edit_language'=>'Sprooch änneren',
+  'flag'=>'Fändel',
+  'information_incomplete'=>'Et fehlen en puur Informatiounen.',
+  'language'=>'Sproch',
+  'news_languages'=>'News-Sproochen',
+  'new_language'=>'néi Sprooch',
+  'preview'=>'Virschau',
+  'really_delete'=>'Dës Sprooch wierklech läschen?',
+  'title'=>'Titel',
+  'transaction_invalid'=>'Transactiouns ID net gülteg'
 );
 

@@ -29,7 +29,6 @@ $language_array = array(
 
 /* do not edit above this line */
 
-    'faq' => 'سوالات متداول',
     'admin_button' => 'مديريت',
     'answer' => 'جواب',
     'categories' => 'دسته بندی',
@@ -37,3 +36,4 @@ $language_array = array(
     'no_faq' => '.هیچ سوالی موجود نیست<br><a href="index.php?site=faq">برگشت</a>',
     'saved_on' => 'ذخیره کردن'
 );
+

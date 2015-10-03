@@ -29,20 +29,20 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'add_rank'=>'add Rank',
-  'actions'=>'Actions',
-  'delete'=>'delete',
-  'edit_rank'=>'edit Rank',
-  'information_incomplete'=>'Some information is missing.',
-  'max_posts'=>'max. Posts',
-  'min_posts'=>'min. Posts',
-  'new_rank'=>'new Rank',
-  'rank_icon'=>'Rank Icon',
-  'rank_name'=>'Rank Name',
-  'really_delete'=>'Really delete this Rank?',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'update'=>'update',
-  'user_ranks'=>'User Ranks'
+  'access_denied'=>'Pristup nije dozvoljen',
+  'add_rank'=>'dodaj Rejting',
+  'actions'=>'Radnje',
+  'delete'=>'izbrisati',
+  'edit_rank'=>'uređivanje naslova',
+  'information_incomplete'=>'Neka informacija nedostaje.',
+  'max_posts'=>'Maks. Postove',
+  'min_posts'=>'min. Postove',
+  'new_rank'=>'novi Poredak',
+  'rank_icon'=>'Rang Ikona',
+  'rank_name'=>'Ime Rang',
+  'really_delete'=>'Zaista obrisati ovaj link?',
+  'transaction_invalid'=>'ID Transakcija Nevažeća',
+  'update'=>'Ažuriranje',
+  'user_ranks'=>'KorisniČki-Činovi'
 );
 

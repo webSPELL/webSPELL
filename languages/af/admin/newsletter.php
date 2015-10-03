@@ -29,25 +29,23 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'error_send'=>'ERROR: Newsletter could not be send (Mailserver available?)',
-  'html_mail'=>'HTML-Mail',
-  'newsletter'=>'Newsletter',
-  'no_htmlmail'=>'Hello!
-Your System doesn\'t support HTML Mails.
-Your received following Message:',
-  'profile'=>'Profile',
-  'receptionists'=>'Newsletter was send!<br><br>Receptionist(s):',
-  'remove'=>'You can remove yourself from the mailing-list at your',
-  'send'=>'send Newsletter',
-  'send_to'=>'Send to',
-  'test'=>'test',
-  'test_newsletter'=>'Test Newsletter',
-  'title'=>'Title',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'user_clanmembers'=>'Clanmembers',
-  'user_newsletter'=>'Newsletter Subscriber',
-  'user_registered'=>'registered Users (incl. Clanmembers) ',
-  'users'=>'Users'
+  'access_denied'=>'Toegang geweier',
+  'error_send'=>'FOUT: Nuusbrief kon nie gestuur word (Pos bediener onbeskikbaar?)',
+  'html_mail'=>'HTML- Pos',
+  'newsletter'=>'Nuusbrief',
+  'no_htmlmail'=>'Hello! Jou System ondersteun nie HTML e-pos. Jy het die volgende boodskap ontvang:',
+  'profile'=>'Profiel',
+  'receptionists'=>'Nuusbrief gestuur <br> Ontvanger(s):',
+  'remove'=>'Jy kan jouself verwyder uit die pos-lys',
+  'send'=>'stuur Nuusbrief',
+  'send_to'=>'Stuur aan',
+  'test'=>'toets',
+  'test_newsletter'=>'Toets nuusbrief',
+  'title'=>'Titel',
+  'transaction_invalid'=>'Transaksie ID ongeldig',
+  'user_clanmembers'=>'Klan lede',
+  'user_newsletter'=>'Nuusbrief intekenaar',
+  'user_registered'=>'geregistreerde gebruikers (Klan Lede ingesluit.) ',
+  'users'=>'Gebruikers'
 );
 

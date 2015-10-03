@@ -29,24 +29,24 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'accesslevel'=>'Accesslevel',
-  'actions'=>'Actions',
-  'add_static_page'=>'add Static Page',
-  'clanmember_only'=>'Clanmembers only',
-  'content'=>'Content',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_static_page'=>'edit Static Page',
-  'title'=>'Title',
+  'access_denied'=>'Erişim Engellendi',
+  'accesslevel'=>'Erişim Seviyesi',
+  'actions'=>'Eylemler',
+  'add_static_page'=>'Statik Sayfa Ekle',
+  'clanmember_only'=>'sadece kalan üyeleri',
+  'content'=>'Içerik',
+  'delete'=>'sil',
+  'edit'=>'düzenle',
+  'edit_static_page'=>'Statik sayfayı düzenle',
+  'title'=>'Başlık',
   'id'=>'ID',
-  'new_static_page'=>'new Static Page',
-  'public'=>'Public',
-  'really_delete'=>'Really delete this Static Page?',
-  'registered_only'=>'registered Users only',
-  'static_pages'=>'Static Pages',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'you_can_use_html'=>'You can use HTML-Tags',
-  'tags'=>'Tags'
+  'new_static_page'=>'yeni Statik Sayfa',
+  'public'=>'Genel',
+  'really_delete'=>'Gerçekten bu Statik Sayfa silinsin mi ?',
+  'registered_only'=>'Sadece Kayıtlı Kullanıcılar',
+  'static_pages'=>'Statik Sayfalar',
+  'transaction_invalid'=>'İşlem kimliği/ID geçersiz',
+  'you_can_use_html'=>'HTML Etiketlerini kullanabilirsiniz',
+  'tags'=>'Etiketler'
 );
 

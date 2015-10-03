@@ -29,21 +29,21 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_category'=>'add Category',
-  'category'=>'Category',
-  'category_name'=>'Category Name',
-  'delete'=>'delete',
-  'description'=>'Description',
-  'edit'=>'edit',
-  'edit_category'=>'edit Category',
-  'faq_categories'=>'FAQ Categories',
-  'information_incomplete'=>'Some information is missing.',
-  'new_category'=>'new Category',
-  'really_delete'=>'Really delete this Category and the Category FAQs?',
-  'sort'=>'Sort',
-  'to_sort'=>'sort',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'دسترسی مجاز نیست',
+  'actions'=>'اعمال',
+  'add_category'=>'دسته را اضافه کن',
+  'category'=>'دسته بندی',
+  'category_name'=>'نام دسته',
+  'delete'=>'پاک کردن',
+  'description'=>'توضيحات',
+  'edit'=>'ویرایش',
+  'edit_category'=>'ویرایش دسته بندی',
+  'faq_categories'=>'دسته های سؤالات متداول',
+  'information_incomplete'=>'بعضی اطلاعات گم شده اند.',
+  'new_category'=>'دسته جدید',
+  'really_delete'=>'واقعاً این دسته و دسته ی سوالات متداول پاک شود؟',
+  'sort'=>'مرتب سازی',
+  'to_sort'=>'مرتب کردن',
+  'transaction_invalid'=>'شناسه معامله نا معتبر است'
 );
 

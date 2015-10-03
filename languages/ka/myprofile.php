@@ -47,9 +47,8 @@ $language_array = array(
     'cpu'=>'CPU',
     'date_of_birth' => 'დაბადების თარიღი',
     'deactivated' => 'გათიშვამდე',
-    'delete_max_90_90' => 'წაშლა (max90/90)',
-    'delete_max_230_210' => 'წაშლა (max230/210)',
-    'e-mail'=>'E-mail',
+    'delete' => 'წაშლა',
+    'e-mail'=>'ელ-ფოსტა',
     'edit_mail' => 'რედაქტირება E-Mail',
     'edit_password' => 'პაროლის რედაქტირება',
     'equipment-info' => 'შემცველობის ინფორმაცია',
@@ -119,7 +118,7 @@ $language_array = array(
     'repeat_new_email' => 'გაიმეორეთ E-Mail',
     'repeat_new_password' => 'გაიმეორეთ ახალი პაროლი',
     'repeated_pw_not_valid' => 'გამეორებული პაროლი არასწორია!',
-    'repeated_mail_not_valid'=>'your repeated e-mail is not equal!',
+    'repeated_mail_not_valid'=>'თქვენი განმეორებითი e-mail თანასწორი არ არის!',
     'sexuality' => 'სქესი',
     'signature' => 'ხელმოწერა',
     'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">სმაილები</a> ჩართულია',
@@ -138,6 +137,6 @@ $language_array = array(
     'you_have_to_nickname' => 'თქვენ უნდა შეიყვანოთ თქვენი მეტსახელი!',
     'you_have_to_username' => 'თქვენ უნდა შეიყვანოთ მომხლარებლის სახელი!',
     'you_have_to_valid_email' => 'თქვენი e-mail არ არის სწორი!',
-    'wrong_password'=>'Wrong password'
+    'wrong_password'=>'პაროლი არასწორია'
 );
 

@@ -29,20 +29,20 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_category'=>'add Category',
-  'category'=>'Category',
-  'category_name'=>'Category Name',
-  'delete'=>'delete',
-  'enter_name'=>'You must enter a Name',
-  'edit'=>'edit',
-  'edit_category'=>'edit Category',
-  'file_categories'=>'File Categories',
-  'main'=>'Main',
-  'new_category'=>'new Category',
-  'really_delete'=>'Really delete this Category?',
-  'sub_category'=>'Sub-Category of',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Toegang geweier',
+  'actions'=>'Aksies',
+  'add_category'=>'voeg Kategorie',
+  'category'=>'Kategorie',
+  'category_name'=>'Kategorie Naam',
+  'delete'=>'verwyder',
+  'enter_name'=>'Jy moet n naam invoer',
+  'edit'=>'wysig',
+  'edit_category'=>'wysig Kategorie',
+  'file_categories'=>'Lêer Kategorieë',
+  'main'=>'Hoof',
+  'new_category'=>'nuwe Kategorie',
+  'really_delete'=>'Verwyder hierdie kategorie Regtig?',
+  'sub_category'=>'Sub-Kategorie van',
+  'transaction_invalid'=>'Transaksie ID ongeldig'
 );
 

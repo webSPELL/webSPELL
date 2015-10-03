@@ -82,7 +82,7 @@ $language_array = array(
     'newreply_image' => '<img src="images/icons/newreply.gif" alt="reply">',
     'newtopic_image' => '<img src="images/icons/newtopic.gif" alt="new topic">',
     'next_7_days' => 'επομενες 7 ημερες',
-    'n_a'=>'n/a',
+    'n_a'=>'Μ/Δ',
     'no_access' => 'Απαγορευεται η προσβαση',
     'no_access_write' => 'Απαγορευεται να δημοσιευσετε σε αυτον τον πινακα.',
     'no_icon' => 'χωρις εικονιδιο',

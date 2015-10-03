@@ -29,20 +29,20 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_contact'=>'add Contact',
-  'contact'=>'Contacts',
-  'contact_name'=>'Contact Name',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_contact'=>'edit Contact',
-  'email'=>'E-Mail',
-  'information_incomplete'=>'Some information is missing.',
-  'new_contact'=>'new Contact',
-  'really_delete'=>'really delete this Contact?',
-  'sort'=>'Sort',
-  'to_sort'=>'sort',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'غير مسموح بالدخول',
+  'actions'=>'اجراءات',
+  'add_contact'=>'إضافة جهة اتصال',
+  'contact'=>'جهات الاتصال',
+  'contact_name'=>'اسم جهة الإتصال',
+  'delete'=>'حذف',
+  'edit'=>'تعديل',
+  'edit_contact'=>'تعديل جهة اتصال',
+  'email'=>'البريد الإلكتروني',
+  'information_incomplete'=>'بعض المعلومات مفقودة.',
+  'new_contact'=>'جهة اتصال جديدة',
+  'really_delete'=>'متأكد من حذف جهة الاتصال هذه ؟',
+  'sort'=>'ترتيب',
+  'to_sort'=>'ترتيب',
+  'transaction_invalid'=>'إجراء ID غير صالح'
 );
 

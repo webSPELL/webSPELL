@@ -29,20 +29,20 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_contact'=>'add Contact',
-  'contact'=>'Contacts',
-  'contact_name'=>'Contact Name',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_contact'=>'edit Contact',
-  'email'=>'E-Mail',
-  'information_incomplete'=>'Some information is missing.',
-  'new_contact'=>'new Contact',
-  'really_delete'=>'really delete this Contact?',
-  'sort'=>'Sort',
-  'to_sort'=>'sort',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Dostop zavrnjen',
+  'actions'=>'Ukrepi',
+  'add_contact'=>'Dodaj stik',
+  'contact'=>'Stiki',
+  'contact_name'=>'Ime stika',
+  'delete'=>'izbriši',
+  'edit'=>'uredi',
+  'edit_contact'=>'Uredi stik',
+  'email'=>'E-pošta',
+  'information_incomplete'=>'Manjka nekaj podatkov.',
+  'new_contact'=>'Nov stik',
+  'really_delete'=>'res želite izbrisati ta Stik?',
+  'sort'=>'Razvrsti',
+  'to_sort'=>'razvrsti',
+  'transaction_invalid'=>'Neveljaven transakcijski ID'
 );
 

@@ -29,25 +29,25 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'error_send'=>'ERROR: Newsletter could not be send (Mailserver available?)',
-  'html_mail'=>'HTML-Mail',
+  'access_denied'=>'Zugriff verwehrt',
+  'error_send'=>'FEHLER: Newsletter konnt net geschéckt ginn (Mailserver verhandelen?)',
+  'html_mail'=>'HTML-Noriicht',
   'newsletter'=>'Newsletter',
-  'no_htmlmail'=>'Hello!
-Your System doesn\'t support HTML Mails.
-Your received following Message:',
-  'profile'=>'Profile',
-  'receptionists'=>'Newsletter was send!<br><br>Receptionist(s):',
-  'remove'=>'You can remove yourself from the mailing-list at your',
-  'send'=>'send Newsletter',
-  'send_to'=>'Send to',
-  'test'=>'test',
-  'test_newsletter'=>'Test Newsletter',
-  'title'=>'Title',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'user_clanmembers'=>'Clanmembers',
-  'user_newsletter'=>'Newsletter Subscriber',
-  'user_registered'=>'registered Users (incl. Clanmembers) ',
-  'users'=>'Users'
+  'no_htmlmail'=>'Hallo!
+Däin System ënnerstëtzt keng HTML Mailen.
+Du hues folgend Noriicht kritt:',
+  'profile'=>'Profil',
+  'receptionists'=>'Newsletter geschéckt!<br><br>Empfänger(s):',
+  'remove'=>'Du kanns dech an dengem Profil selwer vun der Versandlëscht läschen',
+  'send'=>'Newsletter schécken',
+  'send_to'=>'Geschéckt un',
+  'test'=>'testen',
+  'test_newsletter'=>'Newsletter testen',
+  'title'=>'Titel',
+  'transaction_invalid'=>'Transactiouns ID net gülteg',
+  'user_clanmembers'=>'Clanmëmberen',
+  'user_newsletter'=>'Newsletter Abonnenten',
+  'user_registered'=>'registréiert Benotzer (inkl. Clanmatglidder) ',
+  'users'=>'Benotzer'
 );
 

@@ -29,10 +29,10 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'about'=>'About us',
-  'access_denied'=>'Access denied',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'update'=>'update',
-  'you_can_use_html'=>'You can use HTML-Tags'
+  'about'=>'O nama',
+  'access_denied'=>'Pristup zabranjen',
+  'transaction_invalid'=>'Transaction Id invalid',
+  'update'=>'Azururaj',
+  'you_can_use_html'=>'Mozes da koristis Html-plocice'
 );
 

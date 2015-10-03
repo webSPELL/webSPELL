@@ -29,21 +29,21 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_rubric'=>'add Rubric',
-  'back'=>'back',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_rubric'=>'edit Rubric',
-  'format_incorrect'=>'The format of the icon was incorrect. Please upload only banner in *.gif, *.jpg and *.png format.',
-  'information_incomplete'=>'Some information is missing.',
-  'new_rubric'=>'new Rubric',
-  'news_rubrics'=>'News Rubrics',
-  'picture'=>'Picture',
-  'picture_upload'=>'Picture Upload',
-  'really_delete'=>'Really delete this Rubric?',
-  'rubric_name'=>'Rubric Name',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'دسترسی مجاز نیست',
+  'actions'=>'اعمال',
+  'add_rubric'=>'افزودن دسته',
+  'back'=>'برگشت',
+  'delete'=>'پاک کردن',
+  'edit'=>'ویرایش',
+  'edit_rubric'=>'ویرایش دسته',
+  'format_incorrect'=>'پسوند آیکون اشتباه بود.لطفاً بنر هایی با پسوند های gif, *.jpg and *.png آپلود کنید.',
+  'information_incomplete'=>'بعضی اطلاعات گم شده اند.',
+  'new_rubric'=>'دسته جدید',
+  'news_rubrics'=>'اخبار دسته ها',
+  'picture'=>'تصویر',
+  'picture_upload'=>'آپلود تصویر',
+  'really_delete'=>'واقعاً این دسته پاک شود؟',
+  'rubric_name'=>'نام دسته',
+  'transaction_invalid'=>'شناسه معامله نا معتبر است'
 );
 

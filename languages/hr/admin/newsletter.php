@@ -29,25 +29,25 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'error_send'=>'ERROR: Newsletter could not be send (Mailserver available?)',
-  'html_mail'=>'HTML-Mail',
-  'newsletter'=>'Newsletter',
-  'no_htmlmail'=>'Hello!
-Your System doesn\'t support HTML Mails.
-Your received following Message:',
-  'profile'=>'Profile',
-  'receptionists'=>'Newsletter was send!<br><br>Receptionist(s):',
-  'remove'=>'You can remove yourself from the mailing-list at your',
-  'send'=>'send Newsletter',
-  'send_to'=>'Send to',
+  'access_denied'=>'Pristup nije dozvoljen',
+  'error_send'=>'Greška: Bilten nije mogao biti poslat (mail server dostupan?)',
+  'html_mail'=>'U HTML-mail',
+  'newsletter'=>'Bilten',
+  'no_htmlmail'=>'Pozdrav!
+Vaš sustav ne podržava HTML poruke.
+Svoj je dobio sljedeću poruku:',
+  'profile'=>'Profil',
+  'receptionists'=>'Newsletter je poslati!<br><br>Datalogger(s):',
+  'remove'=>'Možete sami ukloniti s popisa primatelja u vašem',
+  'send'=>'za slanje newsletter',
+  'send_to'=>'Pošalji',
   'test'=>'test',
   'test_newsletter'=>'Test Newsletter',
-  'title'=>'Title',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'user_clanmembers'=>'Clanmembers',
-  'user_newsletter'=>'Newsletter Subscriber',
-  'user_registered'=>'registered Users (incl. Clanmembers) ',
-  'users'=>'Users'
+  'title'=>'Naslov',
+  'transaction_invalid'=>'ID Transakcija nevažeća',
+  'user_clanmembers'=>'Članovi klana',
+  'user_newsletter'=>'Newsletter pretplatnici',
+  'user_registered'=>'registrirani korisnici (uklj. Clanmembers) ',
+  'users'=>'Korisnici'
 );
 

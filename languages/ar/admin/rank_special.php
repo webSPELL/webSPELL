@@ -26,8 +26,8 @@
 */
 
 $language_array = Array(
-	'used_for'=>'Used for',
-	'special_rank'=>'special rank',
-	'no_special_rank'=>'no special rank'
+	'used_for'=>'مستعمل ل',
+	'special_rank'=>'رتبة خاصة',
+	'no_special_rank'=>'ليست رتبة خاصة'
  );
  

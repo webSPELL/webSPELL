@@ -29,16 +29,16 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'error'=>'Server not update-compatible or File not available at',
-  'filename'=>'Filename',
-  'get_new_version'=>'Get the newest webSPELL Version here!',
-  'information'=>'Information',
-  'new_functions'=>'New Functions for webSPELL available',
-  'new_updates'=>'New Updates for webSPELL available',
-  'new_version'=>'New webSPELL Version available',
-  'no_updates'=>'No Updates available!',
-  'version'=>'Version',
-  'webspell_update'=>'webSPELL Update'
+  'access_denied'=>'غير مسموح بالدخول',
+  'error'=>'Server يتم تحديث متوافق أو الملف غير متوفر في',
+  'filename'=>'اسم الملف',
+  'get_new_version'=>'الحصول على أحدث webSPELL الإصدار هنا!',
+  'information'=>'معلومات',
+  'new_functions'=>'وظائف جديدة webSPELL المتاحة',
+  'new_updates'=>'تحديثات جديدة webSPELL المتاحة',
+  'new_version'=>'جديد webSPELL نسخة متوفرة',
+  'no_updates'=>'لا توجد تحديثات متوفرة!',
+  'version'=>'النسخة',
+  'webspell_update'=>'webSPELL التحديث'
 );
 

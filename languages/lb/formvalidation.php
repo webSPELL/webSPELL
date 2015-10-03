@@ -28,16 +28,16 @@
 $language_array = Array(
 
 /* do not edit above this line */
-    'file_too_big'=>'File too big',
-    'incomplete_upload'=>'Incomplete upload',
-    'no_file_uploaded'=>'No file uploaded',
-    'no_temp_folder_available'=>'No temporary folder available. Please contact the administrator',
-    'cant_write_temp_file'=>'Can\'t write temporary file. Please contact the administrator',
-    'unexpected_error'=>'Unexpected error',
-    'cant_copy_file'=>'Can\'t copy file. Please contact the administrator',
-    'image_too_big'=>'The image is too big (max size %1$d px & %2$d px)',
-    'broken_image'=>'The image file seems to be broken',
-    'unsupported_image_type'=>'Unsupported image type',
-    'errors_there'=>'There are errors',
-    'file_already_exists'=>'file already exists'
+    'file_too_big'=>'Datei ze grouss',
+    'incomplete_upload'=>'Onvollstännegen Upload',
+    'no_file_uploaded'=>'Keng Datei eroplueden',
+    'no_temp_folder_available'=>'Es stinn keng temporär Uerdner zur Verfügung. W.e.g. wendt Iech un den Administrator',
+    'cant_write_temp_file'=>'Temporär Datei kann net geschriwwen ginn. W.e.g. wend Iech un den Administrator',
+    'unexpected_error'=>'Onerwarteten Fehler',
+    'cant_copy_file'=>'Datei kann net kopéiert ginn. W.e.g. wend Iech un den Administrator',
+    'image_too_big'=>'D\'Bild ass ze grouss (max Gréisst %1$d px & %2$d px)',
+    'broken_image'=>'D\'Bilddatei schéngt futti ze sinn',
+    'unsupported_image_type'=>'Net ënnerstëtzten Bildtyp',
+    'errors_there'=>'Et gëtt Fehler',
+    'file_already_exists'=>'Datei existéiert schon'
 );

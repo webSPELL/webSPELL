@@ -29,12 +29,12 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'automatic'=>'Automatically',
-  'imprint'=>'Imprint',
-  'manual'=>'Manually (use the Textfield below)',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'update'=>'update',
-  'you_can_use_html'=>'You can use HTML-Tags'
+  'access_denied'=>'دسترسی مجاز نیست',
+  'automatic'=>'به طور خودکار',
+  'imprint'=>'مشخصات ناشر',
+  'manual'=>'دستی ( از محل نوشتن زیر استفاده کنید)',
+  'transaction_invalid'=>'شناسه معامله نا معتبر است',
+  'update'=>'به روز رسانی',
+  'you_can_use_html'=>'شما می توانید از تگ های HTML استفاده کنید'
 );
 

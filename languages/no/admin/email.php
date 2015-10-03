@@ -29,13 +29,13 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'auth'=>'Authentication',
-  'debug'=>'Debug Level',
-  'debug_0'=>'None',
-  'debug_1'=>'Commands',
-  'debug_2'=>'Commands + Data',
-  'debug_3'=>'Commands + Data + Connection Status',
+  'access_denied'=>'Ingen tilgang',
+  'auth'=>'Autentisering',
+  'debug'=>'Debug nivå',
+  'debug_0'=>'Ingen',
+  'debug_1'=>'Kommandoer',
+  'debug_2'=>'Kommandoer + Data',
+  'debug_3'=>'Kommandoer + Data + Tilkobling Status',
   'debug_4'=>'Low-level data output',
   'email'=>'eMail',
   'host'=>'Host',

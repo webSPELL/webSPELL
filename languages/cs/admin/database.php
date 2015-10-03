@@ -29,18 +29,18 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'allowed_commands'=>'<b>Allowed commands:</b> insert, alter table, select',
-  'backup_file'=>'Backup File',
-  'database'=>'Database',
-  'export'=>'Export/Download Backup',
-  'import_info'=>'Select a file where to import sql data from.<br><br><b>Important:</b> Create a backup before import another one!',
-  'optimize'=>'Optimize Database',
-  'select_option'=>'Please select Option',
-  'submit'=>'Submit',
-  'sql_query'=>'SQL Query',
-  'syntax_not_allowed'=>'Syntax not allowed!',
-  'upload'=>'Upload',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Přístup odepřen',
+  'allowed_commands'=>'<b>Povolené příkazy:</b> insert, alter table, select',
+  'backup_file'=>'Záložní Soubor',
+  'database'=>'Databáze',
+  'export'=>'Exportovat/Stáhnout zálohu',
+  'import_info'=>'Vyberte soubor, ze kterého chcete importovat SQL data.<br><br><b>Důležité:</b> Před importem si vytvořte zálohu!',
+  'optimize'=>'Optimalizovat Databázi',
+  'select_option'=>'Prosím, vyberte Možnost',
+  'submit'=>'Potvrdit',
+  'sql_query'=>'SQL Dotaz',
+  'syntax_not_allowed'=>'Syntaxe není povolená!',
+  'upload'=>'Nahrát',
+  'transaction_invalid'=>'ID transakce neplatná'
 );
 

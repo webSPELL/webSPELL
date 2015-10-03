@@ -29,7 +29,6 @@ $language_array = array(
 
 /* do not edit above this line */
 
-    'faq' => 'Usein Kysytyt Kysymykset',
     'admin_button' => 'FAQ Hallinto',
     'answer' => 'Vastaukset',
     'categories' => 'Kategoriat',

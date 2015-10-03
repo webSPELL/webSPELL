@@ -29,20 +29,20 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'add_rank'=>'add Rank',
-  'actions'=>'Actions',
-  'delete'=>'delete',
-  'edit_rank'=>'edit Rank',
-  'information_incomplete'=>'Some information is missing.',
-  'max_posts'=>'max. Posts',
-  'min_posts'=>'min. Posts',
-  'new_rank'=>'new Rank',
-  'rank_icon'=>'Rank Icon',
-  'rank_name'=>'Rank Name',
-  'really_delete'=>'Really delete this Rank?',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'update'=>'update',
-  'user_ranks'=>'User Ranks'
+  'access_denied'=>'غير مسموح بالدخول',
+  'add_rank'=>'إضافة رتبة',
+  'actions'=>'اجراءات',
+  'delete'=>'حذف',
+  'edit_rank'=>'تحرير رتبة',
+  'information_incomplete'=>'بعض المعلومات مفقودة.',
+  'max_posts'=>'حد. وظائف',
+  'min_posts'=>'ادنى رتبة',
+  'new_rank'=>'رتبة جديدة',
+  'rank_icon'=>'ايقونة الرتبة',
+  'rank_name'=>'اسم الرتبة',
+  'really_delete'=>'هل تريد حذف هذه الرتبة ؟',
+  'transaction_invalid'=>'إجراء ID غير صالح',
+  'update'=>'تحديث',
+  'user_ranks'=>'رتبة-المستخدم'
 );
 

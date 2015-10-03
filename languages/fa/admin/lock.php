@@ -29,16 +29,16 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'lock'=>'lock',
-  'locked_since'=>'The Page ist locked since',
-  'pagelock'=>'Pagelock',
-  'page_locked'=>'<b>Page locked!</b><br>Only Admins can access the Page now.',
-  'page_unlocked'=>'<b>Page unlocked!</b>',
-  'settings'=>'Settings',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'unlock'=>'unlock',
-  'unlock_page'=>'Do you want to unlock the Page?',
-  'you_can_use_html'=>'You can use HTML-Tags'
+  'access_denied'=>'دسترسی مجاز نیست',
+  'lock'=>'قفل',
+  'locked_since'=>'ای صفحه قفل شده است تا',
+  'pagelock'=>'قفل صفحه',
+  'page_locked'=>'<b>صفحه قفل شده است!</b><br>حالا فقط ادمین ها می توانند به این صفحه دسترسی داشته باشند.',
+  'page_unlocked'=>'<b>صفحه باز شد!</b>',
+  'settings'=>'تنظیمات',
+  'transaction_invalid'=>'شناسه معامله نا معتبر است',
+  'unlock'=>'باز کردن',
+  'unlock_page'=>'آیا می خواهید این صفحه را باز کنید؟',
+  'you_can_use_html'=>'شما می توانید از تگ های HTML استفاده کنید'
 );
 

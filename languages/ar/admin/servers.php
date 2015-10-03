@@ -29,22 +29,22 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'add_server'=>'add Server',
-  'actions'=>'Actions',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_server'=>'edit Server',
-  'game'=>'Game',
-  'info'=>'Info',
-  'ip_port'=>'Server IP:Port',
-  'new_server'=>'new Server',
-  'no_server'=>'No Servers available',
-  'really_delete'=>'Really delete this Server?',
-  'servers'=>'Servers',
-  'server_name'=>'Server Name',
-  'sort'=>'Sort',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'to_sort'=>'sort'
+  'access_denied'=>'غير مسموح بالدخول',
+  'add_server'=>'اضف سيرفر',
+  'actions'=>'اجراءات',
+  'delete'=>'حذف',
+  'edit'=>'تعديل',
+  'edit_server'=>'تعديل الخادم',
+  'game'=>'اللعبة',
+  'info'=>'المعلومات',
+  'ip_port'=>'مدخل IP الخادم',
+  'new_server'=>'خادم جديد',
+  'no_server'=>'لا الخوادم متاحة',
+  'really_delete'=>'فعلا حذف هذا الخادم ؟ ',
+  'servers'=>'خوادم',
+  'server_name'=>'اسم الخادم',
+  'sort'=>'الفرز',
+  'transaction_invalid'=>'إجراء ID غير صالح',
+  'to_sort'=>'ترتيب'
 );
 

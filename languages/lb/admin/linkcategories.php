@@ -29,17 +29,17 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_category'=>'add Category',
-  'category_name'=>'Category Name',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_category'=>'edit Category',
-  'information_incomplete'=>'Some information is missing.',
-  'link_categories'=>'Link Categories',
-  'new_category'=>'new Category',
-  'really_delete'=>'Really delete this Category and the Category Links?',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Zugriff verwehrt',
+  'actions'=>'Aktiounen',
+  'add_category'=>'Kategorie beifügen',
+  'category_name'=>'Kategorie Numm',
+  'delete'=>'ewechhuelen',
+  'edit'=>'beaarbechten',
+  'edit_category'=>'Kategorie bearbechten',
+  'information_incomplete'=>'Et fehlen en puur Informatiounen.',
+  'link_categories'=>'Link Kategorien',
+  'new_category'=>'nei Kategorie',
+  'really_delete'=>'Dës Kategorie inkl. vun allen Links wierklech läschen?',
+  'transaction_invalid'=>'Transactiouns ID net gülteg'
 );
 

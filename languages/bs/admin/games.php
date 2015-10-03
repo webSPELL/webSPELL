@@ -29,24 +29,24 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_game'=>'add Game',
-  'back'=>'back',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_game'=>'edit Game',
-  'fill_correctly'=>'Please fill in the form correctly.',
-  'format_incorrect'=>'The format of the icon was incorrect. Please upload only icons in *.gif format.',
-  'game_icon'=>'Game Icon',
-  'game_name'=>'Game Name',
-  'game_tag'=>'Game Tag',
-  'games'=>'Games',
-  'icons'=>'Icons',
-  'new_game'=>'new Game',
-  'no_entries'=>'No entries',
-  'present_icon'=>'present Icon',
-  'really_delete'=>'Really delete this Game?',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Pristup nije dozvoljen',
+  'actions'=>'Akcije',
+  'add_game'=>'dodaj igru',
+  'back'=>'nazad',
+  'delete'=>'izbrisati',
+  'edit'=>'uredi',
+  'edit_game'=>'Uredi igru',
+  'fill_correctly'=>'Molimo Vas da ispunite formular ispravno.',
+  'format_incorrect'=>'Format ikona je bio pogrešan. Molimo, preuzmite samo ikone u *.GIF format.',
+  'game_icon'=>'Ikona igre',
+  'game_name'=>'Naziv Igre',
+  'game_tag'=>'Tag igre',
+  'games'=>'Igre',
+  'icons'=>'Ikone',
+  'new_game'=>'nova igra',
+  'no_entries'=>'Nema unosa',
+  'present_icon'=>'Sadašnja ikona',
+  'really_delete'=>'Zaista izbrisati ovu igru?',
+  'transaction_invalid'=>'ID Transakcija Nevažeća'
 );
 

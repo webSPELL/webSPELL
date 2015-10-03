@@ -47,9 +47,9 @@ $language_array = Array(
   'max_18x12'=>'(Макс. 18x12)',
   'new_country'=>'Новая страна',
   'no_entries'=>'Нет записей',
-  'present_icon'=>'present Icon',
+  'present_icon'=>'Разместить иконку',
   'really_delete'=>'Действительно удалить эту страну?',
-  'shorthandle'=>'Shorthandle',
+  'shorthandle'=>'Сокр. название страны',
   'transaction_invalid'=>'Недопустимый идентификатор транзакции'
 );
 

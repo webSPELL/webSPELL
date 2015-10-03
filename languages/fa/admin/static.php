@@ -29,24 +29,24 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'accesslevel'=>'Accesslevel',
-  'actions'=>'Actions',
-  'add_static_page'=>'add Static Page',
-  'clanmember_only'=>'Clanmembers only',
-  'content'=>'Content',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_static_page'=>'edit Static Page',
-  'title'=>'Title',
-  'id'=>'ID',
-  'new_static_page'=>'new Static Page',
-  'public'=>'Public',
-  'really_delete'=>'Really delete this Static Page?',
-  'registered_only'=>'registered Users only',
-  'static_pages'=>'Static Pages',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'you_can_use_html'=>'You can use HTML-Tags',
-  'tags'=>'Tags'
+  'access_denied'=>'دسترسی مجاز نیست',
+  'accesslevel'=>'سطح دسترسی',
+  'actions'=>'اعمال',
+  'add_static_page'=>'افزودن صفحه آمار',
+  'clanmember_only'=>'فقط برای افراد کلن',
+  'content'=>'محتوا',
+  'delete'=>'پاک کردن',
+  'edit'=>'ویرایش',
+  'edit_static_page'=>'ویرایش صفحه آمار',
+  'title'=>'عنوان',
+  'id'=>'شناسه',
+  'new_static_page'=>'صفحه آمار جدید',
+  'public'=>'عمومی',
+  'really_delete'=>'واقعاً این صفحه آمار پاک شود؟',
+  'registered_only'=>'فقط برای کاربران عضو',
+  'static_pages'=>'صفحه آمار',
+  'transaction_invalid'=>'شناسه معامله نا معتبر است',
+  'you_can_use_html'=>'شما می توانید از تگ های HTML استفاده کنید',
+  'tags'=>'برچسب‌ها'
 );
 

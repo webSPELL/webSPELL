@@ -29,18 +29,18 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'allowed_commands'=>'<b>Allowed commands:</b> insert, alter table, select',
-  'backup_file'=>'Backup File',
+  'access_denied'=>'Ingen tilgang',
+  'allowed_commands'=>'<b>Tilatte kommandoer:</b> insert, alter table, select',
+  'backup_file'=>'Backup Fil',
   'database'=>'Database',
-  'export'=>'Export/Download Backup',
-  'import_info'=>'Select a file where to import sql data from.<br><br><b>Important:</b> Create a backup before import another one!',
-  'optimize'=>'Optimize Database',
-  'select_option'=>'Please select Option',
-  'submit'=>'Submit',
-  'sql_query'=>'SQL Query',
-  'syntax_not_allowed'=>'Syntax not allowed!',
-  'upload'=>'Upload',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'export'=>'Eksporter/Last ned Backup',
+  'import_info'=>'Velg filen du vil importere sql data fra.<br><br><b>Viktig:</b> Ta backup før du importerer flere!',
+  'optimize'=>'Optimaliser Databasen',
+  'select_option'=>'Vennligst velg et av alternativene',
+  'submit'=>'Send',
+  'sql_query'=>'SQL-Spørring',
+  'syntax_not_allowed'=>'Syntaks ikke tillatt!',
+  'upload'=>'Last opp',
+  'transaction_invalid'=>'Transaksjons-ID\'en er ugyldig'
 );
 

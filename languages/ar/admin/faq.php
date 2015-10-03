@@ -29,23 +29,24 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_faq'=>'add FAQ',
-  'answer'=>'Answer',
-  'category'=>'Category',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_faq'=>'edit FAQ',
-  'faq'=>'FAQ',
-  'information_incomplete'=>'Some information is missing.',
-  'new_faq'=>'new FAQ',
-  'no_category_selected'=>'You forgot to select a Category',
-  'no_faq_selected'=>'No FAQ Category selected',
-  'really_delete'=>'Really delete this FAQ?',
-  'sort'=>'Sort',
-  'to_sort'=>'sort',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'tags'=>'Tags'
+  'access_denied'=>'ممنوع الدخول',
+  'actions'=>'اجراءات',
+  'add_faq'=>'اضافة سؤال شائع',
+  'answer'=>'الاجابة',
+  'category'=>'فئة',
+  'delete'=>'حذف',
+  'edit'=>'تعديل',
+  'edit_faq'=>'تعديل سؤال شائع',
+  'faq'=>' سؤال شائع',
+  'information_incomplete'=>'بعض المعلومات مفقودة.',
+  'new_faq'=>' سؤال شائع جديد
+',
+  'no_category_selected'=>'نسيت تحديد الفئة',
+  'no_faq_selected'=>'لم تختار فئة الاسئلة الشائعة',
+  'really_delete'=>'هل تريد فعلا حذف الاسئلة الشائعة ؟',
+  'sort'=>'الترتيب',
+  'to_sort'=>'ترتيب',
+  'transaction_invalid'=>'إجراء ID غير صالح',
+  'tags'=>'وسوم'
 );
 

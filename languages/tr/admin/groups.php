@@ -29,19 +29,19 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_group'=>'add Group',
-  'back'=>'back',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_group'=>'edit Group',
-  'error_group'=>'ERROR: No Group Name',
-  'error_groupid'=>'ERROR: Missing fgrID',
-  'group_name'=>'Group Name',
-  'groups'=>'Forum User Groups',
-  'new_group'=>'new Group',
-  'really_delete'=>'Really delete this Forum Group?',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Erişim Engellendi',
+  'actions'=>'Eylemler',
+  'add_group'=>'Grup ekle',
+  'back'=>'geri',
+  'delete'=>'sil',
+  'edit'=>'düzenle',
+  'edit_group'=>'Grubu düzenle',
+  'error_group'=>'HATA: Grup adı yok',
+  'error_groupid'=>'HATA: Eksik fgrID',
+  'group_name'=>'Grup Adı',
+  'groups'=>'Forum Kullanıcı Grupları',
+  'new_group'=>'Yeni Grup',
+  'really_delete'=>'Gerçekten bu Forum Grubu silinsin mi?',
+  'transaction_invalid'=>'İşlem kimliği/ID geçersiz'
 );
 

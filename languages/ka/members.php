@@ -42,7 +42,7 @@ $language_array = array(
     'members' => 'მონაწილეები',
     'nickname' => 'მეტსახელი',
     'no_description' => 'არ არის აღწერა ხელმისაწვდომი',
-    'no_entries'=>'no entries available',
+    'no_entries'=>'არ არის ჩანაწერი ხელმისაწვდომი',
     'position' => 'პოზიცია',
     'results' => 'შედეგები',
     'show_details' => '&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>დეტალების ჩვენება</b></a>',

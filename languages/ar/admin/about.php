@@ -29,10 +29,10 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'about'=>'About us',
-  'access_denied'=>'Access denied',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'update'=>'update',
-  'you_can_use_html'=>'You can use HTML-Tags'
+  'about'=>'من نحن',
+  'access_denied'=>'ممنوع الدخول',
+  'transaction_invalid'=>'إجراء ID غير صالح',
+  'update'=>'تحديث',
+  'you_can_use_html'=>'يمكنك استخدام HTML-Tags'
 );
 

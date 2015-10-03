@@ -29,20 +29,20 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_language'=>'add Language',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_language'=>'edit Language',
-  'flag'=>'Flags',
-  'information_incomplete'=>'Some information is missing.',
-  'language'=>'Language',
-  'news_languages'=>'News-Languages',
-  'new_language'=>'new Language',
-  'preview'=>'Preview',
-  'really_delete'=>'Really delete this Language?',
-  'title'=>'Title',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Erişim Engellendi',
+  'actions'=>'Eylemler',
+  'add_language'=>'Dil Ekle',
+  'delete'=>'sil',
+  'edit'=>'düzenle',
+  'edit_language'=>'Dili düzenle',
+  'flag'=>'Bayraklar',
+  'information_incomplete'=>'Bazı bilgiler eksik.',
+  'language'=>'Dil',
+  'news_languages'=>'Haber Dilleri',
+  'new_language'=>'yeni Dil',
+  'preview'=>'Önizleme',
+  'really_delete'=>'Gerçekten bu Dili silinsin mi?',
+  'title'=>'Başlık',
+  'transaction_invalid'=>'İşlem kimliği/ID geçersiz'
 );
 

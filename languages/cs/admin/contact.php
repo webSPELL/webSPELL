@@ -29,20 +29,20 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
+  'access_denied'=>'Přístup odepřen',
   'actions'=>'Actions',
-  'add_contact'=>'add Contact',
-  'contact'=>'Contacts',
-  'contact_name'=>'Contact Name',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_contact'=>'edit Contact',
+  'add_contact'=>'přidat Kontakt',
+  'contact'=>'Kontakty',
+  'contact_name'=>'Kontaktní Jméno',
+  'delete'=>'smazat',
+  'edit'=>'upravit',
+  'edit_contact'=>'upravit Kontakt',
   'email'=>'E-Mail',
-  'information_incomplete'=>'Some information is missing.',
-  'new_contact'=>'new Contact',
-  'really_delete'=>'really delete this Contact?',
-  'sort'=>'Sort',
-  'to_sort'=>'sort',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'information_incomplete'=>'Některé informace chybí.',
+  'new_contact'=>'nový Kontakt',
+  'really_delete'=>'opravdu chcete smazat tento Kontakt?',
+  'sort'=>'Seřadit',
+  'to_sort'=>'seřadit',
+  'transaction_invalid'=>'ID transakce neplatná'
 );
 

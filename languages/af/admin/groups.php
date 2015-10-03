@@ -29,19 +29,19 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_group'=>'add Group',
-  'back'=>'back',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_group'=>'edit Group',
-  'error_group'=>'ERROR: No Group Name',
-  'error_groupid'=>'ERROR: Missing fgrID',
-  'group_name'=>'Group Name',
-  'groups'=>'Forum User Groups',
-  'new_group'=>'new Group',
-  'really_delete'=>'Really delete this Forum Group?',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Toegang verbied',
+  'actions'=>'Aksies',
+  'add_group'=>'voeg Group',
+  'back'=>'trug',
+  'delete'=>'verwyder',
+  'edit'=>'wysig',
+  'edit_group'=>'wysig Group',
+  'error_group'=>'FOUT: Geen Groep Naam',
+  'error_groupid'=>'FOUT: ontbrekende fgrID',
+  'group_name'=>'Groep Naam',
+  'groups'=>'Forum gebruiker groepe',
+  'new_group'=>'nuwe groep',
+  'really_delete'=>'Regtig hierdie Forum Groep verwyder?',
+  'transaction_invalid'=>'Transaksie ID ongeldig'
 );
 

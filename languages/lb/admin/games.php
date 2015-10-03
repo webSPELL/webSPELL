@@ -29,24 +29,24 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_game'=>'add Game',
-  'back'=>'back',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_game'=>'edit Game',
-  'fill_correctly'=>'Please fill in the form correctly.',
-  'format_incorrect'=>'The format of the icon was incorrect. Please upload only icons in *.gif format.',
-  'game_icon'=>'Game Icon',
-  'game_name'=>'Game Name',
-  'game_tag'=>'Game Tag',
-  'games'=>'Games',
+  'access_denied'=>'Zugriff verwehrt',
+  'actions'=>'Aktiounen',
+  'add_game'=>'Spill bäifügen',
+  'back'=>'zeréck',
+  'delete'=>'ewechhuelen',
+  'edit'=>'beaarbechten',
+  'edit_game'=>'Spill änneren',
+  'fill_correctly'=>'W.e.g. fëllt Formular korrekt aus.',
+  'format_incorrect'=>'Format vum Icon ass net korrekt. W.e.g. lued en Icon am *.gif format erop.',
+  'game_icon'=>'Spill Symbol',
+  'game_name'=>'Spill Numm',
+  'game_tag'=>'Spill Kierzel',
+  'games'=>'Spiller',
   'icons'=>'Icons',
-  'new_game'=>'new Game',
-  'no_entries'=>'No entries',
-  'present_icon'=>'present Icon',
-  'really_delete'=>'Really delete this Game?',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'new_game'=>'néit Spill',
+  'no_entries'=>'Keng Anträg',
+  'present_icon'=>'Aktuell Icon',
+  'really_delete'=>'Dëst Spill wiirklech läschen?',
+  'transaction_invalid'=>'Transactiouns ID net gülteg'
 );
 

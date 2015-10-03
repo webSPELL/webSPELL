@@ -29,7 +29,6 @@ $language_array = array(
 
 /* do not edit above this line */
 
-    'faq' => 'Часто Задаваемые Вопросы',
     'admin_button' => 'FAQ Администрация',
     'answer' => 'Ответить',
     'categories' => 'Категории',

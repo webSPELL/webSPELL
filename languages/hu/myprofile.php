@@ -47,9 +47,8 @@ $language_array = array(
     'cpu'=>'CPU',
     'date_of_birth' => 'Születésnap',
     'deactivated' => 'kikapcsolva',
-    'delete_max_90_90' => 'törlés (max90/90)',
-    'delete_max_230_210' => 'törlés (max230/210)',
-    'e-mail'=>'E-mail',
+    'delete' => 'törlés',
+    'e-mail'=>'E-Mail',
     'edit_mail' => 'E-Mail szerkesztése',
     'edit_password' => 'jelszó megváltoztatása',
     'equipment-info' => 'Konfiguráció',
@@ -119,7 +118,7 @@ Köszönjük érdeklődésed
     'repeat_new_email' => 'új E-Mail cím megismétlése',
     'repeat_new_password' => 'új jelszó megismétlése',
     'repeated_pw_not_valid' => 'a megismételt jelszó nem érvényes!',
-    'repeated_mail_not_valid'=>'your repeated e-mail is not equal!',
+    'repeated_mail_not_valid'=>'Ismétlődő e-mail nem egyenlő!',
     'sexuality' => 'Nem',
     'signature' => 'Aláírás',
     'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Hangulatjelek</a> Bekapcsolva',
@@ -138,6 +137,6 @@ Köszönjük érdeklődésed
     'you_have_to_nickname' => 'Írd be a beceneved!',
     'you_have_to_username' => 'Írd be a felhesználóneved!',
     'you_have_to_valid_email' => 'Az e-mail címed nem érvényes!',
-    'wrong_password'=>'Wrong password'
+    'wrong_password'=>'Hibás jelszó'
 );
 

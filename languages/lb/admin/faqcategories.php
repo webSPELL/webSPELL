@@ -29,21 +29,21 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_category'=>'add Category',
-  'category'=>'Category',
-  'category_name'=>'Category Name',
-  'delete'=>'delete',
-  'description'=>'Description',
-  'edit'=>'edit',
-  'edit_category'=>'edit Category',
-  'faq_categories'=>'FAQ Categories',
-  'information_incomplete'=>'Some information is missing.',
-  'new_category'=>'new Category',
-  'really_delete'=>'Really delete this Category and the Category FAQs?',
-  'sort'=>'Sort',
-  'to_sort'=>'sort',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Zugriff verwehrt',
+  'actions'=>'Aktiounen',
+  'add_category'=>'Kategorie beifügen',
+  'category'=>'Kategorie',
+  'category_name'=>'Kategorie Numm',
+  'delete'=>'ewechhuelen',
+  'description'=>'Beschreiwung',
+  'edit'=>'beaarbechten',
+  'edit_category'=>'Kategorie bearbechten',
+  'faq_categories'=>'FAQ Kategorien',
+  'information_incomplete'=>'Et fehlen en puur Informatiounen.',
+  'new_category'=>'nei Kategorie',
+  'really_delete'=>'Dës Kategorie inklusiv aller FAQen läschen?',
+  'sort'=>'Sortéierung',
+  'to_sort'=>'sortéieren',
+  'transaction_invalid'=>'Transactiouns ID net gülteg'
 );
 

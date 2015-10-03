@@ -29,10 +29,10 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'history'=>'Clan-History',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'update'=>'update',
-  'you_can_use_html'=>'You can use HTML-Tags'
+  'access_denied'=>'دسترسی مجاز نیست',
+  'history'=>'تاریخچه کلن',
+  'transaction_invalid'=>'شناسه معامله نا معتبر است',
+  'update'=>'به روز رسانی',
+  'you_can_use_html'=>'شما می توانید از تگ های HTML استفاده کنید'
 );
 

@@ -47,8 +47,7 @@ $language_array = array(
     'cpu'=>'CPU',
     'date_of_birth' => 'Ημερομηνια Γεννησης',
     'deactivated' => 'απενεργοποιηθεί',
-    'delete_max_90_90' => 'διαγραφη (max90/90)',
-    'delete_max_230_210' => 'διαγραφη  (max230/210)',
+    'delete' => 'διαγραφή',
     'e-mail'=>'E-mail',
     'edit_mail' => 'επεξεργασια E-Mail',
     'edit_password' => 'επεξεργασια κωδικου',
@@ -119,7 +118,7 @@ $language_array = array(
     'repeat_new_email' => 'επαναληψη νεου E-Mail',
     'repeat_new_password' => 'επαναληψη νεου κωδικου',
     'repeated_pw_not_valid' => 'η επαναληψη νεου κωδικου ειναι λαθος!',
-    'repeated_mail_not_valid'=>'your repeated e-mail is not equal!',
+    'repeated_mail_not_valid'=>'επαναλαμβανόμενη e-mail σας δεν είναι ίσοι!',
     'sexuality' => 'Φυλο',
     'signature' => 'Υπογραφη',
     'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> ειναι ενεργο',
@@ -138,6 +137,6 @@ $language_array = array(
     'you_have_to_nickname' => 'Πρεπει να εισαγετε ψευδονυμο!',
     'you_have_to_username' => 'Πρεπει να εισαγετε ονομα χρηστη!',
     'you_have_to_valid_email' => 'Το e-mail σας δεν ειναι εγκυρο!',
-    'wrong_password'=>'Wrong password'
+    'wrong_password'=>'Λάθος κωδικός πρόσβασης'
 );
 

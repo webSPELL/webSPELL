@@ -29,21 +29,21 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_category'=>'add Category',
-  'category'=>'Category',
-  'category_name'=>'Category Name',
-  'delete'=>'delete',
-  'description'=>'Description',
-  'edit'=>'edit',
-  'edit_category'=>'edit Category',
-  'faq_categories'=>'FAQ Categories',
-  'information_incomplete'=>'Some information is missing.',
-  'new_category'=>'new Category',
-  'really_delete'=>'Really delete this Category and the Category FAQs?',
-  'sort'=>'Sort',
-  'to_sort'=>'sort',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Pristup nije dozvoljen',
+  'actions'=>'Akcije',
+  'add_category'=>'Dodaj kategoriju',
+  'category'=>'Kategorija',
+  'category_name'=>'Ime kategorije',
+  'delete'=>'izbrisati',
+  'description'=>'Opis',
+  'edit'=>'uredi',
+  'edit_category'=>'Uređivanje Kategorije',
+  'faq_categories'=>'Pitanja i odgovori po kategorijama',
+  'information_incomplete'=>'Neke informacije nedostaju.',
+  'new_category'=>'Nova kategorija',
+  'really_delete'=>'Zaista izbrisati ovu kategoriju i odjeljak često postavljana pitanja?',
+  'sort'=>'Razvrstaj',
+  'to_sort'=>'Razvrstaj',
+  'transaction_invalid'=>'ID transakcije nevažeće'
 );
 

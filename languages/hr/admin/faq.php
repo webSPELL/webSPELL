@@ -29,23 +29,24 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_faq'=>'add FAQ',
-  'answer'=>'Answer',
-  'category'=>'Category',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_faq'=>'edit FAQ',
-  'faq'=>'FAQ',
-  'information_incomplete'=>'Some information is missing.',
-  'new_faq'=>'new FAQ',
-  'no_category_selected'=>'You forgot to select a Category',
-  'no_faq_selected'=>'No FAQ Category selected',
-  'really_delete'=>'Really delete this FAQ?',
-  'sort'=>'Sort',
-  'to_sort'=>'sort',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'tags'=>'Tags'
+  'access_denied'=>'Pristup nije dozvoljen',
+  'actions'=>'Radnje',
+  'add_faq'=>'Dodati u FAQ',
+  'answer'=>'Odgovor',
+  'category'=>'Kategorija',
+  'delete'=>'izbrisati',
+  'edit'=>'uredi',
+  'edit_faq'=>'uređivanje pitanja i odgovora',
+  'faq'=>'Pitanja i odgovori',
+  'information_incomplete'=>'Neki podaci nedostaju.',
+  'new_faq'=>'novi FAQ',
+  'no_category_selected'=>'Zaboravili ste odabrali kategoriju',
+  'no_faq_selected'=>'Nema FAQ odabranoj kategoriji',
+  'really_delete'=>'Zaista izbrisati ovaj FAQ?',
+  'sort'=>'Sortiraj',
+  'to_sort'=>'Sortiraj
+',
+  'transaction_invalid'=>'ID Transakcija Nevažeća',
+  'tags'=>'Oznake'
 );
 

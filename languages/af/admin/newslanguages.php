@@ -29,20 +29,20 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_language'=>'add Language',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_language'=>'edit Language',
-  'flag'=>'Flags',
-  'information_incomplete'=>'Some information is missing.',
-  'language'=>'Language',
-  'news_languages'=>'News-Languages',
-  'new_language'=>'new Language',
-  'preview'=>'Preview',
-  'really_delete'=>'Really delete this Language?',
-  'title'=>'Title',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Toegang verbied',
+  'actions'=>'Aksies',
+  'add_language'=>'voeg taal',
+  'delete'=>'verwyder',
+  'edit'=>'wysig',
+  'edit_language'=>'wysig taal',
+  'flag'=>'Vlae',
+  'information_incomplete'=>'Sommige inligting ontbreek.',
+  'language'=>'Taal',
+  'news_languages'=>'Nuus-Tale',
+  'new_language'=>'nuwe taal',
+  'preview'=>'Voorskou',
+  'really_delete'=>'Taal regtig verwyder?',
+  'title'=>'Titel',
+  'transaction_invalid'=>'Transaksie ID ongeldig'
 );
 

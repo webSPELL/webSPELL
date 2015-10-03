@@ -56,7 +56,7 @@ $language_array = Array(
   'group_name'=>'Название группы',
   'information_incomplete'=>'Некоторая информация отсутствует.',
   'name'=>'Название',
-  'need_group'=>'You have to create at least one gallery group before creating any galleries.',
+  'need_group'=>'Вы должны создать хотя бы одну группу , прежде чем создавать какие либо галереи.',
   'new_gallery'=>'новая галерея',
   'new_group'=>'Новая группа',
   'per_form'=>'по Форме',
@@ -70,7 +70,8 @@ $language_array = Array(
   'to_sort'=>'Сортировать',
   'upload'=>'Загрузить',
   'usergalleries'=>'Галерея пользователей',
-  'usergallery_of'=>'Usergallery of',
+  'usergallery_of'=>'Галерея пользователя 
+',
   'visitor_comments'=>'Комментарии посетителей',
 	'no_thumb'=>'Без иконок'
 );

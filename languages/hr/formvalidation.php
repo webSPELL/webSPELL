@@ -28,16 +28,16 @@
 $language_array = Array(
 
 /* do not edit above this line */
-    'file_too_big'=>'File too big',
-    'incomplete_upload'=>'Incomplete upload',
-    'no_file_uploaded'=>'No file uploaded',
-    'no_temp_folder_available'=>'No temporary folder available. Please contact the administrator',
-    'cant_write_temp_file'=>'Can\'t write temporary file. Please contact the administrator',
-    'unexpected_error'=>'Unexpected error',
-    'cant_copy_file'=>'Can\'t copy file. Please contact the administrator',
-    'image_too_big'=>'The image is too big (max size %1$d px & %2$d px)',
-    'broken_image'=>'The image file seems to be broken',
-    'unsupported_image_type'=>'Unsupported image type',
-    'errors_there'=>'There are errors',
-    'file_already_exists'=>'file already exists'
+    'file_too_big'=>'Datoteka je prevelika',
+    'incomplete_upload'=>'Nepotpune',
+    'no_file_uploaded'=>'Nema datoteka',
+    'no_temp_folder_available'=>'Nema privremenog direktorija na raspolaganju. Kontaktirajte administratora',
+    'cant_write_temp_file'=>'Ne mogu snimiti privremenu datoteku. Kontaktirajte administratora',
+    'unexpected_error'=>'Neočekivana greška',
+    'cant_copy_file'=>'Ne mogu kopirati datoteku. Kontaktirajte administratora',
+    'image_too_big'=>'Slika prevelika (Max Veličina %1$d RH & %2$d RH)',
+    'broken_image'=>'Datoteku slike, čini se da je slomljen',
+    'unsupported_image_type'=>'Tip slike nije podržan',
+    'errors_there'=>'Postoje greške',
+    'file_already_exists'=>'Dokument već postoji'
 );

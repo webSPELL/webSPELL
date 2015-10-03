@@ -29,21 +29,21 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_rubric'=>'add Rubric',
-  'back'=>'back',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_rubric'=>'edit Rubric',
-  'format_incorrect'=>'The format of the icon was incorrect. Please upload only banner in *.gif, *.jpg and *.png format.',
-  'information_incomplete'=>'Some information is missing.',
-  'new_rubric'=>'new Rubric',
-  'news_rubrics'=>'News Rubrics',
-  'picture'=>'Picture',
-  'picture_upload'=>'Picture Upload',
-  'really_delete'=>'Really delete this Rubric?',
-  'rubric_name'=>'Rubric Name',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Erişim Engellendi',
+  'actions'=>'Eylemler',
+  'add_rubric'=>'Başlık ekle',
+  'back'=>'geri',
+  'delete'=>'sil',
+  'edit'=>'düzenle',
+  'edit_rubric'=>'Başlığı düzenle',
+  'format_incorrect'=>'Simge biçimi yanlış. Lütfen sadece .gif, *.jpg ve *.png formatında banner yükleyin.',
+  'information_incomplete'=>'Bazı bilgiler eksik.',
+  'new_rubric'=>'Yeni Başlık',
+  'news_rubrics'=>'Haber Başlıkları',
+  'picture'=>'Resim',
+  'picture_upload'=>'Resim Yükleme',
+  'really_delete'=>'Gerçekten bu Başlık silinsin mi?',
+  'rubric_name'=>'Başlık adı',
+  'transaction_invalid'=>'İşlem kimliği/ID geçersiz'
 );
 

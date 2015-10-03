@@ -29,17 +29,17 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_category'=>'add Category',
-  'category_name'=>'Category Name',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_category'=>'edit Category',
-  'information_incomplete'=>'Some information is missing.',
-  'link_categories'=>'Link Categories',
-  'new_category'=>'new Category',
-  'really_delete'=>'Really delete this Category and the Category Links?',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'غير مسموح بالدخول',
+  'actions'=>'اجراءات',
+  'add_category'=>'إضافة فئة',
+  'category_name'=>'اسم الفئة',
+  'delete'=>'حذف',
+  'edit'=>'تعديل',
+  'edit_category'=>'تحرير الفئة',
+  'information_incomplete'=>'بعض المعلومات مفقودة.',
+  'link_categories'=>'فئات الرابط',
+  'new_category'=>'فئة جديدة',
+  'really_delete'=>'حقا حذف هذه الفئة و الفئة الشائعة ؟',
+  'transaction_invalid'=>'إجراء ID غير صالح'
 );
 

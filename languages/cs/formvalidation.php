@@ -28,16 +28,16 @@
 $language_array = Array(
 
 /* do not edit above this line */
-    'file_too_big'=>'File too big',
-    'incomplete_upload'=>'Incomplete upload',
-    'no_file_uploaded'=>'No file uploaded',
-    'no_temp_folder_available'=>'No temporary folder available. Please contact the administrator',
-    'cant_write_temp_file'=>'Can\'t write temporary file. Please contact the administrator',
-    'unexpected_error'=>'Unexpected error',
-    'cant_copy_file'=>'Can\'t copy file. Please contact the administrator',
-    'image_too_big'=>'The image is too big (max size %1$d px & %2$d px)',
-    'broken_image'=>'The image file seems to be broken',
-    'unsupported_image_type'=>'Unsupported image type',
+    'file_too_big'=>'Soubor je příliš velký',
+    'incomplete_upload'=>'Neúplné nahrání',
+    'no_file_uploaded'=>'Žádné nahrané soubory',
+    'no_temp_folder_available'=>'Dočasná složka není k dispozici. Prosím, obraťte se na správce',
+    'cant_write_temp_file'=>'Nelze zapsat dočasný soubor. Prosím, obraťte se na správce',
+    'unexpected_error'=>'Neočekávaná chyba',
+    'cant_copy_file'=>'Nelze kopírovat soubor. Obraťte se na správce',
+    'image_too_big'=>'Obrázek je příliš velký (maximální velikost %1$d px & %2$d px)',
+    'broken_image'=>'Soubor obrázku se zdá být poškozený',
+    'unsupported_image_type'=>'Nepodporovaný typ obrázku',
     'errors_there'=>'There are errors',
-    'file_already_exists'=>'file already exists'
+    'file_already_exists'=>'soubor již existuje'
 );

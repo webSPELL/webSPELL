@@ -29,12 +29,12 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'automatic'=>'Automatically',
+  'access_denied'=>'Dostęp zabroniony',
+  'automatic'=>'Automatycznie',
   'imprint'=>'Imprint',
   'manual'=>'Manually (use the Textfield below)',
   'transaction_invalid'=>'Transaction ID invalid',
-  'update'=>'update',
+  'update'=>'aktualizacja',
   'you_can_use_html'=>'You can use HTML-Tags'
 );
 

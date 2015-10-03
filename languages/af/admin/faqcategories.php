@@ -29,21 +29,21 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_category'=>'add Category',
-  'category'=>'Category',
-  'category_name'=>'Category Name',
-  'delete'=>'delete',
-  'description'=>'Description',
-  'edit'=>'edit',
-  'edit_category'=>'edit Category',
-  'faq_categories'=>'FAQ Categories',
-  'information_incomplete'=>'Some information is missing.',
-  'new_category'=>'new Category',
-  'really_delete'=>'Really delete this Category and the Category FAQs?',
-  'sort'=>'Sort',
-  'to_sort'=>'sort',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Toegang geweier',
+  'actions'=>'Aksies',
+  'add_category'=>'voeg Kategorie',
+  'category'=>'Kategorie',
+  'category_name'=>'Kategorie Naam',
+  'delete'=>'verwyder',
+  'description'=>'Beskrywing',
+  'edit'=>'wysig',
+  'edit_category'=>'wysig Kategorie',
+  'faq_categories'=>'Vrae Kategorieë',
+  'information_incomplete'=>'Sommige inligting ontbreek.',
+  'new_category'=>'nuwe Kategorie',
+  'really_delete'=>'Regtig hierdie kategorie en die kategorie FAQs verwyder?',
+  'sort'=>'Sorteer',
+  'to_sort'=>'sorteer',
+  'transaction_invalid'=>'Transaksie ID ongeldig'
 );
 

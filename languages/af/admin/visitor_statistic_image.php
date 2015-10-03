@@ -29,9 +29,9 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'max'=>'Maximum',
+  'access_denied'=>'Toegang verbied',
+  'max'=>'Maksimum',
   'min'=>'Minimum',
-  'not_logged_in'=>'You are not logged in'
+  'not_logged_in'=>'Jy is nie aangemeld nie'
 );
 

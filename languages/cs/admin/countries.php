@@ -29,27 +29,27 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
+  'access_denied'=>'Přístup odepřen',
   'actions'=>'Actions',
-  'add_country'=>'add Country',
-  'back'=>'back',
-  'countries'=>'Countries',
+  'add_country'=>'přidat Zemi',
+  'back'=>'zpět',
+  'countries'=>'Země',
   'country'=>'Country',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_country'=>'edit Country',
-  'favorite'=>'Favorite',
-  'fill_correctly'=>'Please fill in the form correctly.',
-  'format_incorrect'=>'The format of the icon was incorrect. Please upload only icons in *.gif format.',
-  'icon'=>'Icon',
-  'icons'=>'Icons',
+  'delete'=>'smazat',
+  'edit'=>'upravit',
+  'edit_country'=>'upravit Zem',
+  'favorite'=>'Oblíbené',
+  'fill_correctly'=>'Prosím, vyplňte formulář správně.',
+  'format_incorrect'=>'Formát ikony není správný. Prosím, nahrajte ikony pouze ve formátu *.gif.',
+  'icon'=>'Ikona',
+  'icons'=>'Ikony',
   'icon_upload'=>'Icon Upload',
   'max_18x12'=>'(max. 18x12)',
   'new_country'=>'new Country',
   'no_entries'=>'No entries',
   'present_icon'=>'present Icon',
-  'really_delete'=>'Really delete this Country?',
+  'really_delete'=>'Opravdu chcete smazat tuto Zemi?',
   'shorthandle'=>'Shorthandle',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'transaction_invalid'=>'ID transakce neplatná'
 );
 

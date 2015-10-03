@@ -29,21 +29,21 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_rubric'=>'add Rubric',
-  'back'=>'back',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_rubric'=>'edit Rubric',
-  'format_incorrect'=>'The format of the icon was incorrect. Please upload only banner in *.gif, *.jpg and *.png format.',
-  'information_incomplete'=>'Some information is missing.',
-  'new_rubric'=>'new Rubric',
-  'news_rubrics'=>'News Rubrics',
-  'picture'=>'Picture',
-  'picture_upload'=>'Picture Upload',
-  'really_delete'=>'Really delete this Rubric?',
-  'rubric_name'=>'Rubric Name',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Toegang verbied',
+  'actions'=>'Aksies',
+  'add_rubric'=>'voeg Rubriek',
+  'back'=>'trug',
+  'delete'=>'verwyder',
+  'edit'=>'wysig',
+  'edit_rubric'=>'wysig Rubriek',
+  'format_incorrect'=>'Die formaat van die ikoon was verkeerd. Laai asseblief net banier in * Gif, jpg * en * Png formaat.',
+  'information_incomplete'=>'Sommige inligting ontbreek.',
+  'new_rubric'=>'nuwe Rubriek',
+  'news_rubrics'=>'Nuus Rubrieke',
+  'picture'=>'Prente',
+  'picture_upload'=>'Prentjie oplaai',
+  'really_delete'=>'Rubriek Regtig verwyder?',
+  'rubric_name'=>'Rubriek Naam',
+  'transaction_invalid'=>'Transaksie ID ongeldig'
 );
 

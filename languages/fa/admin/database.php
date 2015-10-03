@@ -29,18 +29,18 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'allowed_commands'=>'<b>Allowed commands:</b> insert, alter table, select',
-  'backup_file'=>'Backup File',
-  'database'=>'Database',
-  'export'=>'Export/Download Backup',
-  'import_info'=>'Select a file where to import sql data from.<br><br><b>Important:</b> Create a backup before import another one!',
-  'optimize'=>'Optimize Database',
-  'select_option'=>'Please select Option',
-  'submit'=>'Submit',
+  'access_denied'=>'دسترسی مجاز نیست',
+  'allowed_commands'=>'<b>نظرات مجاز:</b> وارد کردن ، تغییر جدول ، انتخاب',
+  'backup_file'=>'تهیه پشتیبان از فایل',
+  'database'=>'پایگاه داده',
+  'export'=>'دانلود فایل پشتیبان',
+  'import_info'=>'یک فایل را برای وارد کردن اطلاعات SQL از آن انتخاب کنید.<br><br><b> مهم:</b> قبل از وارد کردن اطلاعات جدید یک فایل پشتیبان تهیه کنید!',
+  'optimize'=>'بهینه سازی پایگاه داده ها',
+  'select_option'=>'لطفاً گزینه ای را انتخاب کنید',
+  'submit'=>'ثبت',
   'sql_query'=>'SQL Query',
-  'syntax_not_allowed'=>'Syntax not allowed!',
-  'upload'=>'Upload',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'syntax_not_allowed'=>'ترکیب مجاز نیست!',
+  'upload'=>'آپلود',
+  'transaction_invalid'=>'شناسه معامله نا معتبر است'
 );
 

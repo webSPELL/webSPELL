@@ -29,21 +29,21 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_rubric'=>'add Rubric',
-  'back'=>'back',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_rubric'=>'edit Rubric',
-  'format_incorrect'=>'The format of the icon was incorrect. Please upload only banner in *.gif, *.jpg and *.png format.',
-  'information_incomplete'=>'Some information is missing.',
-  'new_rubric'=>'new Rubric',
-  'news_rubrics'=>'News Rubrics',
-  'picture'=>'Picture',
-  'picture_upload'=>'Picture Upload',
-  'really_delete'=>'Really delete this Rubric?',
-  'rubric_name'=>'Rubric Name',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Pristup nije dozvoljen',
+  'actions'=>'Radnje',
+  'add_rubric'=>'dodaj novu kategoriju',
+  'back'=>'Povratak',
+  'delete'=>'izbrisati',
+  'edit'=>'uredi',
+  'edit_rubric'=>'uredi kategoriju',
+  'format_incorrect'=>'Format ikone je netočna. Prenesite samo banner u * .gif, * .jpg i * .png formatu.',
+  'information_incomplete'=>'Neka informacija nedostaje.',
+  'new_rubric'=>'nova rubrika',
+  'news_rubrics'=>'Kategorije Vijesti',
+  'picture'=>'Slika',
+  'picture_upload'=>'Dodaj sliku',
+  'really_delete'=>'Zaista izbrisati ovu kategoriju?',
+  'rubric_name'=>'Naziv Kategorije',
+  'transaction_invalid'=>'ID Transakcija nevažeća'
 );
 

@@ -29,18 +29,18 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'allowed_commands'=>'<b>Allowed commands:</b> insert, alter table, select',
-  'backup_file'=>'Backup File',
-  'database'=>'Database',
-  'export'=>'Export/Download Backup',
-  'import_info'=>'Select a file where to import sql data from.<br><br><b>Important:</b> Create a backup before import another one!',
-  'optimize'=>'Optimize Database',
-  'select_option'=>'Please select Option',
-  'submit'=>'Submit',
-  'sql_query'=>'SQL Query',
-  'syntax_not_allowed'=>'Syntax not allowed!',
-  'upload'=>'Upload',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'غير مسموح بالدخول',
+  'allowed_commands'=>'<b>يسمح الأوامر:</b> إدراج أو تغيير الجدول, حدد',
+  'backup_file'=>'ملف النسخ الاحتياطي',
+  'database'=>'قاعدة البيانات',
+  'export'=>'التصدير/تحميل النسخ الاحتياطي',
+  'import_info'=>'حدد ملف استيراد البيانات sql من.<br><br><b>هام:</b> إنشاء نسخة احتياطية قبل الاستيراد واحد آخر!',
+  'optimize'=>'تحسين قاعدة البيانات',
+  'select_option'=>'الرجاء تحديد الخيارات',
+  'submit'=>'إعتماد',
+  'sql_query'=>'استعلام SQL',
+  'syntax_not_allowed'=>'بناء جملة غير مسموح به!',
+  'upload'=>'رفع',
+  'transaction_invalid'=>'إجراء ID غير صالح'
 );
 

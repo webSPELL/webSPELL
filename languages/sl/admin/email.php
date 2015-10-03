@@ -29,7 +29,7 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
+  'access_denied'=>'Dostop zavrnjen',
   'auth'=>'Authentication',
   'debug'=>'Debug Level',
   'debug_0'=>'None',
@@ -40,8 +40,8 @@ $language_array = Array(
   'email'=>'eMail',
   'host'=>'Host',
   'html'=>'HTML?',
-  'password'=>'Password',
-  'port'=>'SMTP Port',
+  'password'=>'Geslo',
+  'port'=>'SMTP Vrata',
   'secure'=>'Secure connection',
   'secure_none'=>'None',
   'secure_tls'=>'TLS',

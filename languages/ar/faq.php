@@ -29,7 +29,6 @@ $language_array = array(
 
 /* do not edit above this line */
 
-    'faq' => 'أسئلة مكررة',
     'admin_button' => 'ادارة الاسئلة الاكثر شيوعا',
     'answer' => 'الاجابة',
     'categories' => 'التصنيفات',

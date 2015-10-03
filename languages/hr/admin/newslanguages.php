@@ -29,20 +29,20 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_language'=>'add Language',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_language'=>'edit Language',
-  'flag'=>'Flags',
-  'information_incomplete'=>'Some information is missing.',
-  'language'=>'Language',
-  'news_languages'=>'News-Languages',
-  'new_language'=>'new Language',
-  'preview'=>'Preview',
-  'really_delete'=>'Really delete this Language?',
-  'title'=>'Title',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Pristup nije dozvoljen',
+  'actions'=>'Radnje',
+  'add_language'=>'dodaj Jezik',
+  'delete'=>'izbrisati',
+  'edit'=>'uredi',
+  'edit_language'=>'promijeni Jezik',
+  'flag'=>'Zastave',
+  'information_incomplete'=>'Neka informacija nedostaje.',
+  'language'=>'Jezik',
+  'news_languages'=>'Vijesti-jezici',
+  'new_language'=>'novi jezik',
+  'preview'=>'Pregled',
+  'really_delete'=>'Zaista izbrisati ovaj jezik?',
+  'title'=>'Prevod',
+  'transaction_invalid'=>'ID Transakcija Nevažeća'
 );
 

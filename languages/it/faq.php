@@ -29,7 +29,6 @@ $language_array = array(
 
 /* do not edit above this line */
 
-    'faq' => 'Domande frequenti',
     'admin_button' => 'FAQ Amministrazione',
     'answer' => 'Risposta',
     'categories' => 'Categorie',

@@ -30,11 +30,11 @@ $language_array = Array(
 /* do not edit above this line */
 
   'access_denied'=>'Přístup odepřen',
-  'accesslevel'=>'Access',
+  'accesslevel'=>'Přístup',
   'actions'=>'Úpravy',
   'add_category'=>'Přidat kategorii',
   'add_link'=>'Přidat odkaz',
-  'addons'=>'Addons',
+  'addons'=>'Doplňky',
   'admin_any'=>'Admin',
   'admin_cash'=>'Cash-Admin',
   'admin_clanwar'=>'Správce zápasů',
@@ -53,8 +53,8 @@ $language_array = Array(
   'cat_main'=>'Hlavní panel',
   'cat_rubrics'=>'Rubriky/Kategorie',
   'cat_settings'=>'Nastavení',
-  'cat_spam'=>'Spam',
-  'cat_user'=>'User Administration',
+  'cat_spam'=>'Nevyžádané',
+  'cat_user'=>'Správce uživatelů',
   'category'=>'Kategorie',
   'delete'=>'smazat',
   'edit'=>'upravit',
@@ -64,11 +64,11 @@ $language_array = Array(
   'new_category'=>'nová kategorie',
   'new_link'=>'nový odkaz',
   'really_delete_category'=>'Opravdu chcete smazat tuto kategorii?',
-  'really_delete_link'=>'Really delete this Link?',
+  'really_delete_link'=>'Opravdu smazat tento Odkaz?',
   'sort'=>'Seřadit',
-  'transaction_invalid'=>'Transaction ID invalid',
+  'transaction_invalid'=>'ID transakce neplatná',
   'to_sort'=>'seřadit',
   'url'=>'Url',
-  'no_additional_links_available'=>'no additional links available'
+  'no_additional_links_available'=>'žádné další odkazy k dispozici'
 );
 
