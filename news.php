@@ -348,7 +348,7 @@ if ($action == "new") {
     $time = getformattime($ds[ 'date' ]);
     $rubrikname = getrubricname($ds[ 'rubric' ]);
     $rubrikname_link = getinput(getrubricname($ds[ 'rubric' ]));
-    $rubricpic = '<img src="images/news-rubrics/' . getrubricpic($ds[ 'rubric' ]) . '" alt="">';
+    $rubricpic = '<img src="images/news-rubrics/' . getrubricpic($ds[ 'rubric' ]) . '" class="img-responsive" alt="">';
     if (!file_exists($rubricpic)) {
         $rubricpic = '';
     }
