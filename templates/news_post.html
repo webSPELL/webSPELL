@@ -165,133 +165,146 @@
 </head>
 <body>
 <div class="container">
-<form action="news.php?action=save" method="post" enctype="multipart/form-data" id="post" name="post"
-    onsubmit="return chkFormular();">
-    <input type="hidden" name="userID" value="$userID">
-    <input type="hidden" name="newsID" value="$newsID">
-    <div class="pull-right">
+    <form action="news.php?action=save" class="form" method="post" enctype="multipart/form-data" id="post" name="post"
+        onsubmit="return chkFormular();">
+        <input type="hidden" name="userID" value="$userID">
+        <input type="hidden" name="newsID" value="$newsID">
+        <div class="pull-right">
             <input type="submit" class="btn btn-info" name="preview" value="%preview%">
             <input name="save" class="btn btn-success" type="submit" value="%save_news%">
             <input name="button" class="btn btn-danger" type="button" onclick="window.close()" value="%cancel%">
         </div>
         <h2>%new_post%</h2>
-
-
         <div class="panel-group" id="accordion">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
-                        href="#collapse-three">%options%</a>
-                    </h4>
-                </div>
-                <div id="collapse-three" class="panel-collapse collapse in">
-                    <div class="panel-body">
-                        <div class="form-group">
-                            <label class="control-label">%rubric%:</label>
-                            <select name="rubric">$rubrics</select>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">%languages%:</label>
-                            %post_languages%
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">%topnews%:</label>
-                            <select name="topnews">$topnews</select>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">%intern%:</label>
-                            <select name="intern">$intern</select>
-                        </div>
-                        <div class="form-group">
-                            <input name="button" type="button" class="btn btn-danger" onclick="window.open(
-                                'upload.php?newsID=$newsID',
-                                'Upload',
-                                'scrollbars=yes,width=800,height=600')" value="%upload_images%">
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">%tags%</label>
-                            <input type="text" class="form-control" name="tags" value="$tags">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
+                            href="#collapse-three">%options%</a>
+                        </h4>
+                    </div>
+                    <div id="collapse-three" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <div class="form-group">
+                                        <label class="control-label">%rubric%:</label>
+                                        <select name="rubric">$rubrics</select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">%topnews%:</label>
+                                        <select name="topnews">$topnews</select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">%intern%:</label>
+                                        <select name="intern">$intern</select>
+                                    </div>
+                                </div>
+                                <div class="col-xs-8">
+                                    <div class="form-group">
+                                        <input name="button" type="button" class="btn btn-danger" onclick="window.open(
+                                    'upload.php?newsID=$newsID',
+                                    'Upload',
+                                    'scrollbars=yes,width=800,height=600')" value="%upload_images%">
+                                    </div>
+                                    <div class="form-group">
+                                        <select name="comments">$comments</select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label class="control-label">%tags%</label>
+                                        <input type="text" class="form-control" name="tags" value="$tags">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
+                            href="#collapse-two">%links%</a>
+                        </h4>
+                    </div>
+                    <div id="collapse-two" class="panel-collapse collapse">
+                        <table class="table">
+                            <tr>
+                                <td><label class="control-label">%link% 1:</label></td>
+                                <td><input name="link1" type="text" value="$link1" class="form-control"></td>
+                                <td>
+                                    <input name="url1" type="text" value="$url1" placeholder="http://" class="form-control">
+                                </td>
+                                <td><label class="control-label">$window1 %new_window%</label></td>
+                            </tr>
+
+                            <tr>
+                                <td><label class="control-label">%link% 2:</label></td>
+                                <td><input name="link2" type="text" value="$link2" class="form-control"></td>
+                                <td>
+                                    <input name="url2" type="text" value="$url2" placeholder="http://" class="form-control">
+                                </td>
+                                <td><label class="control-label">$window2 %new_window%</label></td>
+                            </tr>
+
+                            <tr>
+                                <td><label class="control-label">%link% 3:</label></td>
+                                <td><input name="link3" type="text" value="$link3" class="form-control"></td>
+                                <td>
+                                    <input name="url3" type="text" value="$url3" placeholder="http://" class="form-control">
+                                </td>
+                                <td><label class="control-label">$window3 %new_window%</label></td>
+                            </tr>
+
+                            <tr>
+                                <td><label class="control-label">%link% 4:</label></td>
+                                <td><input name="link4" type="text" value="$link4" class="form-control"></td>
+                                <td>
+                                    <input name="url4" type="text" value="$url4" placeholder="http://" class="form-control">
+                                </td>
+                                <td><label class="control-label">$window4 %new_window%</label></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
+                            href="#collapse-one">BBCode and Flags</a>
+                        </h4>
+                    </div>
+                    <div id="collapse-one" class="panel-collapse collapse">
+                        $addbbcode
+                        $addflags
+                    </div>
+                </div>
             </div>
-
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
-                        href="#collapse-two">%links%</a>
-                    </h4>
-                </div>
-                <div id="collapse-two" class="panel-collapse collapse">
-                    <table class="table">
-                        <tr>
-                            <td><label class="control-label">%link% 1:</label></td>
-                            <td><input name="link1" type="text" value="$link1" class="form-control"></td>
-                            <td>
-                                <input name="url1" type="text" value="$url1" placeholder="http://" class="form-control">
-                            </td>
-                            <td><label class="control-label">$window1 %new_window%</label></td>
-                        </tr>
-
-                        <tr>
-                            <td><label class="control-label">%link% 2:</label></td>
-                            <td><input name="link2" type="text" value="$link2" class="form-control"></td>
-                            <td>
-                                <input name="url2" type="text" value="$url2" placeholder="http://" class="form-control">
-                            </td>
-                            <td><label class="control-label">$window2 %new_window%</label></td>
-                        </tr>
-
-                        <tr>
-                            <td><label class="control-label">%link% 3:</label></td>
-                            <td><input name="link3" type="text" value="$link3" class="form-control"></td>
-                            <td>
-                                <input name="url3" type="text" value="$url3" placeholder="http://" class="form-control">
-                            </td>
-                            <td><label class="control-label">$window3 %new_window%</label></td>
-                        </tr>
-
-                        <tr>
-                            <td><label class="control-label">%link% 4:</label></td>
-                            <td><input name="link4" type="text" value="$link4" class="form-control"></td>
-                            <td>
-                                <input name="url4" type="text" value="$url4" placeholder="http://" class="form-control">
-                            </td>
-                            <td><label class="control-label">$window4 %new_window%</label></td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
-                        href="#collapse-one">BBCode and Flags</a>
-                    </h4>
-                </div>
-                <div id="collapse-one" class="panel-collapse collapse">
-                    $addbbcode
-                    $addflags
-                </div>
-            </div>
-        </div>
         <div class="row">
-            <div class="col-md-10">
+            <div class="col-md-12">
+                <div class="pull-left">
+                    <label class="control-label">%languages%:</label>%post_languages%
+                </div>
                 <p class="text-right">
-                    <small><strong>%options%:</strong> %html% <a href="javascript:void(0);" onclick="window.open(
-                                'code.php',
-                                'BBCode',
-                                'scrollbars=yes,width=600,height=500')">%bbcode%</a> <a href="javascript:void(0);" onclick="window.open(
-                                    'smileys.php',
-                                    'Smileys',
-                                    'scrollbars=yes,width=340,height=500')">%smilies%</a></small>
+                    <strong>%options%:</strong> %html% <a href="javascript:void(0);" onclick="window.open(
+                                    'code.php',
+                                    'BBCode',
+                                    'scrollbars=yes,width=600,height=500')">%bbcode%</a> <a href="javascript:void(0);" onclick="window.open(
+                                        'smileys.php',
+                                        'Smileys',
+                                        'scrollbars=yes,width=340,height=500')">%smilies%</a>
                 </p>
 
                 <div id="news-textarea"></div>
-
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
                 <div class="pull-right">
                     <input type="submit" class="btn btn-info" name="preview" value="%preview%">
                     <input name="save" class="btn btn-success" type="submit" value="%save_news%">
