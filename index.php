@@ -38,7 +38,7 @@ $hide1 = array("forum", "forum_topic");
 header('X-UA-Compatible: IE=edge,chrome=1');
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="<?php echo $_language->language ?>">
 <head>
     <?php
     if (
