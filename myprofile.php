@@ -333,7 +333,7 @@ if (!$userID) {
             $error = $_language->module['repeated_pw_not_valid'];
         }
 
-        if (!empty($error)) {
+        if (empty($error)) {
             $newmd5pwd = generatePasswordHash(stripslashes($pwd1));
             safe_query("UPDATE " . PREFIX . "user SET password='" . $newmd5pwd . "' WHERE userID='" . $userID . "'");
             //logout
