@@ -29,7 +29,7 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
+  'access_denied'=>'Dostęp zabroniony',
   'allowed_commands'=>'<b>Allowed commands:</b> insert, alter table, select',
   'backup_file'=>'Backup File',
   'database'=>'Database',

@@ -47,7 +47,7 @@ $language_array = array(
     'cpu'=>'CPU',
     'date_of_birth' => 'Datum rojstva',
     'deactivated' => 'deaktivira',
-    'delete' => 'delete',
+    'delete' => 'brisanje',
     'e-mail'=>'E-mail',
     'edit_mail' => 'Spreminjanje e-mail',
     'edit_password' => 'Spremeni geslo',
@@ -118,7 +118,7 @@ Zahvaljujemo se vam za vaše zanimanje
     'repeat_new_email' => 'Ponovi novi e-mail',
     'repeat_new_password' => 'Ponovite novo geslo',
     'repeated_pw_not_valid' => 'Vaš ponovi geslo ni pravilno vpisana!',
-    'repeated_mail_not_valid'=>'your repeated e-mail is not equal!',
+    'repeated_mail_not_valid'=>'vaš ponovi e-pošte, to ni enako!',
     'sexuality' => 'Spol',
     'signature' => 'Podpis',
     'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smajlići\',\'scrollbars=yes,width=340,height=500\')">Smejkoti</a> vključeno',
@@ -137,6 +137,6 @@ Zahvaljujemo se vam za vaše zanimanje
     'you_have_to_nickname' => 'Morate vnesti svoj nick!',
     'you_have_to_username' => 'Morate vnesti uporabniško ime!',
     'you_have_to_valid_email' => 'Vaš e-mail ni veljavna!',
-    'wrong_password'=>'Wrong password'
+    'wrong_password'=>'Napačno geslo'
 );
 

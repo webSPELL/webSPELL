@@ -29,17 +29,17 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_category'=>'add Category',
-  'category_name'=>'Category Name',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_category'=>'edit Category',
-  'information_incomplete'=>'Some information is missing.',
-  'link_categories'=>'Link Categories',
-  'new_category'=>'new Category',
-  'really_delete'=>'Really delete this Category and the Category Links?',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Acces interzis',
+  'actions'=>'Acţiuni',
+  'add_category'=>'adaugă Categorie',
+  'category_name'=>'Nume Categorie',
+  'delete'=>'Şterge',
+  'edit'=>'editează',
+  'edit_category'=>'editează Categoria',
+  'information_incomplete'=>'Unele date lipsesc.',
+  'link_categories'=>'Categorii de link-uri',
+  'new_category'=>'categorie nouă',
+  'really_delete'=>'Chiar doriți să stergeți această categorie și link-urile acestei categorii?',
+  'transaction_invalid'=>'ID-ul tranzacției este invalid'
 );
 

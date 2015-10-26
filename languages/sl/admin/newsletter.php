@@ -29,25 +29,25 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'error_send'=>'ERROR: Newsletter could not be send (Mailserver available?)',
+  'access_denied'=>'Dostop zavrnjen',
+  'error_send'=>'NAPAKA: Glasilo ni bilo mogoče poslati (Mailserver na voljo?)',
   'html_mail'=>'HTML-Mail',
-  'newsletter'=>'Newsletter',
-  'no_htmlmail'=>'Hello!
-Your System doesn\'t support HTML Mails.
-Your received following Message:',
-  'profile'=>'Profile',
-  'receptionists'=>'Newsletter was send!<br><br>Receptionist(s):',
-  'remove'=>'You can remove yourself from the mailing-list at your',
-  'send'=>'send Newsletter',
-  'send_to'=>'Send to',
+  'newsletter'=>'Novice',
+  'no_htmlmail'=>'Pozdravljeni!
+Vaš Sistem ne podpira HTML e-Poštna sporočila.
+Prejeli naslednje Sporočilo:',
+  'profile'=>'Profil',
+  'receptionists'=>'Glasilo je bilo pošlji!<br><br>Receptorka (- e):',
+  'remove'=>'Lahko se odstranijo iz mailing listo, na',
+  'send'=>'pošlji Novice',
+  'send_to'=>'Pošlji',
   'test'=>'test',
-  'test_newsletter'=>'Test Newsletter',
-  'title'=>'Title',
-  'transaction_invalid'=>'Transaction ID invalid',
+  'test_newsletter'=>'Test Novice',
+  'title'=>'Naslov',
+  'transaction_invalid'=>'Posel neveljaven ID',
   'user_clanmembers'=>'Clanmembers',
-  'user_newsletter'=>'Newsletter Subscriber',
-  'user_registered'=>'registered Users (incl. Clanmembers) ',
-  'users'=>'Users'
+  'user_newsletter'=>'Newsletter Naročnik',
+  'user_registered'=>'registrirani Uporabniki (incl. Clanmembers) ',
+  'users'=>'uporabniki'
 );
 

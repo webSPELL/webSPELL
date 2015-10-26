@@ -29,16 +29,16 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'error'=>'Server not update-compatible or File not available at',
-  'filename'=>'Filename',
-  'get_new_version'=>'Get the newest webSPELL Version here!',
-  'information'=>'Information',
-  'new_functions'=>'New Functions for webSPELL available',
-  'new_updates'=>'New Updates for webSPELL available',
-  'new_version'=>'New webSPELL Version available',
-  'no_updates'=>'No Updates available!',
-  'version'=>'Version',
-  'webspell_update'=>'webSPELL Update'
+  'access_denied'=>'Priėeiga atmestas',
+  'error'=>'serveri neatnaujinamas- suderinamų failų nėra',
+  'filename'=>'Failo pavadinimas',
+  'get_new_version'=>'Gauti naujausią webSPELL versiją čia',
+  'information'=>'Informacija',
+  'new_functions'=>'Nauja webSPELL fukncija galima',
+  'new_updates'=>'Galimas naujas webSPELL atnaujinimas',
+  'new_version'=>'Galima nauja webSPELL versija',
+  'no_updates'=>'Jokie atnaujinimai negalimi',
+  'version'=>'Versija',
+  'webspell_update'=>'webSPELL atnaujinimas'
 );
 

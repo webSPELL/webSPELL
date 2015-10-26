@@ -47,8 +47,8 @@ $language_array = array(
     'cpu'=>'CPU',
     'date_of_birth' => 'Data urodzenia',
     'deactivated' => 'wyłączona',
-    'delete' => 'delete',
-    'e-mail'=>'E-mail',
+    'delete' => 'usuń',
+    'e-mail'=>'Adres e-mail',
     'edit_mail' => 'edytuj E-Mail',
     'edit_password' => 'edytuj hasło',
     'equipment-info' => 'Informacje o sprzęcie',
@@ -118,7 +118,7 @@ Thank you for your interest
     'repeat_new_email' => 'powtórz nowy E-Mail',
     'repeat_new_password' => 'powtórz nowe hasło',
     'repeated_pw_not_valid' => 'powtórzone hasł jest niepoprawne!',
-    'repeated_mail_not_valid'=>'your repeated e-mail is not equal!',
+    'repeated_mail_not_valid'=>'Oba maile się różnią!',
     'sexuality' => 'Płeć',
     'signature' => 'Sygnatura',
     'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Emotikonki</a> są Włączone',
@@ -137,6 +137,6 @@ Thank you for your interest
     'you_have_to_nickname' => 'Musisz wpisać nick!',
     'you_have_to_username' => 'Musisz wpisać nazwę użytkownika!',
     'you_have_to_valid_email' => 'Twój e-mail jest niepoprawny!',
-    'wrong_password'=>'Wrong password'
+    'wrong_password'=>'Złe hasło'
 );
 

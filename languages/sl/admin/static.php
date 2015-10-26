@@ -29,24 +29,24 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
+  'access_denied'=>'Dostop zavrnjen',
   'accesslevel'=>'Accesslevel',
-  'actions'=>'Actions',
-  'add_static_page'=>'add Static Page',
-  'clanmember_only'=>'Clanmembers only',
-  'content'=>'Content',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_static_page'=>'edit Static Page',
-  'title'=>'Title',
+  'actions'=>'Akcije',
+  'add_static_page'=>'dodajanje Statičnih Strani',
+  'clanmember_only'=>'samo za člane klana',
+  'content'=>'Vsebina',
+  'delete'=>'brisanje',
+  'edit'=>'uredi',
+  'edit_static_page'=>'urejanje Statičnih Strani',
+  'title'=>'Naslov',
   'id'=>'ID',
-  'new_static_page'=>'new Static Page',
-  'public'=>'Public',
-  'really_delete'=>'Really delete this Static Page?',
-  'registered_only'=>'registered Users only',
-  'static_pages'=>'Static Pages',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'you_can_use_html'=>'You can use HTML-Tags',
-  'tags'=>'Tags'
+  'new_static_page'=>'novo Statične Strani',
+  'public'=>'Javno',
+  'really_delete'=>'Res želite izbrisati ta Statične Strani?',
+  'registered_only'=>'samo registrirani Uporabniki',
+  'static_pages'=>'Statične Strani',
+  'transaction_invalid'=>'Posel neveljaven ID',
+  'you_can_use_html'=>'Lahko uporabite HTML-Oznake',
+  'tags'=>'Oznake'
 );
 

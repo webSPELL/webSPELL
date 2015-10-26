@@ -29,24 +29,24 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_game'=>'add Game',
-  'back'=>'back',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_game'=>'edit Game',
-  'fill_correctly'=>'Please fill in the form correctly.',
-  'format_incorrect'=>'The format of the icon was incorrect. Please upload only icons in *.gif format.',
-  'game_icon'=>'Game Icon',
-  'game_name'=>'Game Name',
-  'game_tag'=>'Game Tag',
-  'games'=>'Games',
-  'icons'=>'Icons',
-  'new_game'=>'new Game',
-  'no_entries'=>'No entries',
-  'present_icon'=>'present Icon',
-  'really_delete'=>'Really delete this Game?',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Piekļuve liegta',
+  'actions'=>'Darbības',
+  'add_game'=>'pievienot Spēli',
+  'back'=>'atpakaļ',
+  'delete'=>'dzēst',
+  'edit'=>'rediģēt',
+  'edit_game'=>'rediģēt Spēli',
+  'fill_correctly'=>'Lūdzu, aizpildiet formu pareizi.',
+  'format_incorrect'=>'Ikonas formāts  ir nepareizs. Lūdzu, augšupielādējiet tikai ikonas * .gif formātā.',
+  'game_icon'=>'Spēles Ikonas',
+  'game_name'=>'Spēles Nosaukums',
+  'game_tag'=>'Spēle Tags',
+  'games'=>'Spēles',
+  'icons'=>'Ikonas',
+  'new_game'=>'jaunas Spēles',
+  'no_entries'=>'Nav ierakstu',
+  'present_icon'=>'klāt Ikona',
+  'really_delete'=>'Vai tiešām izdzēst šo Spēli?',
+  'transaction_invalid'=>'Nederīgs ID darījums'
 );
 

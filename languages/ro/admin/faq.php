@@ -29,23 +29,23 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_faq'=>'add FAQ',
-  'answer'=>'Answer',
-  'category'=>'Category',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_faq'=>'edit FAQ',
-  'faq'=>'FAQ',
-  'information_incomplete'=>'Some information is missing.',
-  'new_faq'=>'new FAQ',
-  'no_category_selected'=>'You forgot to select a Category',
-  'no_faq_selected'=>'No FAQ Category selected',
-  'really_delete'=>'Really delete this FAQ?',
-  'sort'=>'Sort',
-  'to_sort'=>'sort',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'tags'=>'Tags'
+  'access_denied'=>'Acces interzis',
+  'actions'=>'Acţiuni',
+  'add_faq'=>'adaugă întrebări frecvente FAQ',
+  'answer'=>'Răspuns',
+  'category'=>'Categorie',
+  'delete'=>'Şterge',
+  'edit'=>'editează',
+  'edit_faq'=>'editează întrebări frecvente FAQ',
+  'faq'=>'întrebări frecvente FAQ',
+  'information_incomplete'=>'Unele date lipsesc.',
+  'new_faq'=>'întrebări frecvente FAQ noi',
+  'no_category_selected'=>'Ai uitat să selectezi o categorie',
+  'no_faq_selected'=>'Nu ați selectat nici o categorie cu întrebări frecvente FAQ',
+  'really_delete'=>'Chiar doriți să ștergeți aceste întrebări frecvente FAQ?',
+  'sort'=>'Sortează',
+  'to_sort'=>'sortează',
+  'transaction_invalid'=>'ID-ul tranzacției este invalid',
+  'tags'=>'Etichete/Tag-uri'
 );
 

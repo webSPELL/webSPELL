@@ -29,24 +29,24 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'accesslevel'=>'Accesslevel',
-  'actions'=>'Actions',
-  'add_static_page'=>'add Static Page',
-  'clanmember_only'=>'Clanmembers only',
-  'content'=>'Content',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_static_page'=>'edit Static Page',
-  'title'=>'Title',
+  'access_denied'=>'Piekļuve liegta',
+  'accesslevel'=>'Pieejas līmenis',
+  'actions'=>'Darbības',
+  'add_static_page'=>'pievienot Statiskas Lapu',
+  'clanmember_only'=>'Tikai klana biedri',
+  'content'=>'Saturs',
+  'delete'=>'dzēst',
+  'edit'=>'rediģēt',
+  'edit_static_page'=>'rediģēt Statisku Lapu',
+  'title'=>'Virsraksts',
   'id'=>'ID',
-  'new_static_page'=>'new Static Page',
-  'public'=>'Public',
-  'really_delete'=>'Really delete this Static Page?',
-  'registered_only'=>'registered Users only',
-  'static_pages'=>'Static Pages',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'you_can_use_html'=>'You can use HTML-Tags',
-  'tags'=>'Tags'
+  'new_static_page'=>'jauna Statiskas Lapa',
+  'public'=>'Publisks',
+  'really_delete'=>'Vai tiešām izdzēst šo Statisku Lapu?',
+  'registered_only'=>'tikai reģistrēti Lietotāji',
+  'static_pages'=>'Statistikas lapas',
+  'transaction_invalid'=>'Nederīgs ID darījums',
+  'you_can_use_html'=>'Jūs varat izmantot HTML tagus',
+  'tags'=>'Tagi'
 );
 

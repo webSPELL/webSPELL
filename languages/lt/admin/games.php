@@ -29,24 +29,24 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_game'=>'add Game',
-  'back'=>'back',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_game'=>'edit Game',
-  'fill_correctly'=>'Please fill in the form correctly.',
-  'format_incorrect'=>'The format of the icon was incorrect. Please upload only icons in *.gif format.',
-  'game_icon'=>'Game Icon',
-  'game_name'=>'Game Name',
-  'game_tag'=>'Game Tag',
-  'games'=>'Games',
-  'icons'=>'Icons',
-  'new_game'=>'new Game',
-  'no_entries'=>'No entries',
-  'present_icon'=>'present Icon',
-  'really_delete'=>'Really delete this Game?',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Priėeiga atmestas',
+  'actions'=>'Veiksmai',
+  'add_game'=>'pridėti Žaidimą',
+  'back'=>'atgal',
+  'delete'=>'ištrinti',
+  'edit'=>'redaguoti',
+  'edit_game'=>'redaguoti Žaidimą',
+  'fill_correctly'=>'Prašome užpildyti formą teisingai.',
+  'format_incorrect'=>'Piktogramos formatas buvo neteisingas. Prašome įkelti tik įkonas *.gif formatu.',
+  'game_icon'=>'Žaidimo Piktograma',
+  'game_name'=>'Žaidimo Pavadinimas',
+  'game_tag'=>'Žaidimas žyma',
+  'games'=>'Žaidimai',
+  'icons'=>'Piktogramos',
+  'new_game'=>'naujas Žaidimas',
+  'no_entries'=>'Nėra įėjimų',
+  'present_icon'=>'Pateikti piktogramą',
+  'really_delete'=>'Tikrai ištrinti šį Žaidimą?',
+  'transaction_invalid'=>'Sandorio ID negalioja'
 );
 

@@ -29,20 +29,20 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_contact'=>'add Contact',
-  'contact'=>'Contacts',
-  'contact_name'=>'Contact Name',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_contact'=>'edit Contact',
+  'access_denied'=>'Acces interzis',
+  'actions'=>'Acţiuni',
+  'add_contact'=>'adaugă contact',
+  'contact'=>'Contacte',
+  'contact_name'=>'Numele persoanei de contact',
+  'delete'=>'Şterge',
+  'edit'=>'editează',
+  'edit_contact'=>'editează Contact',
   'email'=>'E-Mail',
-  'information_incomplete'=>'Some information is missing.',
-  'new_contact'=>'new Contact',
-  'really_delete'=>'really delete this Contact?',
-  'sort'=>'Sort',
-  'to_sort'=>'sort',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'information_incomplete'=>'Unele date lipsesc.',
+  'new_contact'=>'contact nou',
+  'really_delete'=>'sigur doriți să ștergeți acest contact?',
+  'sort'=>'Sortează',
+  'to_sort'=>'sortează',
+  'transaction_invalid'=>'ID-ul tranzacției este invalid'
 );
 

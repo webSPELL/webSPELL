@@ -42,7 +42,7 @@ $language_array = array(
     'members' => 'nariai',
     'nickname' => 'Slapyvardis',
     'no_description' => 'jokio apibūdinimo nėra',
-    'no_entries'=>'no entries available',
+    'no_entries'=>'Tuščia, nieko nėra',
     'position' => 'Vieta',
     'results' => 'Rezultatai',
     'show_details' => '&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Rodyti detales</b></a>',

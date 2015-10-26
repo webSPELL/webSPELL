@@ -82,7 +82,7 @@ $language_array = array(
     'newreply_image' => '<img src="images/icons/newreply.gif" alt="atbildēt">',
     'newtopic_image' => '<img src="images/icons/newtopic.gif" alt="jauna tēma">',
     'next_7_days' => 'nākamās 7 dienas',
-    'n_a'=>'n/a',
+    'n_a'=>'nav pieejams',
     'no_access' => 'Nav pieejas',
     'no_access_write' => 'Nav pieejas, lai rakstītu šajā forumā.',
     'no_icon' => 'nav ikonas',

@@ -29,20 +29,20 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'add_rank'=>'add Rank',
-  'actions'=>'Actions',
-  'delete'=>'delete',
-  'edit_rank'=>'edit Rank',
-  'information_incomplete'=>'Some information is missing.',
-  'max_posts'=>'max. Posts',
-  'min_posts'=>'min. Posts',
-  'new_rank'=>'new Rank',
-  'rank_icon'=>'Rank Icon',
-  'rank_name'=>'Rank Name',
-  'really_delete'=>'Really delete this Rank?',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'update'=>'update',
-  'user_ranks'=>'User Ranks'
+  'access_denied'=>'Acces interzis',
+  'add_rank'=>'adaugă Rang',
+  'actions'=>'Acţiuni',
+  'delete'=>'Şterge',
+  'edit_rank'=>'editează Rangul',
+  'information_incomplete'=>'Unele date lipsesc.',
+  'max_posts'=>'maximum postări',
+  'min_posts'=>'minimum postări',
+  'new_rank'=>'rang nou',
+  'rank_icon'=>'Pictogramă rang',
+  'rank_name'=>'Nume rang',
+  'really_delete'=>'Chiar doriți să ștergeți acest rang?',
+  'transaction_invalid'=>'ID-ul tranzacției este invalid',
+  'update'=>'actualizare',
+  'user_ranks'=>'Ranguri Utilizatori'
 );
 

@@ -29,18 +29,18 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'allowed_commands'=>'<b>Allowed commands:</b> insert, alter table, select',
-  'backup_file'=>'Backup File',
-  'database'=>'Database',
-  'export'=>'Export/Download Backup',
-  'import_info'=>'Select a file where to import sql data from.<br><br><b>Important:</b> Create a backup before import another one!',
-  'optimize'=>'Optimize Database',
-  'select_option'=>'Please select Option',
-  'submit'=>'Submit',
-  'sql_query'=>'SQL Query',
-  'syntax_not_allowed'=>'Syntax not allowed!',
-  'upload'=>'Upload',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Piekļuve liegta',
+  'allowed_commands'=>'<b>Atļautās komandas:</b> ievietot, mainīt tabulas, atlasiet',
+  'backup_file'=>'atkāpšanās fails',
+  'database'=>'Datu bāze',
+  'export'=>'Eksporta / Lejupielādes atkāpšanās',
+  'import_info'=>'Izvēlieties failu, kurā importēt sql datus.<br><br><b>Svarīgi:</b> Izveidot atkāpšanos pirms importa vēl viens!',
+  'optimize'=>'Optimizēt datu bāzi',
+  'select_option'=>'Lūdzu, izvēlieties opcijas',
+  'submit'=>'Apstiprināt',
+  'sql_query'=>'SQL Vaicājumu',
+  'syntax_not_allowed'=>'Sintakse nav atļauta!',
+  'upload'=>'Augšuplādēt',
+  'transaction_invalid'=>'Nederīgs darījuma ID'
 );
 

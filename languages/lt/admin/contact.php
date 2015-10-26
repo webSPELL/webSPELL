@@ -29,20 +29,20 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_contact'=>'add Contact',
-  'contact'=>'Contacts',
-  'contact_name'=>'Contact Name',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_contact'=>'edit Contact',
-  'email'=>'E-Mail',
-  'information_incomplete'=>'Some information is missing.',
-  'new_contact'=>'new Contact',
-  'really_delete'=>'really delete this Contact?',
-  'sort'=>'Sort',
-  'to_sort'=>'sort',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Priėeiga atmestas',
+  'actions'=>'Veiksmai',
+  'add_contact'=>'Pridėti kontaktą',
+  'contact'=>'Kontaktai',
+  'contact_name'=>'Kontakto vardas',
+  'delete'=>'ištrinti',
+  'edit'=>'redeguoti',
+  'edit_contact'=>'redaguoti Kontaktą',
+  'email'=>'El. paštas',
+  'information_incomplete'=>'Trūksta informacijos',
+  'new_contact'=>'naujas Kontaktas',
+  'really_delete'=>'tikrai ištrinti šį kontaktą?',
+  'sort'=>'Rūšiuoti',
+  'to_sort'=>'rūšiuoti',
+  'transaction_invalid'=>'Sandorio ID negalioja'
 );
 

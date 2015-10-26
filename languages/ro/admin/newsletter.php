@@ -29,25 +29,23 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'error_send'=>'ERROR: Newsletter could not be send (Mailserver available?)',
-  'html_mail'=>'HTML-Mail',
-  'newsletter'=>'Newsletter',
-  'no_htmlmail'=>'Hello!
-Your System doesn\'t support HTML Mails.
-Your received following Message:',
-  'profile'=>'Profile',
-  'receptionists'=>'Newsletter was send!<br><br>Receptionist(s):',
-  'remove'=>'You can remove yourself from the mailing-list at your',
-  'send'=>'send Newsletter',
-  'send_to'=>'Send to',
+  'access_denied'=>'Acces interzis',
+  'error_send'=>'Eroare: Buletin de știri nu a putut fi trimis (serverul de mail este disponibil?)',
+  'html_mail'=>'Mail-HTML',
+  'newsletter'=>'Buletin de ştiri',
+  'no_htmlmail'=>'Salut! Sistemul dumneavoastră nu suportă mail-uri HTML. Ați primit următorul mesaj:',
+  'profile'=>'Profil',
+  'receptionists'=>'Buletinul de știri a fost trimis!<br><br>Recipienţi(e):',
+  'remove'=>'Puteți să vă ștergeți din lista de mail-uri la',
+  'send'=>'trimite Buletinul de ştiri',
+  'send_to'=>'Trimite la',
   'test'=>'test',
-  'test_newsletter'=>'Test Newsletter',
-  'title'=>'Title',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'user_clanmembers'=>'Clanmembers',
-  'user_newsletter'=>'Newsletter Subscriber',
-  'user_registered'=>'registered Users (incl. Clanmembers) ',
-  'users'=>'Users'
+  'test_newsletter'=>'Testează Buletinul de ştiri',
+  'title'=>'Titlu',
+  'transaction_invalid'=>'ID-ul tranzacției este invalid',
+  'user_clanmembers'=>'Membrii Clan',
+  'user_newsletter'=>'Abonaţi buletin de ştiri',
+  'user_registered'=>'utilizatori înregistrați (inclusiv Membrii clanului) ',
+  'users'=>'Utilizatori'
 );
 

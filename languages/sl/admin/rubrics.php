@@ -29,21 +29,21 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_rubric'=>'add Rubric',
-  'back'=>'back',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_rubric'=>'edit Rubric',
-  'format_incorrect'=>'The format of the icon was incorrect. Please upload only banner in *.gif, *.jpg and *.png format.',
-  'information_incomplete'=>'Some information is missing.',
-  'new_rubric'=>'new Rubric',
-  'news_rubrics'=>'News Rubrics',
-  'picture'=>'Picture',
-  'picture_upload'=>'Picture Upload',
-  'really_delete'=>'Really delete this Rubric?',
-  'rubric_name'=>'Rubric Name',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Dostop zavrnjen',
+  'actions'=>'Akcije',
+  'add_rubric'=>'dodaj Rubriki',
+  'back'=>'nazaj',
+  'delete'=>'brisanje',
+  'edit'=>'uredi',
+  'edit_rubric'=>'urejanje Rubriki',
+  'format_incorrect'=>'Oblika ikona, je bila napačna. Prosimo, da naložite samo banner *.gif, *.jpg in *.zapis png.',
+  'information_incomplete'=>'Nekaj podatkov manjka.',
+  'new_rubric'=>'novi Rubriki',
+  'news_rubrics'=>'Novice Rubrics',
+  'picture'=>'Slika',
+  'picture_upload'=>'Naloži Sliko',
+  'really_delete'=>'Res želite izbrisati tej Rubriki?',
+  'rubric_name'=>'Rubriki Ime',
+  'transaction_invalid'=>'Posel neveljaven ID'
 );
 

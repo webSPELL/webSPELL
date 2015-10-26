@@ -29,19 +29,19 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_group'=>'add Group',
-  'back'=>'back',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_group'=>'edit Group',
-  'error_group'=>'ERROR: No Group Name',
-  'error_groupid'=>'ERROR: Missing fgrID',
-  'group_name'=>'Group Name',
-  'groups'=>'Forum User Groups',
-  'new_group'=>'new Group',
-  'really_delete'=>'Really delete this Forum Group?',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Piekļuve liegta',
+  'actions'=>'Darbības',
+  'add_group'=>'pievienot Grupu',
+  'back'=>'atpakaļ',
+  'delete'=>'dzēst',
+  'edit'=>'rediģēt',
+  'edit_group'=>'rediģēt Grupu',
+  'error_group'=>'KĻŪDA: Nav Grupas Nosaukums',
+  'error_groupid'=>'KĻŪDA: Trūkst fgrID',
+  'group_name'=>'Grupas nosaukums',
+  'groups'=>'Forums Lietotāju Grupas',
+  'new_group'=>'jauna Grupa',
+  'really_delete'=>'Vai tiešām izdzēst šo Forumu Grupa?',
+  'transaction_invalid'=>'Nederīgs ID darījums'
 );
 

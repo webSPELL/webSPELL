@@ -29,19 +29,19 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_group'=>'add Group',
-  'back'=>'back',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_group'=>'edit Group',
-  'error_group'=>'ERROR: No Group Name',
-  'error_groupid'=>'ERROR: Missing fgrID',
-  'group_name'=>'Group Name',
-  'groups'=>'Forum User Groups',
-  'new_group'=>'new Group',
-  'really_delete'=>'Really delete this Forum Group?',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Dostop zavrnjen',
+  'actions'=>'Akcije',
+  'add_group'=>'dodaj skupino',
+  'back'=>'nazaj',
+  'delete'=>'izbriši',
+  'edit'=>'uredi',
+  'edit_group'=>'uredi skupino',
+  'error_group'=>'NAPAKA: Ne Ime Skupine',
+  'error_groupid'=>'NAPAKA: Manjka fgrID',
+  'group_name'=>'Ime skupine',
+  'groups'=>'Forum Skupine Uporabnikov',
+  'new_group'=>'nova skupina',
+  'really_delete'=>'Res želite izbrisati ta Forum Skupini?',
+  'transaction_invalid'=>'Neveljaven ID transakcije'
 );
 

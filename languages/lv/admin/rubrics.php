@@ -29,21 +29,21 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_rubric'=>'add Rubric',
-  'back'=>'back',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_rubric'=>'edit Rubric',
-  'format_incorrect'=>'The format of the icon was incorrect. Please upload only banner in *.gif, *.jpg and *.png format.',
-  'information_incomplete'=>'Some information is missing.',
-  'new_rubric'=>'new Rubric',
-  'news_rubrics'=>'News Rubrics',
-  'picture'=>'Picture',
-  'picture_upload'=>'Picture Upload',
-  'really_delete'=>'Really delete this Rubric?',
-  'rubric_name'=>'Rubric Name',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Piekļuve liegta',
+  'actions'=>'Darbības',
+  'add_rubric'=>'pievienot Rubrikas',
+  'back'=>'atpakaļ',
+  'delete'=>'dzēst',
+  'edit'=>'rediģēt',
+  'edit_rubric'=>'rediģēt Rubriku',
+  'format_incorrect'=>'Ikonu formāts bija nepareizs. Lūdzu, augšupielādējiet tikai reklāmas *.gif, *.jpg un *.png formāta.',
+  'information_incomplete'=>'Daža informācija ir pazudusi.',
+  'new_rubric'=>'jauna Rubrika',
+  'news_rubrics'=>'Jaunumi pielikumiem',
+  'picture'=>'Attēls',
+  'picture_upload'=>'Augšupielādēt Attēlu',
+  'really_delete'=>'Vai tiešām izdzēst šo pielikumu?',
+  'rubric_name'=>'Pielikuma Nosaukums',
+  'transaction_invalid'=>'Nederīgs ID darījums'
 );
 

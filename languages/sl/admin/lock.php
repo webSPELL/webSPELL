@@ -29,16 +29,16 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'lock'=>'lock',
-  'locked_since'=>'The Page ist locked since',
+  'access_denied'=>'Dostop zavrnjen',
+  'lock'=>'zaklepanje',
+  'locked_since'=>'Strani ist zaklenjena, saj',
   'pagelock'=>'Pagelock',
-  'page_locked'=>'<b>Page locked!</b><br>Only Admins can access the Page now.',
-  'page_unlocked'=>'<b>Page unlocked!</b>',
-  'settings'=>'Settings',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'unlock'=>'unlock',
-  'unlock_page'=>'Do you want to unlock the Page?',
-  'you_can_use_html'=>'You can use HTML-Tags'
+  'page_locked'=>'<b>Stran je zaklenjena!</b><br>Samo Administratorji lahko dostopa do Strani je zdaj.',
+  'page_unlocked'=>'<b>Stran odklenjena!</b>',
+  'settings'=>'Nastavitve',
+  'transaction_invalid'=>'Neveljaven ID transakcije',
+  'unlock'=>'odkleni',
+  'unlock_page'=>'Ali želite odkleniti Strani?',
+  'you_can_use_html'=>'Lahko uporabljate HTML-Tags'
 );
 

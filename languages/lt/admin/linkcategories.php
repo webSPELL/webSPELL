@@ -29,17 +29,17 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_category'=>'add Category',
-  'category_name'=>'Category Name',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_category'=>'edit Category',
-  'information_incomplete'=>'Some information is missing.',
-  'link_categories'=>'Link Categories',
-  'new_category'=>'new Category',
-  'really_delete'=>'Really delete this Category and the Category Links?',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Priėeiga atmestas',
+  'actions'=>'Veiksmai',
+  'add_category'=>'Pridėti kategoriją',
+  'category_name'=>'Kategorijos pavadinimas',
+  'delete'=>'ištrinti',
+  'edit'=>'redaguoti',
+  'edit_category'=>'Redaguoti kategoriją',
+  'information_incomplete'=>'Trūksta informacijos.',
+  'link_categories'=>'Nuorodų kategorijos',
+  'new_category'=>'nauja kategorija',
+  'really_delete'=>'Tikrai ištrinti šią Kategoriją ir Kategorijos nuorodas?',
+  'transaction_invalid'=>'Sandorio ID negalioja'
 );
 

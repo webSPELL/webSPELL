@@ -47,8 +47,8 @@ $language_array = array(
     'cpu'=>'CPU',
     'date_of_birth' => 'Dzimšanas datums',
     'deactivated' => 'deaktivizēts',
-    'delete' => 'delete',
-    'e-mail'=>'E-mail',
+    'delete' => 'dzēst',
+    'e-mail'=>'E-pasts',
     'edit_mail' => 'labot e-pastu',
     'edit_password' => 'labot paroli',
     'equipment-info' => 'Ekipējuma informācija',
@@ -118,7 +118,7 @@ Paldies par Jūsu interesi
     'repeat_new_email' => 'atkārtojiet jauno e-pastu',
     'repeat_new_password' => 'atkārtojiet jauno paroli',
     'repeated_pw_not_valid' => 'Jūsu atkārtotā parole nav derīga!',
-    'repeated_mail_not_valid'=>'your repeated e-mail is not equal!',
+    'repeated_mail_not_valid'=>'jūsu atkārtotais e-pasts nav vienāds!',
     'sexuality' => 'Dzimums',
     'signature' => 'Paraksts',
     'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Sejiņas</a> ir ieslēgtas',
@@ -137,6 +137,6 @@ Paldies par Jūsu interesi
     'you_have_to_nickname' => 'Jums jāievada Jūsu segvārds!',
     'you_have_to_username' => 'Jums jāievada Jūsu lietotājvārds!',
     'you_have_to_valid_email' => 'Jūsu e-pasts nav derīgs!',
-    'wrong_password'=>'Wrong password'
+    'wrong_password'=>'Nepareiza parole'
 );
 

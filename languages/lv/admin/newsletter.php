@@ -29,25 +29,25 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'error_send'=>'ERROR: Newsletter could not be send (Mailserver available?)',
-  'html_mail'=>'HTML-Mail',
-  'newsletter'=>'Newsletter',
-  'no_htmlmail'=>'Hello!
-Your System doesn\'t support HTML Mails.
-Your received following Message:',
-  'profile'=>'Profile',
-  'receptionists'=>'Newsletter was send!<br><br>Receptionist(s):',
-  'remove'=>'You can remove yourself from the mailing-list at your',
-  'send'=>'send Newsletter',
-  'send_to'=>'Send to',
-  'test'=>'test',
-  'test_newsletter'=>'Test Newsletter',
-  'title'=>'Title',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'user_clanmembers'=>'Clanmembers',
-  'user_newsletter'=>'Newsletter Subscriber',
-  'user_registered'=>'registered Users (incl. Clanmembers) ',
-  'users'=>'Users'
+  'access_denied'=>'Piekļuve liegta',
+  'error_send'=>'KĻŪDA: jaunumus nevar nosūtīt (Pastsserver pieejami?)',
+  'html_mail'=>'HTML-Pasts',
+  'newsletter'=>'Jaunumi',
+  'no_htmlmail'=>'Labdien!
+Jūsu Sistēma neatbalsta HTML Pastu.
+Jūs saņēmāt šādu Vēstījumu:',
+  'profile'=>'Profils',
+  'receptionists'=>'Vēstule ir nosūtita!<br><br>reģistratoram (- i):',
+  'remove'=>'Varat noņemt sevi no jūsu adresātu saraksta',
+  'send'=>'nosūtīt jaunumus',
+  'send_to'=>'Sūtīt uz',
+  'test'=>'tests',
+  'test_newsletter'=>'Testa jaunumi',
+  'title'=>'Virsraksts',
+  'transaction_invalid'=>'Nederīgs ID darījums',
+  'user_clanmembers'=>'Klanabiedri',
+  'user_newsletter'=>'jaunie Abonenti',
+  'user_registered'=>'reģistrētajiem Lietotājiem (t. sk. Clanmembers) ',
+  'users'=>'Lietotāji'
 );
 

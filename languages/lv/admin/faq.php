@@ -29,23 +29,23 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_faq'=>'add FAQ',
-  'answer'=>'Answer',
-  'category'=>'Category',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_faq'=>'edit FAQ',
-  'faq'=>'FAQ',
-  'information_incomplete'=>'Some information is missing.',
-  'new_faq'=>'new FAQ',
-  'no_category_selected'=>'You forgot to select a Category',
-  'no_faq_selected'=>'No FAQ Category selected',
-  'really_delete'=>'Really delete this FAQ?',
-  'sort'=>'Sort',
-  'to_sort'=>'sort',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'tags'=>'Tags'
+  'access_denied'=>'Piekļuve liegta',
+  'actions'=>'Darbības',
+  'add_faq'=>'pievienot FAQ',
+  'answer'=>'Atbilde',
+  'category'=>'Kategorija',
+  'delete'=>'dzēst',
+  'edit'=>'rediģēt',
+  'edit_faq'=>'rediģēt  bieži uzdotos jautājumus',
+  'faq'=>'BIEŽI UZDOTIE JAUTĀJUMI',
+  'information_incomplete'=>'Daža informācija ir pazudusi.',
+  'new_faq'=>'jauni BIEŽI UZDOTIE JAUTĀJUMI',
+  'no_category_selected'=>'Aizmirsāt izvēlieties Kategoriju',
+  'no_faq_selected'=>'Nav FAQ izvēlētās Kategorijas',
+  'really_delete'=>'Vai tiešām izdzēst šo BIEŽI UZDOTO JAUTĀJUMU',
+  'sort'=>'Kārtot',
+  'to_sort'=>'kārtot',
+  'transaction_invalid'=>'Nederīgs ID darījums',
+  'tags'=>'Tagi'
 );
 

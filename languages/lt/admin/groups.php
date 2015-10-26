@@ -29,19 +29,19 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_group'=>'add Group',
-  'back'=>'back',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_group'=>'edit Group',
-  'error_group'=>'ERROR: No Group Name',
-  'error_groupid'=>'ERROR: Missing fgrID',
-  'group_name'=>'Group Name',
-  'groups'=>'Forum User Groups',
-  'new_group'=>'new Group',
-  'really_delete'=>'Really delete this Forum Group?',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Priėeiga atmestas',
+  'actions'=>'Veiksmai',
+  'add_group'=>'pridėti grupę',
+  'back'=>'atgal',
+  'delete'=>'ištrinti',
+  'edit'=>'redaguoti',
+  'edit_group'=>'Redaguoti grupę',
+  'error_group'=>'KLAIDA: Nėra Grupės Pavadinimo',
+  'error_groupid'=>'KLAIDA: Trūksta fgrID',
+  'group_name'=>'Grupės pavadinimas',
+  'groups'=>'Forumo Vartotojų Grupės',
+  'new_group'=>'nauja Grupė',
+  'really_delete'=>'Tikrai ištrinti šią forumo grupę?',
+  'transaction_invalid'=>'Sandorio ID negalioja'
 );
 

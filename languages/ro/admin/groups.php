@@ -29,19 +29,19 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_group'=>'add Group',
-  'back'=>'back',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_group'=>'edit Group',
-  'error_group'=>'ERROR: No Group Name',
-  'error_groupid'=>'ERROR: Missing fgrID',
-  'group_name'=>'Group Name',
-  'groups'=>'Forum User Groups',
-  'new_group'=>'new Group',
-  'really_delete'=>'Really delete this Forum Group?',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Acces interzis',
+  'actions'=>'Acţiuni',
+  'add_group'=>'adaugă grup',
+  'back'=>'înapoi',
+  'delete'=>'Şterge',
+  'edit'=>'editează',
+  'edit_group'=>'editează grupul',
+  'error_group'=>'Eroare: grupul nu are nume',
+  'error_groupid'=>'Eroare: lipseşte fgrID',
+  'group_name'=>'Numele Grupului',
+  'groups'=>'Grupurile de utilizatori al forumului',
+  'new_group'=>'grup nou',
+  'really_delete'=>'Chiar doriți să ștergeți acest grup al forumului?',
+  'transaction_invalid'=>'ID-ul tranzacției este invalid'
 );
 

@@ -29,21 +29,21 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_category'=>'add Category',
-  'category'=>'Category',
-  'category_name'=>'Category Name',
-  'delete'=>'delete',
-  'description'=>'Description',
-  'edit'=>'edit',
-  'edit_category'=>'edit Category',
-  'faq_categories'=>'FAQ Categories',
-  'information_incomplete'=>'Some information is missing.',
-  'new_category'=>'new Category',
-  'really_delete'=>'Really delete this Category and the Category FAQs?',
-  'sort'=>'Sort',
-  'to_sort'=>'sort',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Acces interzis',
+  'actions'=>'Acţiuni',
+  'add_category'=>'adaugă Categorie',
+  'category'=>'Categorie',
+  'category_name'=>'Nume Categorie',
+  'delete'=>'Şterge',
+  'description'=>'Descriere',
+  'edit'=>'editează',
+  'edit_category'=>'editează Categoria',
+  'faq_categories'=>'Categorii întrebări frecvente FAQ',
+  'information_incomplete'=>'Unele date lipsesc.',
+  'new_category'=>'categorie nouă',
+  'really_delete'=>'Chiar doriți să stergeți această categorie și întrebările frecvente FAQ ale acestei categorii?',
+  'sort'=>'Sortează',
+  'to_sort'=>'sortează',
+  'transaction_invalid'=>'ID-ul tranzacției este invalid'
 );
 

@@ -29,12 +29,12 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'automatic'=>'Automatically',
-  'imprint'=>'Imprint',
-  'manual'=>'Manually (use the Textfield below)',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'update'=>'update',
-  'you_can_use_html'=>'You can use HTML-Tags'
+  'access_denied'=>'Acces interzis',
+  'automatic'=>'Automat',
+  'imprint'=>'Imprimă',
+  'manual'=>'Manual (utilizați căsuța pentru text de mai jos)',
+  'transaction_invalid'=>'ID-ul tranzacției este invalid',
+  'update'=>'actualizare',
+  'you_can_use_html'=>'Puteți utiliza tag-uri HTML'
 );
 

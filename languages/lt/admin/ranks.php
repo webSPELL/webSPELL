@@ -29,20 +29,20 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'add_rank'=>'add Rank',
-  'actions'=>'Actions',
-  'delete'=>'delete',
-  'edit_rank'=>'edit Rank',
-  'information_incomplete'=>'Some information is missing.',
-  'max_posts'=>'max. Posts',
-  'min_posts'=>'min. Posts',
-  'new_rank'=>'new Rank',
-  'rank_icon'=>'Rank Icon',
-  'rank_name'=>'Rank Name',
-  'really_delete'=>'Really delete this Rank?',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'update'=>'update',
-  'user_ranks'=>'User Ranks'
+  'access_denied'=>'Priėeiga atmestas',
+  'add_rank'=>'pridėti ranką',
+  'actions'=>'Veiksmai',
+  'delete'=>'ištrinti',
+  'edit_rank'=>'redaguoti Reitingą',
+  'information_incomplete'=>'Trūksta informacijos.',
+  'max_posts'=>'maks. Pateikimų',
+  'min_posts'=>'min. Pateikimų',
+  'new_rank'=>'naujas Rangas',
+  'rank_icon'=>'Rango piktorgrama',
+  'rank_name'=>'Rango Pavadinimas',
+  'really_delete'=>'Tikrai ištrinti šį rangą ? ',
+  'transaction_invalid'=>'Sandorio ID negalioja',
+  'update'=>'atnaujinimas',
+  'user_ranks'=>'Vartotojo Rankai'
 );
 

@@ -29,21 +29,21 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_rubric'=>'add Rubric',
-  'back'=>'back',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_rubric'=>'edit Rubric',
-  'format_incorrect'=>'The format of the icon was incorrect. Please upload only banner in *.gif, *.jpg and *.png format.',
-  'information_incomplete'=>'Some information is missing.',
-  'new_rubric'=>'new Rubric',
-  'news_rubrics'=>'News Rubrics',
-  'picture'=>'Picture',
-  'picture_upload'=>'Picture Upload',
-  'really_delete'=>'Really delete this Rubric?',
-  'rubric_name'=>'Rubric Name',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Acces interzis',
+  'actions'=>'Acţiuni',
+  'add_rubric'=>'adauga rubrica',
+  'back'=>'înapoi',
+  'delete'=>'Şterge',
+  'edit'=>'editează',
+  'edit_rubric'=>'editează rubrică',
+  'format_incorrect'=>'Formatul pictogramei a fost greșit. Vă rugăm să încărcați imagine pentru banner doar in format *.gif, *.Jpg, *.png.',
+  'information_incomplete'=>'Unele date lipsesc.',
+  'new_rubric'=>'rubrică nouă',
+  'news_rubrics'=>'Rubrici de ştiri',
+  'picture'=>'Poză',
+  'picture_upload'=>'încărcare imagine',
+  'really_delete'=>'Chiar doriți să ștergeți această rubrică?',
+  'rubric_name'=>'Numele rubricii',
+  'transaction_invalid'=>'ID-ul tranzacției este invalid'
 );
 

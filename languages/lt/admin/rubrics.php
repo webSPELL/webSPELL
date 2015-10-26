@@ -29,21 +29,21 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_rubric'=>'add Rubric',
-  'back'=>'back',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_rubric'=>'edit Rubric',
-  'format_incorrect'=>'The format of the icon was incorrect. Please upload only banner in *.gif, *.jpg and *.png format.',
-  'information_incomplete'=>'Some information is missing.',
-  'new_rubric'=>'new Rubric',
-  'news_rubrics'=>'News Rubrics',
-  'picture'=>'Picture',
-  'picture_upload'=>'Picture Upload',
-  'really_delete'=>'Really delete this Rubric?',
-  'rubric_name'=>'Rubric Name',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Priėeiga atmestas',
+  'actions'=>'Veiksmai',
+  'add_rubric'=>'pridėti Rubriką',
+  'back'=>'atgal',
+  'delete'=>'ištrinti',
+  'edit'=>'redaguoti',
+  'edit_rubric'=>'redaguoti Rubriką',
+  'format_incorrect'=>'Piktogramos formatas , buvo neteisingas. Prašome įkelti tik reklamą *.gif, *.jpg ir *.png formatu.',
+  'information_incomplete'=>'Trūksta informacijos.',
+  'new_rubric'=>'nauja Rubrika',
+  'news_rubrics'=>'Naujienų Rubrikos',
+  'picture'=>'Nuotrauka',
+  'picture_upload'=>'Įkelti nuotrauką',
+  'really_delete'=>'Tikrai ištrinti šią Rubrika?',
+  'rubric_name'=>'Rubrikos Pavadinimas',
+  'transaction_invalid'=>'Sandorio ID negalioja'
 );
 

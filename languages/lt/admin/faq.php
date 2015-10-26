@@ -29,23 +29,23 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_faq'=>'add FAQ',
-  'answer'=>'Answer',
-  'category'=>'Category',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_faq'=>'edit FAQ',
-  'faq'=>'FAQ',
-  'information_incomplete'=>'Some information is missing.',
-  'new_faq'=>'new FAQ',
-  'no_category_selected'=>'You forgot to select a Category',
-  'no_faq_selected'=>'No FAQ Category selected',
-  'really_delete'=>'Really delete this FAQ?',
-  'sort'=>'Sort',
-  'to_sort'=>'sort',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'tags'=>'Tags'
+  'access_denied'=>'Priėeiga atmestas',
+  'actions'=>'Veiksmai',
+  'add_faq'=>'pridėti DUK',
+  'answer'=>'Atsakymas',
+  'category'=>'Kategorija',
+  'delete'=>'ištrinti',
+  'edit'=>'redaguoti',
+  'edit_faq'=>'redaguoti DUK',
+  'faq'=>'DUK',
+  'information_incomplete'=>'Trūksta informacijos.',
+  'new_faq'=>'naujas DUK',
+  'no_category_selected'=>'Pamiršote pasirinkti kategoriją',
+  'no_faq_selected'=>'Jokia DUK kategorija pasirinkta',
+  'really_delete'=>'Tikrai ištrinti šį DUK?',
+  'sort'=>'Rūšiuoti',
+  'to_sort'=>'rūšiuoti',
+  'transaction_invalid'=>'Sandorio ID negalioja',
+  'tags'=>'Žymos'
 );
 

@@ -29,9 +29,9 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'max'=>'Maximum',
-  'min'=>'Minimum',
-  'not_logged_in'=>'You are not logged in'
+  'access_denied'=>'Piekļuve liegta',
+  'max'=>'Maksimums',
+  'min'=>'Minimums',
+  'not_logged_in'=>'Jūs neesat ienācis'
 );
 

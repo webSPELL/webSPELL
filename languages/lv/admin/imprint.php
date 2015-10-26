@@ -29,12 +29,12 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'automatic'=>'Automatically',
-  'imprint'=>'Imprint',
-  'manual'=>'Manually (use the Textfield below)',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'update'=>'update',
-  'you_can_use_html'=>'You can use HTML-Tags'
+  'access_denied'=>'Piekļuve liegta',
+  'automatic'=>'automātiski',
+  'imprint'=>'Nospiedums',
+  'manual'=>'Manuāli (lietošanas teksta Lauks zemāk)',
+  'transaction_invalid'=>'Nederīgs ID darījums',
+  'update'=>'atjaunot',
+  'you_can_use_html'=>'Jūs varat izmantot HTML tagus'
 );
 

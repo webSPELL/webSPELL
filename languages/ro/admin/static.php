@@ -29,24 +29,24 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'accesslevel'=>'Accesslevel',
-  'actions'=>'Actions',
-  'add_static_page'=>'add Static Page',
-  'clanmember_only'=>'Clanmembers only',
-  'content'=>'Content',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_static_page'=>'edit Static Page',
-  'title'=>'Title',
+  'access_denied'=>'Acces interzis',
+  'accesslevel'=>'Nivel de acces',
+  'actions'=>'Acţiuni',
+  'add_static_page'=>'adăugare pagină statică',
+  'clanmember_only'=>'Doar membrii clanului',
+  'content'=>'Conţinut',
+  'delete'=>'Şterge',
+  'edit'=>'editează',
+  'edit_static_page'=>'editare pagină statică',
+  'title'=>'Titlu',
   'id'=>'ID',
-  'new_static_page'=>'new Static Page',
+  'new_static_page'=>'pagină statică nouă',
   'public'=>'Public',
-  'really_delete'=>'Really delete this Static Page?',
-  'registered_only'=>'registered Users only',
-  'static_pages'=>'Static Pages',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'you_can_use_html'=>'You can use HTML-Tags',
-  'tags'=>'Tags'
+  'really_delete'=>'Chiar doriți să ștergeți acesta pagină statică?',
+  'registered_only'=>'doar utilizatorii inregistrați',
+  'static_pages'=>'Pagini statice',
+  'transaction_invalid'=>'ID-ul tranzacției este invalid',
+  'you_can_use_html'=>'Puteți utiliza tag-uri HTML',
+  'tags'=>'Etichete/Tag-uri'
 );
 

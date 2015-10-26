@@ -29,18 +29,18 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'allowed_commands'=>'<b>Allowed commands:</b> insert, alter table, select',
-  'backup_file'=>'Backup File',
-  'database'=>'Database',
-  'export'=>'Export/Download Backup',
-  'import_info'=>'Select a file where to import sql data from.<br><br><b>Important:</b> Create a backup before import another one!',
-  'optimize'=>'Optimize Database',
-  'select_option'=>'Please select Option',
-  'submit'=>'Submit',
-  'sql_query'=>'SQL Query',
-  'syntax_not_allowed'=>'Syntax not allowed!',
-  'upload'=>'Upload',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Acces interzis',
+  'allowed_commands'=>'<b>Comenzi permise:</b> introdu, modifica tabel, selectează',
+  'backup_file'=>'Fișier copie de rezervă',
+  'database'=>'Bază de date',
+  'export'=>'Exportă/Descarcă copia de rezervă',
+  'import_info'=>'Selectați un fișier de unde să importați date sql.<br><br><b>Important:</b> Creați un fișier de rezervă înainte să importați unul nou!',
+  'optimize'=>'Optimizează Baza de Date',
+  'select_option'=>'Vă rugăm să selectați opțiunea',
+  'submit'=>'Trimiteţi',
+  'sql_query'=>'Interogare SQL',
+  'syntax_not_allowed'=>'Sintaxa nu este permisă!',
+  'upload'=>'Încarcă',
+  'transaction_invalid'=>'ID-ul tranzacției este invalid'
 );
 

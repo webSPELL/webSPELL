@@ -29,7 +29,7 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-    'error_404'=>'Error 404',
-    'message_404'=>'This pages does not exists.'
+    'error_404'=>'Kļūda 404',
+    'message_404'=>'Šī lapa neeksistē.'
 );
 

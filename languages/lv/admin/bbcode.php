@@ -29,7 +29,7 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-	'align'=>'ALIGN',
+	'align'=>'līdzināt',
 	'blue'=>'zils',
 	'burlywood'=>'kokains',
 	'center'=>'Centrs',
@@ -41,7 +41,7 @@ $language_array = Array(
 	'darkred'=>'tumši sarkans',
 	'deeppink'=>'tumši rozā',
 	'firebrick'=>'ķieģelis',
-	'font'=>'FONT',
+	'font'=>'Fonts',
 	'green'=>'zaļš',
 	'huge'=>'milzīgs',
 	'indigo'=>'indigo',
@@ -67,7 +67,7 @@ $language_array = Array(
 	'teal'=>'gaiši zaļš',
 	'tiny'=>'mazs',
 	'tomato'=>'tomāts',
-	'unevenAmount'=>'Uneven amount of opening and closing BBCode tags',
+	'unevenAmount'=>'Nevienāds skaits atvērto un aizvērto BBKoda etiķešu',
 	'firstTagClosingTag'=>'Pirmā BBKoda etiķete nevar būt aizverošais',
 	'notSameAmount'=>'Atšķiras atvērto un aizvērto BBKoda etiķešu skaits',
 	'wrongNesting'=>'Nepareiza BBKoda etiķešu pozīcija',
@@ -79,9 +79,9 @@ $language_array = Array(
 	'mc_new_messages'=>'jauns ziņojums (-i). Vai jūs vēlaties lasīt tos tagad?',
 	'na'=>'nav pieejams',
 	'wrote'=>'rakstīja',
-	'auto_resize'=>'Auto resize',
-	'code'=>'Code',
-	'large_picture'=>'Large Picture',
-	'show_original'=>'show original'
+	'auto_resize'=>'Automātiskā pielāgošana',
+	'code'=>'Kods',
+	'large_picture'=>'Liels Attēls',
+	'show_original'=>'rādīt oriģinālu'
 );
 

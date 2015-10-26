@@ -29,21 +29,21 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_category'=>'add Category',
-  'category'=>'Category',
-  'category_name'=>'Category Name',
-  'delete'=>'delete',
-  'description'=>'Description',
-  'edit'=>'edit',
-  'edit_category'=>'edit Category',
-  'faq_categories'=>'FAQ Categories',
-  'information_incomplete'=>'Some information is missing.',
-  'new_category'=>'new Category',
-  'really_delete'=>'Really delete this Category and the Category FAQs?',
-  'sort'=>'Sort',
-  'to_sort'=>'sort',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Piekļuve liegta',
+  'actions'=>'Darbības',
+  'add_category'=>'Pievienot kategoriju',
+  'category'=>'Kategorija',
+  'category_name'=>'Kategorijas nosaukums',
+  'delete'=>'dzēst',
+  'description'=>'Apraksts',
+  'edit'=>'rediģēt',
+  'edit_category'=>'rediģēt Kategorija',
+  'faq_categories'=>'FAQ Kategorijas',
+  'information_incomplete'=>'Daža informācija ir pazudusi.',
+  'new_category'=>'jauna kategorija',
+  'really_delete'=>'Vai tiešām izdzēst šo Kategoriju un Kategorijas FAQ',
+  'sort'=>'Kārtot',
+  'to_sort'=>'kārtot',
+  'transaction_invalid'=>'Nederīgs ID darījums'
 );
 

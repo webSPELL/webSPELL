@@ -29,23 +29,23 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_faq'=>'add FAQ',
-  'answer'=>'Answer',
-  'category'=>'Category',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_faq'=>'edit FAQ',
-  'faq'=>'FAQ',
-  'information_incomplete'=>'Some information is missing.',
-  'new_faq'=>'new FAQ',
-  'no_category_selected'=>'You forgot to select a Category',
-  'no_faq_selected'=>'No FAQ Category selected',
-  'really_delete'=>'Really delete this FAQ?',
-  'sort'=>'Sort',
-  'to_sort'=>'sort',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'tags'=>'Tags'
+  'access_denied'=>'Dostop zavrnjen',
+  'actions'=>'Ukrepi',
+  'add_faq'=>'dodaj Pogosta zastavljena vprašanja',
+  'answer'=>'Odgovor',
+  'category'=>'Kategorija',
+  'delete'=>'izbriši',
+  'edit'=>'uredi',
+  'edit_faq'=>'uredi Pogosto zastavljena vprašanja',
+  'faq'=>'Pogosto zastavljena vprašanja',
+  'information_incomplete'=>'Nekaj podatkov manjka.',
+  'new_faq'=>'nova pogosta zastavljena vprašanja',
+  'no_category_selected'=>'Pozabili ste izbrati kategorijo',
+  'no_faq_selected'=>'Nobena kategorija pogosto zastavljenih vprašanj ni izbrana',
+  'really_delete'=>'Res želite izbrisati ta pogosto zastavljena vprašanja?',
+  'sort'=>'Razvrsti',
+  'to_sort'=>'razvrsti',
+  'transaction_invalid'=>'Neveljaven ID transakcije',
+  'tags'=>'Oznake'
 );
 

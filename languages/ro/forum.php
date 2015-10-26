@@ -82,7 +82,7 @@ $language_array = array(
     'newreply_image' => '<img src="images/icons/newreply.gif" alt="răspuns">',
     'newtopic_image' => '<img src="images/icons/newtopic.gif" alt="noua subiect">',
     'next_7_days' => 'următoarele 7 zile',
-    'n_a'=>'n/a',
+    'n_a'=>'nu este disponibil',
     'no_access' => 'Fără acces',
     'no_access_write' => 'Fără accses la scriere.',
     'no_icon' => 'Nicio pictogramă',

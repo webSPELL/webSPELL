@@ -29,25 +29,25 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'error_send'=>'ERROR: Newsletter could not be send (Mailserver available?)',
-  'html_mail'=>'HTML-Mail',
-  'newsletter'=>'Newsletter',
-  'no_htmlmail'=>'Hello!
-Your System doesn\'t support HTML Mails.
-Your received following Message:',
-  'profile'=>'Profile',
-  'receptionists'=>'Newsletter was send!<br><br>Receptionist(s):',
-  'remove'=>'You can remove yourself from the mailing-list at your',
-  'send'=>'send Newsletter',
-  'send_to'=>'Send to',
-  'test'=>'test',
-  'test_newsletter'=>'Test Newsletter',
-  'title'=>'Title',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'user_clanmembers'=>'Clanmembers',
-  'user_newsletter'=>'Newsletter Subscriber',
-  'user_registered'=>'registered Users (incl. Clanmembers) ',
-  'users'=>'Users'
+  'access_denied'=>'Priėeiga atmestas',
+  'error_send'=>'KLAIDA: Naujienlaiškis negalėjo būti išsiųstas (pašto serveris galimas?)',
+  'html_mail'=>'HTML-Laiškas',
+  'newsletter'=>'Naujienlaiškis',
+  'no_htmlmail'=>'Sveiki!
+Jūsų Sistema nepalaiko HTML Laiškų.
+Jūs gavote tokią Žinutę:',
+  'profile'=>'Profilis',
+  'receptionists'=>'Naujienlaiškis buvo išsiųstas!<br><br>Administratorė (- ų):',
+  'remove'=>'Galite pašalinti save iš laiškų gavėjų sarašo savo',
+  'send'=>'siųsti Naujienlaiškį',
+  'send_to'=>'Išsiųsti',
+  'test'=>'testas',
+  'test_newsletter'=>'Bandyti naujienlaiškį',
+  'title'=>'Pavadinimas',
+  'transaction_invalid'=>'Sandorio ID negalioja',
+  'user_clanmembers'=>'Klano Nariai',
+  'user_newsletter'=>'Naujienlaiškio prenumeratorius',
+  'user_registered'=>'registruotiems Vartotojams (įsk. Klano nariams) ',
+  'users'=>'vartotojai'
 );
 

@@ -29,24 +29,24 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'accesslevel'=>'Accesslevel',
-  'actions'=>'Actions',
-  'add_static_page'=>'add Static Page',
-  'clanmember_only'=>'Clanmembers only',
-  'content'=>'Content',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_static_page'=>'edit Static Page',
-  'title'=>'Title',
+  'access_denied'=>'Priėeiga atmestas',
+  'accesslevel'=>'Prieigos lygmuo',
+  'actions'=>'Veiksmai',
+  'add_static_page'=>'pridėti statinį puslapį',
+  'clanmember_only'=>'Tik klano nariams',
+  'content'=>'Turinys',
+  'delete'=>'ištrinti',
+  'edit'=>'redaguoti',
+  'edit_static_page'=>'redaguoti statinį puslapį',
+  'title'=>'Pavadinimas',
   'id'=>'ID',
-  'new_static_page'=>'new Static Page',
-  'public'=>'Public',
-  'really_delete'=>'Really delete this Static Page?',
-  'registered_only'=>'registered Users only',
-  'static_pages'=>'Static Pages',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'you_can_use_html'=>'You can use HTML-Tags',
-  'tags'=>'Tags'
+  'new_static_page'=>'naujas Statinis Puslapis',
+  'public'=>'Viešas',
+  'really_delete'=>'Tikrai ištrinti šį statinį puslapį',
+  'registered_only'=>'tik registruotiems Vartotojams',
+  'static_pages'=>'Statiniai puslapiai',
+  'transaction_invalid'=>'Sandorio ID negalioja',
+  'you_can_use_html'=>'Jūs galite naudoti HTML Žymas',
+  'tags'=>'Žymos'
 );
 

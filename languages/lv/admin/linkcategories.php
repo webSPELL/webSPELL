@@ -29,17 +29,17 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_category'=>'add Category',
-  'category_name'=>'Category Name',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_category'=>'edit Category',
-  'information_incomplete'=>'Some information is missing.',
-  'link_categories'=>'Link Categories',
-  'new_category'=>'new Category',
-  'really_delete'=>'Really delete this Category and the Category Links?',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Piekļuve liegta',
+  'actions'=>'Darbības',
+  'add_category'=>'pievienot kategoriju',
+  'category_name'=>'Kategorijas nosaukums',
+  'delete'=>'dzēst',
+  'edit'=>'rediģēt',
+  'edit_category'=>'rediģēt Kategoriju',
+  'information_incomplete'=>'Daža informācija ir pazudusi.',
+  'link_categories'=>'Kategorijas saite',
+  'new_category'=>'jauna kategorija',
+  'really_delete'=>'Vai tiešām izdzēst šo Kategoriju un Kategorijas Saites?',
+  'transaction_invalid'=>'Nederīgs ID darījums'
 );
 

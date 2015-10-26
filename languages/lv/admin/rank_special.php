@@ -26,8 +26,8 @@
 */
 
 $language_array = Array(
-	'used_for'=>'Used for',
-	'special_rank'=>'special rank',
-	'no_special_rank'=>'no special rank'
+	'used_for'=>'Lietot prēkš',
+	'special_rank'=>'īpašs rangs',
+	'no_special_rank'=>'nav īpašu rangu'
  );
  

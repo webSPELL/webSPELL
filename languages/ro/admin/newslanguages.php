@@ -29,20 +29,20 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_language'=>'add Language',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_language'=>'edit Language',
-  'flag'=>'Flags',
-  'information_incomplete'=>'Some information is missing.',
-  'language'=>'Language',
-  'news_languages'=>'News-Languages',
-  'new_language'=>'new Language',
-  'preview'=>'Preview',
-  'really_delete'=>'Really delete this Language?',
-  'title'=>'Title',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Acces interzis',
+  'actions'=>'Acţiuni',
+  'add_language'=>'adaugă limbă',
+  'delete'=>'Şterge',
+  'edit'=>'editează',
+  'edit_language'=>'editează limba',
+  'flag'=>'Steaguri',
+  'information_incomplete'=>'Unele date lipsesc.',
+  'language'=>'Limbă',
+  'news_languages'=>'Ştiri-Limbi',
+  'new_language'=>'limbă nouă',
+  'preview'=>'Previzualizare',
+  'really_delete'=>'Chiar doriți să ștergeți această limbă?',
+  'title'=>'Titlu',
+  'transaction_invalid'=>'ID-ul tranzacției este invalid'
 );
 

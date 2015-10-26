@@ -28,16 +28,16 @@
 $language_array = Array(
 
 /* do not edit above this line */
-    'file_too_big'=>'File too big',
-    'incomplete_upload'=>'Incomplete upload',
-    'no_file_uploaded'=>'No file uploaded',
-    'no_temp_folder_available'=>'No temporary folder available. Please contact the administrator',
-    'cant_write_temp_file'=>'Can\'t write temporary file. Please contact the administrator',
-    'unexpected_error'=>'Unexpected error',
-    'cant_copy_file'=>'Can\'t copy file. Please contact the administrator',
-    'image_too_big'=>'The image is too big (max size %1$d px & %2$d px)',
-    'broken_image'=>'The image file seems to be broken',
-    'unsupported_image_type'=>'Unsupported image type',
-    'errors_there'=>'There are errors',
-    'file_already_exists'=>'file already exists'
+    'file_too_big'=>'Datoteka prevelika',
+    'incomplete_upload'=>'Nepopoln prenos',
+    'no_file_uploaded'=>'No file dodal',
+    'no_temp_folder_available'=>'Ne začasno mapo na voljo. Prosimo, da se obrnite na skrbnika',
+    'cant_write_temp_file'=>'Lahko pišeš začasne datoteke. Prosimo, da se obrnite na skrbnika',
+    'unexpected_error'=>'Nepričakovana napaka',
+    'cant_copy_file'=>'Ne more kopirati datoteke. Prosimo, da se obrnite na skrbnika',
+    'image_too_big'=>'Slika je prevelika (max velikost %1$d px & %2$d px)',
+    'broken_image'=>'Slikovno datoteko, se zdi, da se razdeli',
+    'unsupported_image_type'=>'Nepodprte vrste slike',
+    'errors_there'=>'Obstajajo napake',
+    'file_already_exists'=>'datoteka že obstaja'
 );

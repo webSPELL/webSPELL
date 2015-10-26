@@ -29,22 +29,22 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'add_server'=>'add Server',
-  'actions'=>'Actions',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_server'=>'edit Server',
-  'game'=>'Game',
-  'info'=>'Info',
-  'ip_port'=>'Server IP:Port',
-  'new_server'=>'new Server',
-  'no_server'=>'No Servers available',
-  'really_delete'=>'Really delete this Server?',
-  'servers'=>'Servers',
-  'server_name'=>'Server Name',
-  'sort'=>'Sort',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'to_sort'=>'sort'
+  'access_denied'=>'Acces interzis',
+  'add_server'=>'adaugă server',
+  'actions'=>'Acţiuni',
+  'delete'=>'Şterge',
+  'edit'=>'editează',
+  'edit_server'=>'editaţi server',
+  'game'=>'Joc',
+  'info'=>'Informaţie',
+  'ip_port'=>'IP:Port-ul serverului',
+  'new_server'=>'server nou',
+  'no_server'=>'Niciun server disponibil',
+  'really_delete'=>'Chiar doriți să ștergeți acest server?',
+  'servers'=>'Servere',
+  'server_name'=>'Nume server',
+  'sort'=>'Sortează',
+  'transaction_invalid'=>'ID-ul tranzacției este invalid',
+  'to_sort'=>'sortează'
 );
 

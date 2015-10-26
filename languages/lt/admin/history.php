@@ -29,10 +29,10 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'history'=>'Clan-History',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'update'=>'update',
-  'you_can_use_html'=>'You can use HTML-Tags'
+  'access_denied'=>'Priėeiga atmestas',
+  'history'=>'Klano Istorija',
+  'transaction_invalid'=>'Sandorio ID negalioja',
+  'update'=>'atnaujinti',
+  'you_can_use_html'=>'Jūs galite naudoti HTML Žymas'
 );
 

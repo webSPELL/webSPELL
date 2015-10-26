@@ -31,10 +31,10 @@ $language_array = Array(
 
   'access_denied'=>'Piekļuve liegta',
   'actions'=>'Darbības',
-  'add_board'=>'add Board',
+  'add_board'=>'pievinot Pārvaldē',
   'add_category'=>'Pievienot kategoriju',
-  'boardinfo'=>'Boardinfo',
-  'boardname'=>'Boardname',
+  'boardinfo'=>'Pārvaldes informācija',
+  'boardname'=>'Pārvaldes vārds',
   'boards'=>'Dēļi',
   'category'=>'Kategorija',
   'category_info'=>'Kategorija Info',
@@ -42,7 +42,7 @@ $language_array = Array(
   'choose_moderators'=>'Izvēlieties Moderatori par valdes priekšsēdētājs:',
   'delete'=>'dzēst',
   'edit'=>'rediģēt',
-  'edit_board'=>'edit Board',
+  'edit_board'=>'pārveidot Pārvaldi',
   'edit_category'=>'rediģēt Kategorija',
   'moderators'=>'Moderatori',
   'mods'=>'Modi',
@@ -59,7 +59,7 @@ $language_array = Array(
   'transaction_invalid'=>'Darījumu ID spēkā neesošu',
   'to_sort'=>'kārtot',
   'unselect_all'=>'Atcelt visu',
-  'write_right'=>'Write-Right',
+  'write_right'=>'Rakstiet- tiesības',
   'write_right_info_board'=>'Šis / Tie lietotāju grupa (s) ir / ir atļauts rakstīt kuģa. <br> Ja ir izvēlēts neviens lietotājs grupa, visi reģistrētiem lietotājiem ir atļauts rakstīt šajā padomē. <br> Izmantojiet CTRL multi izvēlēties un izņemiet atzīmi.'
 );
 

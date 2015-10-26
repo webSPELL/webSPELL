@@ -29,22 +29,22 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'add_server'=>'add Server',
-  'actions'=>'Actions',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_server'=>'edit Server',
-  'game'=>'Game',
-  'info'=>'Info',
-  'ip_port'=>'Server IP:Port',
-  'new_server'=>'new Server',
-  'no_server'=>'No Servers available',
-  'really_delete'=>'Really delete this Server?',
-  'servers'=>'Servers',
-  'server_name'=>'Server Name',
-  'sort'=>'Sort',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'to_sort'=>'sort'
+  'access_denied'=>'Piekļuve liegta',
+  'add_server'=>'pievienot Serveri',
+  'actions'=>'Darbības',
+  'delete'=>'dzēst',
+  'edit'=>'rediģēt',
+  'edit_server'=>'rediģēt Serveri',
+  'game'=>'Spēle',
+  'info'=>'Informācija',
+  'ip_port'=>'Servera IP:Ports',
+  'new_server'=>'jauns Serveris',
+  'no_server'=>'Serveri nav pieejami',
+  'really_delete'=>'Vai tiešām izdzēst šo Serveri?',
+  'servers'=>'Serveri',
+  'server_name'=>'Servera Nosaukums',
+  'sort'=>'Kārtot',
+  'transaction_invalid'=>'Nederīgs ID darījums',
+  'to_sort'=>'kārtot'
 );
 

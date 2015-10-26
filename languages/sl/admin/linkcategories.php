@@ -29,17 +29,17 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_category'=>'add Category',
-  'category_name'=>'Category Name',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_category'=>'edit Category',
-  'information_incomplete'=>'Some information is missing.',
-  'link_categories'=>'Link Categories',
-  'new_category'=>'new Category',
-  'really_delete'=>'Really delete this Category and the Category Links?',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Dostop zavrnjen',
+  'actions'=>'Akcije',
+  'add_category'=>'dodaj kategorijo',
+  'category_name'=>'Ime kategorije',
+  'delete'=>'izbriši',
+  'edit'=>'uredi',
+  'edit_category'=>'uredi kategorijo',
+  'information_incomplete'=>'Nekaj podatkov manjka.',
+  'link_categories'=>'Naslovi kategorij',
+  'new_category'=>'nova kategorija',
+  'really_delete'=>'Res želite izbrisati to kategorijo in njena pogosto zastavljena vprašanja?',
+  'transaction_invalid'=>'Neveljaven ID transakcije'
 );
 

@@ -29,21 +29,21 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_category'=>'add Category',
-  'category'=>'Category',
-  'category_name'=>'Category Name',
-  'delete'=>'delete',
-  'description'=>'Description',
-  'edit'=>'edit',
-  'edit_category'=>'edit Category',
-  'faq_categories'=>'FAQ Categories',
-  'information_incomplete'=>'Some information is missing.',
-  'new_category'=>'new Category',
-  'really_delete'=>'Really delete this Category and the Category FAQs?',
-  'sort'=>'Sort',
-  'to_sort'=>'sort',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Priėeiga atmestas',
+  'actions'=>'Veiksmai',
+  'add_category'=>'Pridėti kategoriją',
+  'category'=>'Kategorija',
+  'category_name'=>'Kategorijos pavadinimas',
+  'delete'=>'ištrinti',
+  'description'=>'Aprašymas',
+  'edit'=>'redaguoti',
+  'edit_category'=>'Redaguoti kategoriją',
+  'faq_categories'=>'DUK Kategorijos',
+  'information_incomplete'=>'Trūksta informacijos.',
+  'new_category'=>'nauja kategorija',
+  'really_delete'=>'Tikrai ištrinti šią Kategoriją ir Kategorijos DUK?',
+  'sort'=>'Rūšiuoti',
+  'to_sort'=>'rūšiuoti',
+  'transaction_invalid'=>'Sandorio ID negalioja'
 );
 

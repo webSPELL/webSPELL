@@ -29,20 +29,20 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_language'=>'add Language',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_language'=>'edit Language',
-  'flag'=>'Flags',
-  'information_incomplete'=>'Some information is missing.',
-  'language'=>'Language',
-  'news_languages'=>'News-Languages',
-  'new_language'=>'new Language',
-  'preview'=>'Preview',
-  'really_delete'=>'Really delete this Language?',
-  'title'=>'Title',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Priėeiga atmestas',
+  'actions'=>'Veiksmai',
+  'add_language'=>'Pridėti kalbą',
+  'delete'=>'ištrinti',
+  'edit'=>'redaguoti',
+  'edit_language'=>'Redaguoti kalbą',
+  'flag'=>'Vėliavos',
+  'information_incomplete'=>'Trūksta informacijos.',
+  'language'=>'Kalba',
+  'news_languages'=>'Naujieų-Kalbos',
+  'new_language'=>'nauja kalba',
+  'preview'=>'Peržiūrėti',
+  'really_delete'=>'Tikrai ištrinti šią Kalbą?',
+  'title'=>'Pavadinimas',
+  'transaction_invalid'=>'Sandorio ID negalioja'
 );
 

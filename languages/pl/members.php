@@ -42,7 +42,7 @@ $language_array = array(
     'members' => 'użytkowników',
     'nickname' => 'Nick',
     'no_description' => 'Brak opisu',
-    'no_entries'=>'no entries available',
+    'no_entries'=>'Brak wpisów',
     'position' => 'Pozycja',
     'results' => 'Wyniki',
     'show_details' => '&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Pokaż szczegóły</b></a>',

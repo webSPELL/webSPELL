@@ -29,25 +29,25 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'back'=>'back',
-  'edit_group_users'=>'edit Group Users',
-  'error_group'=>'ERROR: User Group doesn\'t exist',
+  'access_denied'=>'Dostop zavrnjen',
+  'back'=>'nazaj',
+  'edit_group_users'=>'urejanje Skupine Uporabnikov',
+  'error_group'=>'NAPAKA: Uporabniška Skupina ne obstaja',
   'filter'=>'Filter',
-  'filter_anyadmin'=>'any Admin Filter',
+  'filter_anyadmin'=>'vse Admin Filter',
   'filter_clanmember'=>'Clanmembers Filter',
-  'filter_registered'=>'registered Filter',
+  'filter_registered'=>'registrirani Filter',
   'filter_superadmin'=>'Super Admin Filter',
-  'go'=>'go',
-  'group_users'=>'Group Users',
-  'groups'=>'Forum User Groups',
-  'or_just'=>'or just',
-  'save'=>'save',
-  'save_and_jump'=>'jump to Page',
-  'select_all'=>'select all',
-  'show'=>'show',
-  'user_filter'=>'User Filter',
-  'users_from_group'=>'Users from Group',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'go'=>'pojdi',
+  'group_users'=>'Skupine Uporabnikov',
+  'groups'=>'Forum Skupine Uporabnikov',
+  'or_just'=>'ali samo',
+  'save'=>'Shrani',
+  'save_and_jump'=>'skoči na Stran',
+  'select_all'=>'izberite vse',
+  'show'=>'prikaži',
+  'user_filter'=>'Uporabniški filter',
+  'users_from_group'=>'Uporabniki iz Skupine',
+  'transaction_invalid'=>'Neveljaven ID transakcije'
 );
 

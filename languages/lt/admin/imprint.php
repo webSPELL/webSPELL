@@ -29,12 +29,12 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'automatic'=>'Automatically',
-  'imprint'=>'Imprint',
-  'manual'=>'Manually (use the Textfield below)',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'update'=>'update',
-  'you_can_use_html'=>'You can use HTML-Tags'
+  'access_denied'=>'Priėeiga atmestas',
+  'automatic'=>'Automatiškai',
+  'imprint'=>'Įspaudas',
+  'manual'=>'Rankiniu būdu (naudoti laukelį žemiau)',
+  'transaction_invalid'=>'Sandorio ID negalioja',
+  'update'=>'atnaujinimas',
+  'you_can_use_html'=>'Jūs galite naudoti HTML Žymas'
 );
 

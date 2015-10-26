@@ -29,20 +29,20 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_language'=>'add Language',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_language'=>'edit Language',
-  'flag'=>'Flags',
-  'information_incomplete'=>'Some information is missing.',
-  'language'=>'Language',
-  'news_languages'=>'News-Languages',
-  'new_language'=>'new Language',
-  'preview'=>'Preview',
-  'really_delete'=>'Really delete this Language?',
-  'title'=>'Title',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'access_denied'=>'Piekļuve liegta',
+  'actions'=>'Darbības',
+  'add_language'=>'valodas pievienošana',
+  'delete'=>'dzēst',
+  'edit'=>'rediģēt',
+  'edit_language'=>'labot valodu',
+  'flag'=>'Karogi',
+  'information_incomplete'=>'Daža informācija ir pazudusi.',
+  'language'=>'Valoda',
+  'news_languages'=>'Jaunumi-Valodas',
+  'new_language'=>'jaunas Valodas',
+  'preview'=>'Priekšskats',
+  'really_delete'=>'Vai tiešām izdzēst šo Valodu?',
+  'title'=>'Virsraksts',
+  'transaction_invalid'=>'Nederīgs ID darījums'
 );
 
