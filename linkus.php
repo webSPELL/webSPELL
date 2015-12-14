@@ -30,7 +30,7 @@ if (isset($_GET['action'])) {
 } else {
     $action = "";
 }
-
+$showerror = "";
 if (isset($_POST['save'])) {
     $_language->readModule('linkus');
     if (!ispageadmin($userID)) {
@@ -73,16 +73,16 @@ if (isset($_POST['save'])) {
                                 );
                             }
                         } else {
-                            echo generateErrorBox(sprintf($_language->module[ 'image_too_big' ], 800, 600));
+                           $showerror = generateErrorBox(sprintf($_language->module[ 'image_too_big' ], 800, 600));
                         }
                     } else {
-                        echo generateErrorBox($_language->module[ 'broken_image' ]);
+                        $showerror =  generateErrorBox($_language->module[ 'broken_image' ]);
                     }
                 } else {
-                    echo generateErrorBox($_language->module[ 'unsupported_image_type' ]);
+                    $showerror =  generateErrorBox($_language->module[ 'unsupported_image_type' ]);
                 }
             } else {
-                echo generateErrorBox($upload->translateError());
+                $showerror =  generateErrorBox($upload->translateError());
             }
         }
     }
@@ -135,16 +135,16 @@ if (isset($_POST['save'])) {
                                 );
                             }
                         } else {
-                            echo generateErrorBox(sprintf($_language->module[ 'image_too_big' ], 800, 600));
+                            $showerror = generateErrorBox(sprintf($_language->module[ 'image_too_big' ], 800, 600));
                         }
                     } else {
-                        echo generateErrorBox($_language->module[ 'broken_image' ]);
+                        $showerror = generateErrorBox($_language->module[ 'broken_image' ]);
                     }
                 } else {
-                    echo generateErrorBox($_language->module[ 'unsupported_image_type' ]);
+                    $showerror = generateErrorBox($_language->module[ 'unsupported_image_type' ]);
                 }
             } else {
-                echo generateErrorBox($upload->translateError());
+                $showerror = generateErrorBox($upload->translateError());
             }
         }
     }
@@ -244,6 +244,7 @@ if ($action == "new") {
             }
 
             $data_array = array();
+			$data_array['$showerror'] = $showerror;
             $data_array['$name'] = $name;
             $data_array['$banner'] = $banner;
             $data_array['$code'] = $code;
