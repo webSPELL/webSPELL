@@ -146,13 +146,27 @@ if ($action == "save" && isset($_POST['post'])) {
         $showerror = generateErrorBoxFromArray($_language->module['problems'], $error);
     }
 }
+
 if ($show === true) {
     if ($showonlygamingsquads) {
         $squads = getgamesquads();
     } else {
         $squads = getsquads();
     }
-
+	if($showonlygamingsquads==false) {
+		$_r2 = mysqli_num_rows(safe_query("SELECT * FROM `" . PREFIX . "squads` WHERE `gamesquad` = 0"));
+		$_r1 = $_r2 + mysqli_num_rows(safe_query("SELECT * FROM `" . PREFIX . "squads` WHERE `gamesquad` = 1"));
+	 } else {
+		$_r1 = mysqli_num_rows(safe_query("SELECT * FROM `" . PREFIX . "squads` WHERE `gamesquad` = 1"));
+	 }
+	if($_r1<1) {
+		$data_array = array();
+		$data_array['$showerror'] = generateErrorBoxFromArray($_language->module['squad'], array($_language->module['no_squads_found']));
+		$joinus_failure = $GLOBALS["_template"]->replaceTemplate("joinus_failure", $data_array);
+        echo $joinus_failure;
+	return false;
+	} 
+	
     $bg1 = BG_1;
 
     if ($loggedin) {
