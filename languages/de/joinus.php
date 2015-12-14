@@ -56,6 +56,7 @@ $language_array = array(
     'squad' => 'Team',
     'thanks_you_will_get_mail' => 'Vielen Dank für Deinen Eintrag, wir werden uns mit Dir in Verbindung setzen.',
     'title_join_us' => 'Mitglied werden',
-    'wrong_security_code' => 'Der Sicherheitscode war falsch!'
+    'wrong_security_code' => 'Der Sicherheitscode war falsch!',
+    'no_squads_found' => 'Es gibt kein Team dem man beitreten kann.'
 );
 
