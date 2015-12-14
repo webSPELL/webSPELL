@@ -48,6 +48,7 @@ $language_array = array(
     'subject' => 'Betreff',
     'title_contact' => 'Kontaktformular',
     'unknown_receiver' => 'Unbekannter Empfänger',
-    'wrong_securitycode' => 'Der Sicherheitscode ist falsch'
+    'wrong_securitycode' => 'Der Sicherheitscode ist falsch',
+    'no_contact_setup' => 'Es wurde kein Kontakt gefunden, dem eine Nachricht gesendet werden kann.'
 );
 
