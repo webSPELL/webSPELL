@@ -170,13 +170,15 @@ function fixJavaEvents($string)
 function flags($text, $calledfrom = 'root')
 {
     global $_language;
-    $_language->readModule('bbcode', true);
 
+    $prefix = '';
     if ($calledfrom == 'admin') {
         $prefix = '../';
+        $_language->readModule('bbcode', true, true);
     } else {
-        $prefix = '';
+        $_language->readModule('bbcode', true, false);
     }
+
     $ergebnis = safe_query("SELECT * FROM `" . PREFIX . "countries`");
     while ($ds = mysqli_fetch_array($ergebnis)) {
         $text = str_ireplace(
