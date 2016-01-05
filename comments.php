@@ -286,7 +286,7 @@ if (isset($_POST[ 'savevisitorcomment' ])) {
             SET
                 comment='" . $message . "'
             WHERE
-                commentID='" . (int)$_POST[ 'commentID' ]
+                commentID='" . (int)$_POST[ 'commentID' ] . "'"
         )
     ) {
         header("Location: " . $referer);
