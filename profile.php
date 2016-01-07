@@ -712,18 +712,17 @@ if (isset($id) && getnickname($id) != '') {
 
         if ($userID != $id && $userID != 0) {
             safe_query("UPDATE " . PREFIX . "user SET visits=visits+1 WHERE userID='" . $id . "'");
-            if (
-                mysqli_num_rows(
-                    safe_query(
-                        "SELECT
+            if (mysqli_num_rows(
+                safe_query(
+                    "SELECT
                             visitID
                         FROM
                             " . PREFIX . "user_visitors
                         WHERE
                             userID='" . $id . "' AND
                             visitor='" . (int)$userID."'"
-                    )
                 )
+            )
             ) {
                 safe_query(
                     "UPDATE

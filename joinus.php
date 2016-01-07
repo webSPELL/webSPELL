@@ -132,14 +132,16 @@ if ($action == "save" && isset($_POST['post'])) {
             sendmessage($id, $tmp_lang->module['message_title'], $message);
         }
         echo generateAlert($_language->module['thanks_you_will_get_mail'], 'alert-success');
-        unset($_POST['nick'],
+        unset(
+            $_POST['nick'],
             $_POST['name'],
             $_POST['email'],
             $_POST['messenger'],
             $_POST['age'],
             $_POST['city'],
             $_POST['clanhistory'],
-            $_POST['info']);
+            $_POST['info']
+        );
         $show = false;
     } else {
         $show = true;

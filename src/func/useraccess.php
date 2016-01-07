@@ -329,12 +329,11 @@ function isgalleryadmin($userID)
 
 function isclanmember($userID)
 {
-    if (
-        mysqli_num_rows(
-            safe_query(
-                "SELECT userID FROM `" . PREFIX . "squads_members` WHERE `userID` = " . (int)$userID
-            )
-        ) > 0
+    if (mysqli_num_rows(
+        safe_query(
+            "SELECT userID FROM `" . PREFIX . "squads_members` WHERE `userID` = " . (int)$userID
+        )
+    ) > 0
     ) {
         return true;
     } else {
@@ -344,12 +343,11 @@ function isclanmember($userID)
 
 function isjoinusmember($userID)
 {
-    if (
-        mysqli_num_rows(
-            safe_query(
-                "SELECT userID FROM `" . PREFIX . "squads_members` WHERE `userID` = " . (int)$userID
-            )
-        ) > 0
+    if (mysqli_num_rows(
+        safe_query(
+            "SELECT userID FROM `" . PREFIX . "squads_members` WHERE `userID` = " . (int)$userID
+        )
+    ) > 0
     ) {
         return true;
     } else {
@@ -446,16 +444,15 @@ function isinusergrp($usergrp, $userID)
         return false;
     }
 
-    if (
-        mysqli_num_rows(safe_query(
-            "SELECT
+    if (mysqli_num_rows(safe_query(
+        "SELECT
                 userID
             FROM
                 " . PREFIX . "user_forum_groups
             WHERE
                 `" . $usergrp . "` = 1 AND
                 `userID` = " . (int)$userID
-        )) > 0
+    )) > 0
     ) {
         return true;
     }

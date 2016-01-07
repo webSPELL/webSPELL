@@ -85,8 +85,7 @@ if (isset($_GET[ 'delete' ])) {
     }
 } elseif (isset($_POST[ 'savecat' ])) {
     $CAPCLASS = new \webspell\Captcha;
-    if (
-        $CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])
+    if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])
     ) {
         $anz = mysqli_num_rows(safe_query("SELECT catID FROM " . PREFIX . "addon_categories"));
         safe_query(

@@ -62,7 +62,7 @@ class Email
         $mail = new \PHPMailer();
 
         $mail->SMTPDebug = $debug;
-        $mail->Debugoutput = function($str, $level) {
+        $mail->Debugoutput = function ($str, $level) {
             $GLOBALS['mail_debug'] .= $str . '<br>';
         };
 

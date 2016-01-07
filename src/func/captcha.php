@@ -236,16 +236,15 @@ class Captcha
     public function checkCaptcha($input, $hash)
     {
 
-        if (
-            mysqli_num_rows(
-                safe_query(
-                    "SELECT `hash`
+        if (mysqli_num_rows(
+            safe_query(
+                "SELECT `hash`
                     FROM `" . PREFIX . "captcha`
                     WHERE
                         `captcha` = '" . $input . "' AND
                         `hash` = '" . $hash . "'"
-                )
             )
+        )
         ) {
             safe_query(
                 "DELETE FROM `" . PREFIX . "captcha`

@@ -203,7 +203,7 @@ class SpamApi
                 curl_close($ch);
                 return "";
             }
-        } elseif (include ("HTTP/Request2.php") && class_exists("HTTP_Request2")) {
+        } elseif (include("HTTP/Request2.php") && class_exists("HTTP_Request2")) {
             $request = new \HTTP_Request2($this->host, \HTTP_Request2::METHOD_POST);
             if (stripos($this->host, "https") == 0) {
                 $request->setConfig(array("ssl_cafile" => "src/ca.pem", "ssl_verify_peer" => false));

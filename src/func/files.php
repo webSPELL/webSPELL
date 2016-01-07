@@ -41,17 +41,16 @@ function generateFileCategoryOptions($filecats = '', $offset = '', $subcatID = 0
     while ($dr = mysqli_fetch_array($rubrics)) {
         $filecats .= '<option value="' . $dr[ 'filecatID' ] . '">' .
                     $offset . htmlspecialchars($dr[ 'name' ]) . '</option>';
-        if (
-            mysqli_num_rows(
-                safe_query(
-                    "SELECT
+        if (mysqli_num_rows(
+            safe_query(
+                "SELECT
                                 *
                     FROM
                     `" . PREFIX . "files_categorys`
                     WHERE
                     `subcatID` = '" . (int)$dr[ 'filecatID' ]."'"
-                )
             )
+        )
         ) {
             $filecats .= generateFileCategoryOptions("", $offset . "- ", $dr[ 'filecatID' ]);
         }

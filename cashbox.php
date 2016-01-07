@@ -127,18 +127,17 @@ if (isset($_POST[ 'save' ]) && $_POST[ 'save' ]) {
     $date = time();
     foreach ($payid as $usID => $costs) {
         if ($costs != "") {
-            if (
-                mysqli_num_rows(
-                    safe_query(
-                        "SELECT
+            if (mysqli_num_rows(
+                safe_query(
+                    "SELECT
                             payedID
                         FROM
                             " . PREFIX . "cash_box_payed
                         WHERE
                             userID='$usID'AND
                             cashID='".(int)$id."'"
-                    )
                 )
+            )
             ) {
                 safe_query(
                     "UPDATE

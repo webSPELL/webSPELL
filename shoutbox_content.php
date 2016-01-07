@@ -54,8 +54,7 @@ if ($action == "save") {
         $ip = $GLOBALS[ 'ip' ];
         $ergebnis = safe_query("SELECT * FROM " . PREFIX . "shoutbox ORDER BY date DESC LIMIT 0,1");
         $ds = mysqli_fetch_array($ergebnis);
-        if (
-            ($ds[ 'message' ] != $message) ||
+        if (($ds[ 'message' ] != $message) ||
             ($ds[ 'name' ] != $name)
         ) {
             safe_query(

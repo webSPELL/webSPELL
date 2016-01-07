@@ -59,8 +59,7 @@ if (isset($newsID)) {
     $result = safe_query("SELECT * FROM " . PREFIX . "news WHERE `newsID` = '" . (int)$newsID."'");
     $ds = mysqli_fetch_array($result);
 
-    if (
-        $ds[ 'intern' ] <= isclanmember($userID) &&
+    if ($ds[ 'intern' ] <= isclanmember($userID) &&
         (
             $ds[ 'published' ] || (
                 isnewsadmin($userID) ||

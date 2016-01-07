@@ -105,7 +105,7 @@ if (isset($table) && isset($key)) {
         }
     }
 
-    switch($table) {
+    switch ($table) {
         case "gallery_pictures":
             $table = "gallery&picID=" . $id;
             break;

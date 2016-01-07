@@ -313,13 +313,12 @@ if ($action == "add") {
 } elseif (isset($_GET["delete"])) {
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_GET['captcha_hash'])) {
-        if (
-            safe_query(
-                "DELETE FROM
+        if (safe_query(
+            "DELETE FROM
                 `" . PREFIX . "bannerrotation`
                 WHERE
                 `bannerID` = '" . (int) $_GET["bannerID"] . "'"
-            )
+        )
         ) {
             if (file_exists($filepath . $_GET["bannerID"] . '.jpg')) {
                 unlink($filepath . $_GET["bannerID"] . '.jpg');

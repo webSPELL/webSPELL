@@ -130,8 +130,7 @@ class Tags
                 n.newsID = " . (int)$newsID
         );
         $ds = mysqli_fetch_array($result);
-        if (
-            $ds['intern'] <= isclanmember($userID) &&
+        if ($ds['intern'] <= isclanmember($userID) &&
             (
                 $ds['published'] ||
                 (

@@ -147,8 +147,7 @@ class ModRewrite
     private function rewrite($content, $headers = false)
     {
         $start_time = microtime(true);
-        if (
-            stristr($content, "MM_goToURL") ||
+        if (stristr($content, "MM_goToURL") ||
             stristr($content, "window.open") ||
             stristr($content, 'http-equiv="refresh"')
         ) {

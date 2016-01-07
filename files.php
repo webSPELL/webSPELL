@@ -159,9 +159,8 @@ if ($action == "save") {
         if (count($error)) {
             echo generateErrorBoxFromArray($_language->module['errors_there'], $fehler);
         } else {
-            if (
-                safe_query(
-                    "INSERT INTO
+            if (safe_query(
+                "INSERT INTO
                         `" . PREFIX . "files` (
                             `filecatID`,
                             `poster`,
@@ -186,7 +185,7 @@ if ($action == "save") {
                             '0',
                             '" . $accesslevel . "'
                         )"
-                )
+            )
             ) {
                 redirect(
                     "index.php?site=files&amp;file=" . mysqli_insert_id($_database),

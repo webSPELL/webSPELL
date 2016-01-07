@@ -31,8 +31,7 @@ if (isset($_GET[ 'action' ])) {
     $action = '';
 }
 
-if (
-    $action == "search" &&
+if ($action == "search" &&
     (
         $userID || isset($_REQUEST[ 'captcha' ])
     )
@@ -112,8 +111,7 @@ if (
                                 `articlesID` = '" . $articlesID . "' AND
                                 `content` LIKE '%" . $text . "%'"
                         );
-                    if (
-                        !mysqli_num_rows($ergebnis_articles_contents) &&
+                    if (!mysqli_num_rows($ergebnis_articles_contents) &&
                         substr_count(strtolower($ds[ 'title' ]), strtolower(stripslashes($text))) == 0
                     ) {
                         continue;

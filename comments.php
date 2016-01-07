@@ -279,15 +279,14 @@ if (isset($_POST[ 'savevisitorcomment' ])) {
     $referer = urldecode($_POST[ 'referer' ]);
 
     // check if any admin edited the post
-    if (
-        safe_query(
-            "UPDATE
+    if (safe_query(
+        "UPDATE
                 `" . PREFIX . "comments`
             SET
                 comment='" . $message . "'
             WHERE
                 commentID='" . (int)$_POST[ 'commentID' ] . "'"
-        )
+    )
     ) {
         header("Location: " . $referer);
     }
