@@ -233,6 +233,8 @@ module.exports = function( grunt ) {
                     "E001", // Document is missing a DOCTYPE declaration
                     "E003", // .row that were not children of a grid column
                     "E041", // `.carousel-inner` must have exactly one `.item.active` child
+                    "E042", // `.form-control` cannot be used on non-textual `<input>`s
+                    "E047", // `.btn` should only be used on `<a>`, `<button>`, `<input>`
                     "W001", // <head> is missing UTF-8 charset
                     "W002", // <head> is missing X-UA-Compatible <meta> tag
                     "W003", // <head> is missing viewport <meta> tag that enables responsiveness

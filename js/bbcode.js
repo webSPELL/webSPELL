@@ -70,21 +70,21 @@ function AddTag( open, close, content ) {
     }
 }
 
-// insert [img] tag
+// Insert [img] tag
 function AddImg() {
     "use strict";
 
     AddTag( "[IMG]", "[/IMG]", "" );
 }
 
-// insert [url] or [email] tag
+// Insert [url] or [email] tag
 function AddLink( thetype ) {
     "use strict";
 
     AddTag( "[" + thetype + "]", "[/" + thetype + "]", "" );
 }
 
-// insert html list
+// Insert html list
 function AddList() {
     "use strict";
 
@@ -115,7 +115,7 @@ function AddList() {
     }
 }
 
-// insert code from another window
+// Insert code from another window
 function AddCodeFromWindow( thecode ) {
     "use strict";
 
@@ -166,49 +166,49 @@ function AddCodeFromWindow( thecode ) {
     }
 }
 
-// insert [b] tag
+// Insert [b] tag
 function AddB() {
     "use strict";
 
     AddTag( "[B]", "[/B]", "" );
 }
 
-// insert [U] tag
+// Insert [U] tag
 function AddU() {
     "use strict";
 
     AddTag( "[U]", "[/U]", "" );
 }
 
-// insert [I] tag
+// Insert [I] tag
 function AddI() {
     "use strict";
 
     AddTag( "[I]", "[/I]", "" );
 }
 
-// insert [S] tag
+// Insert [S] tag
 function AddS() {
     "use strict";
 
     AddTag( "[S]", "[/S]", "" );
 }
 
-// insert [quote] tag
+// Insert [quote] tag
 function AddQuote() {
     "use strict";
 
     AddTag( "[quote]", "[/quote]", "" );
 }
 
-// insert [code] tag
+// Insert [code] tag
 function AddCodetag() {
     "use strict";
 
     AddTag( "[code]", "[/code]", "" );
 }
 
-// insert [Toggle] tag
+// Insert [Toggle] tag
 function AddToggle() {
     "use strict";
 
@@ -217,7 +217,7 @@ function AddToggle() {
     AddTag( "[toggle=" + languageArray.bbcode.read_more + "]", "[/toggle]", "" );
 }
 
-// toggle function - read more
+// Toggle function - read more
 function Toggle( id, multi ) {
     "use strict";
 
@@ -267,7 +267,7 @@ function Toggle( id, multi ) {
     }
 }
 
-// function addRow() ** this adds a new row to the table,
+// Function addRow() ** this adds a new row to the table,
 // containing mapname, mapresult_home, mapresult_opponent
 function addRow( action ) {
     "use strict";
@@ -291,7 +291,7 @@ function addRow( action ) {
     }
     cell0.appendChild( textNode );
 
-    // mapname
+    // Mapname
     cell1 = row.insertCell( 1 );
     ele1 = document.createElement( "input" );
     ele1.setAttribute( "type", "text" );
@@ -301,7 +301,7 @@ function addRow( action ) {
     ele1.className = "form_off";
     cell1.appendChild( ele1 );
 
-    // results: home
+    // Results: home
     cell2 = row.insertCell( 2 );
     ele2 = document.createElement( "input" );
     ele2.setAttribute( "type", "text" );
@@ -311,7 +311,7 @@ function addRow( action ) {
     ele2.className = "form_off";
     cell2.appendChild( ele2 );
 
-    // results: opponent
+    // Results: opponent
     cell3 = row.insertCell( 3 );
     ele3 = document.createElement( "input" );
     ele3.setAttribute( "type", "text" );
@@ -321,7 +321,7 @@ function addRow( action ) {
     ele3.className = "form_off";
     cell3.appendChild( ele3 );
 
-    // create delete-selection for edit-function
+    // Create delete-selection for edit-function
     if ( theAction === "edit" ) {
         cell4 = row.insertCell( 4 );
         ele4 = document.createElement( "input" );
@@ -335,7 +335,7 @@ function addRow( action ) {
     }
 }
 
-// function removeRow() ** removes the last row of a table
+// Function removeRow() ** removes the last row of a table
 function removeRow() {
     "use strict";
 
@@ -385,7 +385,7 @@ function checkSize( name, xmax, ymax ) {
     }
 
     if ( resized === false ) {
-        parentElement.getElementsByTagName( "a" )[0].style.display = "none";
+        parentElement.getElementsByTagName( "a" )[ 0 ].style.display = "none";
     }
 
     parentElement.style.display = "block";
@@ -404,7 +404,7 @@ function AddCode( code ) {
     AddText( code );
 }
 
-/* tooltip */
+/* Tooltip */
 function updateWMTT( e ) {
     "use strict";
 
@@ -438,7 +438,7 @@ function trim( stringToTrim ) {
     return stringToTrim.replace( /^\s+|\s+$/g, "" );
 }
 
-//update target
+// Update target
 function updatepage( str, id, action ) {
     "use strict";
 
@@ -459,7 +459,7 @@ function updatepage( str, id, action ) {
     }
 }
 
-//ajax functions
+// Ajax functions
 function postRequest( strURL, id, action ) {
     "use strict";
 
@@ -480,14 +480,14 @@ function postRequest( strURL, id, action ) {
     xmlHttp.send( strURL );
 }
 
-//fetch data for onclick/onchange events
+// Fetch data for onclick/onchange events
 function eventfetch( url, id, action ) {
     "use strict";
 
     postRequest( url, id, action );
 }
 
-//fetch data for timebased events
+// Fetch data for timebased events
 function timefetch( url, id, action, milliseconds ) {
     "use strict";
 
@@ -499,16 +499,16 @@ function timefetch( url, id, action, milliseconds ) {
     );
 }
 
-//generic fetch function, accepts 5 parameters (first 4 mandatory).
-//url = script to access on the server
-//id = html id (for example of a div, a form field etc.., works with all tags which accept an id)
-//action = add, replace, return or formfield, add adds up content at the end of the original
+// Generic fetch function, accepts 5 parameters (first 4 mandatory).
+// url = script to access on the server
+// id = html id (for example of a div, a form field etc.., works with all tags which accept an id)
+// action = add, replace, return or formfield, add adds up content at the end of the original
 // content in the id element, replace replaces the complete content in the id element,
 // formfield replaces a form field value, return simply returns the fetched data
-//base = time or event, time based means script will autoexecute itself every amount of
+// base = time or event, time based means script will autoexecute itself every amount of
 // milliseconds specified via the 5th parameter, event based means you are calling the
 // funtion with something like onclick, onchange, onmouseover or directly in a script
-//milliseconds = time in milliseconds till the script should autoexecute itself again
+// milliseconds = time in milliseconds till the script should autoexecute itself again
 // (only needed when base==time)
 function fetch( url, id, action, base, milliseconds ) {
     "use strict";
@@ -520,7 +520,7 @@ function fetch( url, id, action, base, milliseconds ) {
     }
 }
 
-//search & overlay functions
+// Search & overlay functions
 function search( table, column, identifier, searchqry, searchtemp, id, action, exact, searchtype ) {
     "use strict";
 
@@ -595,7 +595,7 @@ function formcheckOnsend( id ) {
     return trim( valuestring ) !== "";
 }
 
-//bbcode checker
+// Bbcode checker
 function validbbcode( txt ) {
     "use strict";
 
@@ -710,7 +710,7 @@ function validbbcode( txt ) {
 /* jshint ignore:start */
 
 // jscs:disable
-function MM_confirm( msg, url ) { //v1.0
+function MM_confirm( msg, url ) { // v1.0
     if ( confirm( msg ) ) location.replace( url );
 }
 
@@ -718,7 +718,7 @@ function MM_confirm( msg, url ) { //v1.0
 
 /* jshint ignore:end */
 
-//test for valid url
+// Test for valid url
 function url( string ) {
     "use strict";
 
@@ -749,7 +749,7 @@ function loadLanguageSynchron( module ) {
     if ( window.calledfrom === "admin" ) {
         path = "../" + path;
     }
-    window.languageArray[module] = [];
+    window.languageArray[ module ] = [];
     /*jshint -W061 */
     eval( $.ajax( {
         type: "GET",
@@ -765,7 +765,7 @@ function replaceLangVars( template, vars ) {
     for ( key in vars ) {
         if ( vars.hasOwnProperty( key ) ) {
             template = template.replace(
-                new RegExp( "\\%" + key + "\\%", "gm" ), vars[key]
+                new RegExp( "\\%" + key + "\\%", "gm" ), vars[ key ]
             );
         }
     }
@@ -786,11 +786,11 @@ Object.defineProperty( String.prototype, "replaceAll", {
     }
 } );
 
-//initialize javascript language array
+// Initialize javascript language array
 window.languageArray = {};
 function loadLanguageModule( module ) {
     "use strict";
-    window.languageArray[module] = [];
+    window.languageArray[ module ] = [];
     if ( typeof window.calledfrom === "undefined" ) {
         fetch( "getlang.php?modul=" + module + "&mode=array", "none", "execute", "event" );
     } else if ( window.calledfrom === "admin" ) {
@@ -818,7 +818,7 @@ $( document ).ready( function() {
             success: function( data, textStatus, jqXHR ) {
                 $body.css( "cursor", "default" );
 
-                //data: return data from server
+                // Data: return data from server
                 if ( data.state === "success" ) {
                     $loginAlert
                         .addClass( "alert-success" )
@@ -832,13 +832,13 @@ $( document ).ready( function() {
                         .removeClass( "hidden" )
                         .html( data.message );
 
-                    // always clear password
+                    // Always clear password
                     $this
                         .find( "input[name=password]" )
                         .val( "" )
                         .focus();
 
-                    // username wrong?
+                    // Username wrong?
                     if ( data.code === "no_user" ) {
                         $this
                             .find( "input[name=ws_user]" )
