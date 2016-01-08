@@ -61,6 +61,8 @@ _mysql.php
 
 # Grunt Plugins
 node_modules
+grunt-log.txt
+npm-debug.log
 
 # Bower Packages
 components
@@ -69,3 +71,10 @@ components
 composer.phar
 vendor
 /development/tools/output.log
+composer.lock
+
+# Vagrant
+.vagrant
+
+# Misc
+selenium-debug.log
