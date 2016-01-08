@@ -31,7 +31,7 @@ foreach($allLangFiles as $file){
                     break;
                 }
             }
-            if($found == false){
+            if($found === false){
                 $all_keys[$key][] = array(1, $value);
             }
         }

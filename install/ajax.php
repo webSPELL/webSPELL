@@ -45,7 +45,7 @@ $_language->readModule('step6');
 header('Cache-Control: no-cache, must-revalidate');
 header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
 header('Content-type: application/json');
-if ($function != null) {
+if ($function !== null) {
     if (isset($_SESSION['adminname'])) $adminname = $_SESSION['adminname'];
     if (isset($_SESSION['adminpassword'])) $adminpassword = $_SESSION['adminpassword'];
     if (isset($_SESSION['adminmail'])) $adminmail = $_SESSION['adminmail'];
