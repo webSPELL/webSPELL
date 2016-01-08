@@ -490,6 +490,10 @@ module.exports = function( grunt ) {
                 globalReplace: false,
                 regExp: false
             }
+        },
+
+        clean: {
+            folder: ["node_modules", "components", "vendor"]
         }
 
     } );
