@@ -1,13 +1,18 @@
 include php
-class { ['php::extension::intl', 'php::extension::mcrypt', 'php::extension::imagick', 'php::extension::curl', 'php::extension::gd', 'php::extension::mysql']:
+class { ['php::extension::intl',
+    'php::extension::mcrypt',
+    'php::extension::imagick',
+    'php::extension::curl',
+    'php::extension::gd',
+    'php::extension::mysql']:
 }
 class { 'apache':
   default_vhost => false,
-  mpm_module => 'prefork',
-  manage_group => false,
-  manage_user => false,
-  user => 'vagrant',
-  group => 'vagrant',
+  mpm_module    => 'prefork',
+  manage_group  => false,
+  manage_user   => false,
+  user          => 'vagrant',
+  group         => 'vagrant',
 }
 include apache::mod::php
 include apache::mod::rewrite
@@ -26,13 +31,6 @@ mysql::db { 'webspelldev':
   grant    => ['ALL'],
 }
 class { 'nodejs':
-  repo_url_suffix => 'node_0.12',
+    version      => 'v0.12.9',
+    make_install => false,
 }
-#package { 'grunt-cli':
-#  ensure   => 'present',
-#  provider => 'npm',
-#}
-#package { 'bower':
-#  ensure   => 'present',
-#  provider => 'npm',
-#}
