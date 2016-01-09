@@ -7,17 +7,7 @@ sudo puppet module install puppetlabs-apache
 sudo puppet module install puppetlabs-mysql
 sudo puppet module install nodes/php
 sudo puppet module install willdurand/nodejs
-SCRIPT
-
-$post = <<SCRIPT
-curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin
-sudo ln -s /usr/local/bin/composer.phar /usr/local/bin/composer
-cd /vagrant
-sudo /usr/local/node/node-default/bin/npm install -g grunt-cli
-sudo /usr/local/node/node-default/bin/npm install -g bower
-/usr/local/node/node-default/bin/npm install
-/usr/local/node/node-default/bin/bower install
-/usr/local/bin/composer install
+sudo puppet module install tPl0ch-composer
 SCRIPT
 
 $locale = <<SCRIPT
@@ -43,5 +33,4 @@ Vagrant.configure(2) do |config|
       puppet.manifests_path = "development"
       puppet.manifest_file = "Provision.pp"
   end
-  config.vm.provision "post", type: "shell", inline: $post, privileged: false
 end
