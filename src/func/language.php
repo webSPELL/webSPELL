@@ -35,9 +35,11 @@ class Language
     public $module = array();
     private $language_path = 'languages/';
 
-    public function setLanguage($to)
+    public function setLanguage($to, $admin = false)
     {
-
+        if ($admin) {
+            $this->language_path = '../'.$this->language_path;
+        }
         $langs = array();
 
         foreach (new \DirectoryIterator($this->language_path) as $fileInfo) {
