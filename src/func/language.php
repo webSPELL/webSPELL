@@ -50,6 +50,7 @@ class Language
 
         if (in_array($to, $langs)) {
             $this->language = $to;
+            $this->language_path = 'languages/';
             return true;
         } else {
             return false;
