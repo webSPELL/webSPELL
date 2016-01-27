@@ -72,7 +72,7 @@ if (isset($_POST[ 'save' ])) {
                     $error[ ] = $_language->module[ 'file_already_exists' ];
                 } else {
                     @chmod($new_name, $new_chmod);
-                    $file = $demo[ 'name' ];
+                    $file = $demo->getFileName();
                 }
             } else {
                 $error[ ] = $demo->translateError();
