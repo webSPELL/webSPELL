@@ -90,17 +90,17 @@ if (isset($table) && isset($key)) {
                 " . $key . " = '" . (int)$id."'"
             );
             $ergebnis = safe_query(
-                "SELECT votes, points FROM " . PREFIX . $table . " WHERE " . $key . " = '" . (int)$id-"'"
+                "SELECT votes, points FROM " . PREFIX . $table . " WHERE " . $key . " = '" . (int)$id . "'"
             );
             $ds = mysqli_fetch_array($ergebnis);
             $rate = round($ds[ 'points' ] / $ds[ 'votes' ]);
             safe_query(
-                "UPDATE " . PREFIX . $table . " SET rating='" . $rate . "' WHERE " . $key . "='" . (int)$id."'"
+                "UPDATE " . PREFIX . $table . " SET rating='" . $rate . "' WHERE " . $key . "='" . (int)$id . "'"
             );
             $array[ ] = $id;
             $string_new = implode(":", $array);
             safe_query(
-                "UPDATE " . PREFIX . "user SET " . $table . "='" . $string_new . "' WHERE userID='" . (int)$userID."'"
+                "UPDATE " . PREFIX . "user SET " . $table . "='" . $string_new . "' WHERE userID='" . (int)$userID . "'"
             );
         }
     }
