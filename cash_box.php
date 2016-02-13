@@ -37,7 +37,7 @@ if(isset($_POST['save']) and $_POST['save']) {
 	$date=time();
 	$paydate=mktime(0,0,0,$_POST['month'],$_POST['day'],$_POST['year']);
 
-	safe_query("INSERT INTO ".PREFIX."cash_box ( date, paydate, usedfor, info, totalcosts, usercosts, squad, konto ) VALUES ('$date', '$paydate', '".$_POST['usedfor']."', '".$_POST['info']."', '".$_POST['euro']."', '".$_POST['usereuro']."', '".$_POST['squad']."', '".$_POST['konto']."' ) ");
+	safe_query("INSERT INTO ".PREFIX."cash_box ( date, paydate, usedfor, info, totalcosts, usercosts, squad, konto ) VALUES ('$date', '$paydate', '".$_POST['usedfor']."', '".$_POST['info']."', '".$_POST['euro']."', '".$_POST['usereuro']."', '".((int)$_POST['squad'])."', '".$_POST['konto']."' ) ");
 	$id=mysql_insert_id();
 
 	header("Location: index.php?site=cash_box&id=$id");
@@ -52,14 +52,14 @@ elseif(isset($_POST['saveedit']) and $_POST['saveedit']) {
 	$date=time();
 	$paydate=mktime(0,0,0,$_POST['month'],$_POST['day'],$_POST['year']);
 
-	$id = $_POST['id'];
+	$id = (int)$_POST['id'];
 
 	safe_query("UPDATE ".PREFIX."cash_box SET date='".$date."',
 											  paydate='".$paydate."',
 											  usedfor='".$_POST['usedfor']."',
 											  info='".$_POST['info']."',
 											  totalcosts='".$_POST['euro']."',
-											  squad='".$_POST['squad']."',
+											  squad='".(int)$_POST['squad']."',
 											  konto='".$_POST['konto']."',
 											  usercosts='".$_POST['usereuro']."'  WHERE cashID='$id'");
 
@@ -71,7 +71,7 @@ elseif(isset($_GET['delete']) and $_GET['delete']) {
 	include("_functions.php");
 	$_language->read_module('cash_box');
 	if(!iscashadmin($userID)) die($_language->module['no_access']);
-	$id = $_GET['id'];
+	$id = (int)$_GET['id'];
 	safe_query("DELETE FROM ".PREFIX."cash_box WHERE cashID='$id'");
 	safe_query("DELETE FROM ".PREFIX."cash_box_payed WHERE cashID='$id'");
 
@@ -86,10 +86,11 @@ elseif(isset($_POST['pay']) and $_POST['pay']) {
 
 	$payid = $_POST['payid'];
 	$costs = isset($_POST['costs']);
-	$id = $_POST['id'];
+	$id = (int)$_POST['id'];
 
 	$date=time();
 	foreach ( $payid as $usID => $costs ) {
+		$usID = (int)$usID;
 		if($costs!="") {
 			if(mysql_num_rows(safe_query("SELECT payedID FROM ".PREFIX."cash_box_payed WHERE userID='$usID' AND cashID='$id'"))) {
 				safe_query("UPDATE ".PREFIX."cash_box_payed SET costs='$costs' WHERE userID='$usID' AND cashID='$id'");
@@ -130,7 +131,7 @@ else {
 		
     	echo'<h2>'.$_language->module['cash_box'].'</h2>';
 
-		$id = $_GET['id'];
+		$id = (int)$_GET['id'];
 		$ergebnis=safe_query("SELECT * FROM ".PREFIX."cash_box WHERE cashID='$id'");
 		$ds=mysql_fetch_array($ergebnis);
 
@@ -351,8 +352,8 @@ else {
 			}
 		}
 		else {
-			$id = $_GET['id'];
-			if(isset($_GET['squad'])) $get_squad = $_GET['squad'];
+			$id = (int)$_GET['id'];
+			if(isset($_GET['squad'])) $get_squad = (int)$_GET['squad'];
 			else $get_squad = 0;
 			if($get_squad == 0) {
 				print_cashbox(0, $id);
