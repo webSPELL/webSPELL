@@ -22,6 +22,11 @@
 #                                                                        #
  ########################################################################
 
+### webspell 4.2.5 ( 2016- 02 - 13 ) changeset b514b0686b6c20a359461e7e0aa6b2dab9c7f29f
+
+* cash_box.php
+  - fix(sec) Security fix for SQL injection
+
 ### webspell 4.2.4 ( 2015- 01 - 28 ) changeset 68dced0dc64a968c1fa5bfaab330b13a3777da7c
 
 * awards.php, calendar.php, challenge.php, clanwars.php, demos.php
