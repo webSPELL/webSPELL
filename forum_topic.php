@@ -246,8 +246,8 @@ if (isset($_POST['newreply']) && !isset($_POST['preview'])) {
             if ((bool)$_POST['notify']) {
                 safe_query(
                     "INSERT INTO " . PREFIX .
-                    "forum_notify (`notifyID`, `topicID`, `userID`) VALUES ('', '$userID', '" . (int)$_GET['topic'] .
-                    "')"
+                    "forum_notify (`notifyID`, `topicID`, `userID`) 
+                    VALUES ('', '" . (int)$_GET['topic'] . "', '$userID')"
                 );
             }
         }
