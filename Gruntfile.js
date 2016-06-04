@@ -173,7 +173,7 @@ module.exports = function( grunt ) {
         jscs: {
             all: {
                 options: {
-                    "config": "node_modules/grunt-jscs/node_modules/jscs/presets/jquery.json"
+                    "config": "node_modules/jscs/presets/jquery.json"
                 },
                 files: {
                     src: [
