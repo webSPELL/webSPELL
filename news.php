@@ -193,22 +193,22 @@ if ($action == "new") {
 
     $link1 = strip_tags($_POST[ 'link1' ]);
     $url1 = strip_tags($_POST[ 'url1' ]);
-    $window1 = $_POST[ 'window1' ];
+    $window1 = isset($_POST[ 'window1' ]) ? $_POST[ 'window1' ] : '';
 
     $link2 = strip_tags($_POST[ 'link2' ]);
     $url2 = strip_tags($_POST[ 'url2' ]);
-    $window2 = $_POST[ 'window2' ];
+    $window2 = isset($_POST[ 'window2' ]) ? $_POST[ 'window2' ] : '';
 
     $link3 = strip_tags($_POST[ 'link3' ]);
     $url3 = strip_tags($_POST[ 'url3' ]);
-    $window3 = $_POST[ 'window3' ];
+    $window3 = isset($_POST[ 'window3' ]) ? $_POST[ 'window3' ] : '';
 
     $link4 = strip_tags($_POST[ 'link4' ]);
     $url4 = strip_tags($_POST[ 'url4' ]);
-    $window4 = $_POST[ 'window4' ];
+    $window4 = isset($_POST[ 'window4' ]) ? $_POST[ 'window4' ] : '';
 
-    $intern = $_POST[ 'intern' ];
-    $comments = $_POST[ 'comments' ];
+    $intern = isset($_POST[ 'intern' ]) ? $_POST[ 'intern' ] : null;
+    $comments = isset($_POST[ 'comments' ]) ? $_POST[ 'comments' ] : null;
 
     safe_query(
         "UPDATE
@@ -303,7 +303,7 @@ if ($action == "new") {
     if ($preview) {
         header("Location: news.php?action=preview&newsID=" . $newsID);
     }
-    if ($languagecount) {
+    if ($langcount) {
         header("Location: news.php?action=edit&newsID=" . $newsID);
     }
 } elseif ($action == "preview") {
