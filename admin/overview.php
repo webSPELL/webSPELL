@@ -139,7 +139,7 @@ echo $_language->module[ 'hello' ] . '&nbsp;' . $username . ',&nbsp;' . $_langua
 echo $_language->module[ 'welcome_message' ]; ?>
 <br/>
 <iframe
-    src="http://update.webspell.org/index.php?new&amp;v=<?php
+    src="https://update.webspell.org/index.php?new&amp;v=<?php
         echo $version;
     ?>&amp;h=<?php
         echo $_SERVER[ 'SERVER_NAME' ];
