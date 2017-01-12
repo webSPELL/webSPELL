@@ -1,3 +1,6 @@
+machine:
+  php:
+    version: 5.5.0
 general:
   artifacts:
     - "grunt-log.txt"
