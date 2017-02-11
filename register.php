@@ -25,6 +25,24 @@
 ##########################################################################
 */
 
+// #read database entries (?)
+$_admin_minpasslen = "6";
+$_admin_maxpasslen = "18"; #empty = no max
+$_admin_musthavelow = true;
+$_admin_musthaveupp = true;
+$_admin_musthavenum = true;
+$_admin_musthavespec = true;
+
+// #chk pass function
+function pass_complex($pwd,$_admin_minpasslen,$_admin_maxpasslen,$_admin_musthavelow,$_admin_musthaveupp,$_admin_musthavenum,$_admin_musthavespec) {
+    if ($_admin_musthavelow==true) { $_pwd_low = "(?=\S*[a-z])"; } else { $_pwd_low=""; }
+    if ($_admin_musthaveupp==true) { $_pwd_upp = "(?=\S*[A-Z])"; } else { $_pwd_upp=""; }
+    if ($_admin_musthavenum==true) { $_pwd_num = "(?=\S*[\d])"; } else { $_pwd_num=""; }
+    if ($_admin_musthavespec==true) { $_pwd_spec = "(?=\S*[\W])"; } else { $_pwd_spec=""; }
+    if (!preg_match_all('$\S*(?=\S{'.$_admin_minpasslen.','.$_admin_maxpasslen.'})'.$_pwd_low.$_pwd_upp.$_pwd_num.$_pwd_spec.'\S*$', $pwd)) { return false; }
+return true;
+}
+
 $_language->readModule('register');
 
 $title_register = $GLOBALS["_template"]->replaceTemplate("title_register", array());
@@ -69,8 +87,8 @@ if (isset($_POST['save'])) {
         }
 
         // check passwort
-        if (!(mb_strlen(trim($password)))) {
-            $error[] = $_language->module['enter_password'];
+        if (pass_complex($password,$_admin_minpasslen,$_admin_maxpasslen,$_admin_musthavelow,$_admin_musthaveupp,$_admin_musthavenum,$_admin_musthavespec)==false) {
+            $error[] = $_language->module['enter_password2'];
         }
 
         // check e-mail

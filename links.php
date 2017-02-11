@@ -30,29 +30,29 @@ if (isset($_GET[ 'action' ])) {
 } else {
     $action = '';
 }
-
+$showerror="";
 if (isset($_POST[ 'save' ])) {
     $_language->readModule('links');
     if (!ispageadmin($userID) || !isnewsadmin($userID)) {
         echo generateAlert($_language->module['no_access'], 'alert-danger');
     } else {
-        safe_query(
-            "INSERT INTO
-                " . PREFIX . "links (
-                    linkcatID,
-                    name,
-                    url,
-                    info
-                )
-            values (
-                '" . (int)$_POST[ 'cat' ] . "',
-                '" . strip_tags($_POST[ 'name' ]) . "',
-                '" . $_POST[ 'url' ] . "',
-                '" . $_POST[ 'info' ] . "'
-            ) "
-        );
-
-        $filepath = "./images/links/";
+			safe_query(
+				"INSERT INTO
+					" . PREFIX . "links (
+						linkcatID,
+						name,
+						url,
+						info
+					)
+				values (
+					'" . (int)$_POST[ 'cat' ] . "',
+					'" . strip_tags($_POST[ 'name' ]) . "',
+					'" . $_POST[ 'url' ] . "',
+					'" . $_POST[ 'info' ] . "'
+				) "
+			);
+		$_id = mysqli_insert_id($_database);	
+		$filepath = "./images/links/";
 
         $_language->readModule('formvalidation', true);
 
@@ -88,18 +88,24 @@ if (isset($_POST[ 'save' ])) {
                                 );
                             }
                         } else {
-                            echo generateErrorBox(sprintf($_language->module[ 'image_too_big' ], 800, 600));
+                            $showerror = generateErrorBox(sprintf($_language->module[ 'image_too_big' ], 800, 600));
                         }
                     } else {
-                        echo generateErrorBox($_language->module[ 'broken_image' ]);
+                        $showerror = generateErrorBox($_language->module[ 'broken_image' ]);
                     }
                 } else {
-                    echo generateErrorBox($_language->module[ 'unsupported_image_type' ]);
+                    $showerror = generateErrorBox($_language->module[ 'unsupported_image_type' ]);
                 }
             } else {
-                echo generateErrorBox($upload->translateError());
+                $showerror = generateErrorBox($upload->translateError());
             }
         }
+		if($showerror!="") { 
+			#delete the create entry because the upload failed - try again 
+			safe_query("DELETE FROM `".PREFIX."links` WHERE `linkID` = '".$_id."' LIMIT 1");
+		}
+
+       
     }
 } elseif (isset($_POST[ 'saveedit' ])) {
     $_language->readModule('links');
@@ -153,16 +159,16 @@ if (isset($_POST[ 'save' ])) {
                                 );
                             }
                         } else {
-                            echo generateErrorBox(sprintf($_language->module[ 'image_too_big' ], 800, 600));
+                            $showerror = generateErrorBox(sprintf($_language->module[ 'image_too_big' ], 800, 600));
                         }
                     } else {
-                        echo generateErrorBox($_language->module[ 'broken_image' ]);
+                        $showerror = generateErrorBox($_language->module[ 'broken_image' ]);
                     }
                 } else {
-                    echo generateErrorBox($_language->module[ 'unsupported_image_type' ]);
+                    $showerror = generateErrorBox($_language->module[ 'unsupported_image_type' ]);
                 }
             } else {
-                echo generateErrorBox($upload->translateError());
+                $showerror = generateErrorBox($upload->translateError());
             }
         }
     }
@@ -333,6 +339,7 @@ if ($action == "new") {
         $anzcats = mysqli_num_rows(safe_query("SELECT linkcatID FROM " . PREFIX . "links_categorys"));
 
         $data_array = array();
+		$data_array['$showerror'] = $showerror;
         $data_array['$anzcats'] = $anzcats;
         $links_category = $GLOBALS["_template"]->replaceTemplate("links_category", $data_array);
         echo $links_category;
