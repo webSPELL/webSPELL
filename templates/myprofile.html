@@ -30,378 +30,475 @@
 </script>
 
 <form
-    method="post"
-    name="post"
-    action="index.php?site=myprofile"
-    enctype="multipart/form-data"
-    onsubmit="return chkFormular()"
-    class="form-horizontal"
-    role="form">
+        method="post"
+        name="post"
+        action="index.php?site=myprofile"
+        enctype="multipart/form-data"
+        onsubmit="return chkFormular()"
+        class="form-horizontal"
+        role="form">
 
-    <h2>%profile-info%:</h2>
-    $showerror
+    <!-- Profile info -->
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">%profile-info%</h3>
+        </div>
+        <div class="panel-body">
 
-    <div class="form-group">
-        <label for="nickname" class="col-lg-3 control-label">%nickname%:*</label>
+            <!-- Error Box -->
+            $showerror
 
-        <div class="col-lg-9">
-            <input
-                type="text"
-                name="nickname"
-                id="nickname"
-                value="$nickname"
-                maxlength="30"
-                autocomplete="nickname"
-                class="form-control">
+            <!-- Nickname -->
+            <div class="form-group">
+                <label for="input-nickname" class="col-sm-3 control-label">%nickname%:*</label>
+
+                <div class="col-sm-9">
+                    <input type="text" name="nickname" class="form-control" id="input-nickname" value="$nickname" autocomplete="nickname" maxlength="30">
+                </div>
+            </div>
+
+            <!-- Nickname -->
+            <div class="form-group">
+                <label for="input-usernamenew" class="col-sm-3 control-label">%username%:</label>
+
+                <div class="col-sm-9">
+                    <input type="text" name="usernamenew" class="form-control" id="input-usernamenew" value="$username" autocomplete="nickname">
+                </div>
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+                <label for="input-usernamenew" class="col-sm-3 control-label">%password%:</label>
+
+                <div class="col-sm-9">
+                    <p class="form-control-static">
+                        ******<br>
+                        <a href="index.php?site=myprofile&amp;action=editpwd" class="btn btn-warning btn-xs">%edit_password%</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="input-usernamenew" class="col-sm-3 control-label">%e-mail%:</label>
+
+                <div class="col-sm-9">
+                    <p class="form-control-static">
+                        $email<br>
+                        <a href="index.php?site=myprofile&amp;action=editmail" class="btn btn-warning btn-xs">%edit_mail%</a>
+                    </p>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Avatar -->
+            <div class="form-group">
+
+                <label for="input-avatar" class="col-sm-3 control-label">
+                    $viewavatar
+                </label>
+
+                <div class="col-sm-9">
+                    <p class="form-control-static">
+                        <input type="file" name="avatar" id="input-avatar"><span class="help-block">%or%</span>
+                        <input type="text" name="avatar_url" class="form-control" placeholder="http://">
+                        <span class="help-block"><input type="checkbox" name="delavatar" value="1"> %delete_max_90_90%</span>
+                    </p>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <!-- Userpic -->
+            <div class="form-group">
+
+                <label for="input-userpic" class="col-sm-3 control-label">
+                    $viewpic
+                </label>
+
+                <div class="col-sm-9">
+                    <p class="form-control-static">
+                        <input type="file" name="userpic" id="input-userpic"><span class="help-block">%or%</span>
+                        <input type="text" name="userpic_url" class="form-control" placeholder="http://">
+                        <span class="help-block"><input type="checkbox" name="deluserpic" value="1"> %delete_max_230_210%</span>
+                    </p>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <!-- Signature -->
+            <div class="form-group">
+                <label for="textarea-usertext" class="col-sm-3 control-label">%signature%:</label>
+
+                <div class="col-sm-9">
+                    <textarea name="usertext" rows="5" class="form-control" id="textarea-usertext">$usertext</textarea>
+                </div>
+            </div>
+
         </div>
     </div>
 
-    <div class="form-group">
-        <label for="usernamenew" class="col-lg-3 control-label">%username%:*</label>
+    <!-- Personal info -->
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">%personal-info%</h3>
+        </div>
+        <div class="panel-body">
 
-        <div class="col-lg-9">
-            <input
-                type="text"
-                name="usernamenew"
-                id="usernamenew"
-                value="$username"
-                autocomplete="nickname"
-                class="form-control">
+            <!-- First name -->
+            <div class="form-group">
+                <label for="input-firstname" class="col-sm-3 control-label">%first_name%:*</label>
+
+                <div class="col-sm-9">
+                    <input type="text" name="firstname" class="form-control" id="input-firstname" value="$firstname" autocomplete="given-name">
+                </div>
+            </div>
+
+            <!-- Last name -->
+            <div class="form-group">
+                <label for="input-lastname" class="col-sm-3 control-label">%last_name%:</label>
+
+                <div class="col-sm-9">
+                    <input type="text" name="lastname" class="form-control" id="input-lastname" value="$lastname" autocomplete="family-name">
+                </div>
+            </div>
+
+            <!-- Country -->
+            <div class="form-group">
+                <label for="input-country" class="col-sm-3 control-label">%country%:</label>
+                <div class="col-sm-9">
+                    <div class="row">
+                        <div class="col-sm-1">
+                            $country
+                        </div>
+                        <div class="col-sm-11">
+                            <select name="flag" onchange="document.getElementById('county').src='images/flags/' +
+                                this.options[this.selectedIndex].value+'.gif'" class="form-control" id="input-country">
+                                $countries
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Town -->
+            <div class="form-group">
+                <label for="input-town" class="col-sm-3 control-label">%town%:</label>
+
+                <div class="col-sm-9">
+                    <input type="text" name="town" class="form-control" id="input-town" value="$town" autocomplete="locality">
+                </div>
+            </div>
+
+            <!-- Birthday -->
+            <div class="form-group">
+                <label for="input-birthday" class="col-sm-3 control-label">%date_of_birth%:*</label>
+
+                <div class="col-sm-9">
+                    <input type="date" name="birthday" class="form-control" id="input-birthday" placeholder="yyyy-mm-dd" value="$birthday">
+                </div>
+            </div>
+
+            <!-- Sexuality -->
+            <div class="form-group">
+                <label for="input-sex" class="col-sm-3 control-label">%sexuality%:</label>
+
+                <div class="col-sm-9">
+                    <select name="sex" class="form-control" id="input-sex">
+                        $sex
+                    </select>
+                </div>
+            </div>
+
+            <!-- ICQ -->
+            <div class="form-group">
+                <label for="input-icq" class="col-sm-3 control-label">Icq#</label>
+
+                <div class="col-sm-9">
+                    <input type="text" name="icq" class="form-control" id="input-icq" value="$icq">
+                </div>
+            </div>
+
+            <!-- Homepage -->
+            <div class="form-group">
+                <label for="input-homepage" class="col-sm-3 control-label">%homepage%:</label>
+
+                <div class="col-sm-9">
+                    <input type="url" name="homepage" class="form-control" id="input-homepage" value="http://$homepage" autocomplete="url">
+                </div>
+            </div>
+
+            <!-- Message about -->
+            <div class="form-group">
+                <label for="textarea-messageabout" class="col-sm-3 control-label">%about_myself%:</label>
+
+                <div class="col-sm-9">
+                    <textarea name="messageabout" rows="8" class="form-control" id="textarea-messageabout">$about</textarea>
+                </div>
+            </div>
+
         </div>
     </div>
 
-    <div class="form-group">
-        <div class="col-xs-6 text-left">
-            <a href="index.php?site=myprofile&amp;action=editpwd" class="btn btn-danger">%edit_password%</a>
+    <!-- Options -->
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">%options%</h3>
         </div>
-        <div class="col-xs-6 text-right">
-            <a href="index.php?site=myprofile&amp;action=editmail" title="$email" class="btn btn-danger">%edit_mail%</a>
-        </div>
-    </div>
-    <hr>
+        <div class="panel-body">
 
-    <div class="row">
+            <!-- Newsletter -->
+            <div class="form-group">
+                <label for="select-newsletter" class="col-sm-3 control-label">%newsletter%:</label>
 
-        <label for="avatar" class="col-md-3 control-label">$viewavatar<br>
-        <input name="delavatar" type="checkbox" value="1"> <small>%delete%</small></label>
+                <div class="col-sm-9">
+                    <select name="newsletter" class="form-control" id="select-newsletter">
+                        $newsletter
+                    </select>
+                </div>
+            </div>
 
-        <div class="col-md-9">
-                <input name="avatar" type="file"><span class="help-block">%or%</span>
-                <input name="avatar_url" type="text" placeholder="http://" class="form-control">
-                <span class="help-block">max: 90px / 90px</span>
-        </div>
-    </div>
-    <hr>
+            <!-- Language -->
+            <div class="form-group">
+                <label for="select-language" class="col-sm-3 control-label">%language%:</label>
 
-    <div class="row">
-        <label for="userpic" class="col-md-3 control-label">$viewpic<br>
-        <input name="deluserpic" type="checkbox" value="1"> <small>%delete%</small></label>
+                <div class="col-sm-9">
+                    <select name="language" class="form-control" id="select-language">
+                        $langdirs
+                    </select>
+                </div>
+            </div>
 
-        <div class="col-md-9">
-                <input name="userpic" type="file"><span class="help-block">%or%</span>
-                <input name="userpic_url" type="text" placeholder="http://" class="form-control">
-                <span class="help-block">max: 230px / 210px</span>
-        </div>
-    </div>
-    <hr>
+            <!-- Mail on new pm -->
+            <div class="form-group">
+                <label for="select-pm_mail" class="col-sm-3 control-label">%mail_on_new_pm%:</label>
 
-    <div class="form-group">
-        <label for="usertext" class="col-lg-3 control-label">%signature%:*</label>
+                <div class="col-sm-9">
+                    <select name="pm_mail" class="form-control" id="select-pm_mail">
+                        $pm_mail
+                    </select>
+                </div>
+            </div>
 
-        <div class="col-lg-9">
-            <textarea id="usertext" name="usertext" cols="70" rows="5" class="form-control">$usertext</textarea>
-        </div>
-    </div>
+            <!-- Hide E-mail -->
+            <div class="form-group">
+                <label for="input-mail_hide" class="col-sm-3 control-label">%hide_e-mail%:</label>
 
-    <h2>%personal-info%:</h2>
+                <div class="col-sm-9">
+                    <input type="checkbox" name="mail_hide" id="input-mail_hide" value="1" $email_hide>
+                </div>
+            </div>
 
-    <div class="form-group">
-        <label for="firstname" class="col-lg-3 control-label">%first_name%:*</label>
+            <!-- Format date -->
+            <div class="form-group">
+                <label for="select-date_format" class="col-sm-3 control-label">%format_date%:</label>
 
-        <div class="col-lg-9">
-            <input
-                type="text"
-                name="firstname"
-                id="firstname"
-                value="$firstname"
-                autocomplete="given-name"
-                class="form-control">
-        </div>
-    </div>
+                <div class="col-sm-9">
+                    <select name="date_format" class="form-control" id="select-date_format">
+                        $format_date
+                    </select>
+                </div>
+            </div>
 
-    <div class="form-group">
-        <label for="lastname" class="col-lg-3 control-label">%last_name%:*</label>
+            <!-- Format time -->
+            <div class="form-group">
+                <label for="select-time_format" class="col-sm-3 control-label">%format_time%:</label>
 
-        <div class="col-lg-9">
-            <input id="lastname" type="text" name="lastname" value="$lastname" autocomplete="family-name"
-                class="form-control">
-        </div>
-    </div>
+                <div class="col-sm-9">
+                    <select name="time_format" class="form-control" id="select-time_format">
+                        $format_time
+                    </select>
+                </div>
+            </div>
 
-    <div class="form-group">
-        <label for="input-flag" class="col-xs-12 col-lg-3">%country%:</label>
+            $user_gbook_select
 
-        <div class="col-xs-1">
-            <label>$country</label>
-        </div>
-        <div class="col-xs-11 col-lg-7">
-            <select id="input-flag" name="flag" onchange="document.getElementById('county').src='images/flags/' +
-                this.options[this.selectedIndex].value+'.gif'" class="form-control">
-                $countries
-            </select>
         </div>
     </div>
 
-    <div class="form-group">
-        <label for="town" class="col-lg-3 control-label">%town%:</label>
+    <!-- Clan info -->
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">%clan-info%</h3>
+        </div>
+        <div class="panel-body">
 
-        <div class="col-lg-9">
-            <input id="town" type="text" name="town" autocomplete="locality" value="$town" class="form-control">
+            <!-- Clan tag -->
+            <div class="form-group">
+                <label for="input-clantag" class="col-sm-3 control-label">%clan-tag%:</label>
+
+                <div class="col-sm-9">
+                    <input type="text" name="clantag" class="form-control" id="input-clantag" value="$clantag">
+                </div>
+            </div>
+
+            <!-- Clan name -->
+            <div class="form-group">
+                <label for="input-clanname" class="col-sm-3 control-label">%clan-name%:</label>
+
+                <div class="col-sm-9">
+                    <input type="text" name="clanname" class="form-control" id="input-clanname" value="$clanname">
+                </div>
+            </div>
+
+            <!-- Clan hp -->
+            <div class="form-group">
+                <label for="input-clanhp" class="col-sm-3 control-label">%clan-hp%:</label>
+
+                <div class="col-sm-9">
+                    <input type="url" name="clanhp" class="form-control" id="input-clanhp" value="$clanhp">
+                </div>
+            </div>
+
+            <!-- Clan irc -->
+            <div class="form-group">
+                <label for="input-clanirc" class="col-sm-3 control-label">%clan-irc%:</label>
+
+                <div class="col-sm-9">
+                    <input type="text" name="clanirc" class="form-control" id="input-clanirc" value="$clanirc">
+                </div>
+            </div>
+
+            <!-- Clan history -->
+            <div class="form-group">
+                <label for="input-clanhistory" class="col-sm-3 control-label">%clan-history%:</label>
+
+                <div class="col-sm-9">
+                    <input type="text" name="clanhistory" class="form-control" id="input-clanhistory" value="$clanhistory">
+                </div>
+            </div>
+
         </div>
     </div>
 
-    <div class="form-group">
-        <label for="bday" class="col-lg-3 control-label">%date_of_birth%:*</label>
+    <!-- Equipment info -->
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">%equipment-info%</h3>
+        </div>
+        <div class="panel-body">
 
-        <div class="col-lg-9">
-            <input id="bday"
-                class="form-control"
-                placeholder="yyyy-mm-dd"
-                value="$birthday"
-                name="birthday"
-                type="date">
+            <!-- CPU -->
+            <div class="form-group">
+                <label for="input-cpu" class="col-sm-3 control-label">%cpu%:</label>
+
+                <div class="col-sm-9">
+                    <input type="text" name="cpu" class="form-control" id="input-cpu" value="$cpu">
+                </div>
+            </div>
+
+            <!-- Mainboard -->
+            <div class="form-group">
+                <label for="input-mainboard" class="col-sm-3 control-label">%mainboard%:</label>
+
+                <div class="col-sm-9">
+                    <input type="text" name="mainboard" class="form-control" id="input-mainboard" value="$mainboard">
+                </div>
+            </div>
+
+            <!-- Ram -->
+            <div class="form-group">
+                <label for="input-ram" class="col-sm-3 control-label">%ram%:</label>
+
+                <div class="col-sm-9">
+                    <input type="text" name="ram" class="form-control" id="input-ram" value="$ram">
+                </div>
+            </div>
+
+            <!-- HDD -->
+            <div class="form-group">
+                <label for="input-hdd" class="col-sm-3 control-label">%hdd%:</label>
+
+                <div class="col-sm-9">
+                    <input type="text" name="hdd" class="form-control" id="input-hdd" value="$hdd">
+                </div>
+            </div>
+
+            <!-- Monitor -->
+            <div class="form-group">
+                <label for="input-monitor" class="col-sm-3 control-label">%monitor%:</label>
+
+                <div class="col-sm-9">
+                    <input type="text" name="monitor" class="form-control" id="input-monitor" value="$monitor">
+                </div>
+            </div>
+
+            <!-- Graphiccard -->
+            <div class="form-group">
+                <label for="input-graphiccard" class="col-sm-3 control-label">%graphiccard%:</label>
+
+                <div class="col-sm-9">
+                    <input type="text" name="graphiccard" class="form-control" id="input-graphiccard" value="$graphiccard">
+                </div>
+            </div>
+
+            <!-- Soundcard -->
+            <div class="form-group">
+                <label for="input-soundcard" class="col-sm-3 control-label">%soundcard%:</label>
+
+                <div class="col-sm-9">
+                    <input type="text" name="soundcard" class="form-control" id="input-soundcard" value="$soundcard">
+                </div>
+            </div>
+
+            <!-- Connection -->
+            <div class="form-group">
+                <label for="input-connection" class="col-sm-3 control-label">%i-connection%:</label>
+
+                <div class="col-sm-9">
+                    <input type="text" name="connection" class="form-control" id="input-connection" value="$connection">
+                </div>
+            </div>
+
+            <!-- Keyboard -->
+            <div class="form-group">
+                <label for="input-keyboard" class="col-sm-3 control-label">%keyboard%:</label>
+
+                <div class="col-sm-9">
+                    <input type="text" name="keyboard" class="form-control" id="input-keyboard" value="$keyboard">
+                </div>
+            </div>
+
+            <!-- Mouse -->
+            <div class="form-group">
+                <label for="input-mouse" class="col-sm-3 control-label">%mouse%:</label>
+
+                <div class="col-sm-9">
+                    <input type="text" name="mouse" class="form-control" id="input-mouse" value="$mouse">
+                </div>
+            </div>
+
+            <!-- Mousepad -->
+            <div class="form-group">
+                <label for="input-mousepad" class="col-sm-3 control-label">%mousepad%:</label>
+
+                <div class="col-sm-9">
+                    <input type="text" name="mousepad" class="form-control" id="input-mousepad" value="$mousepad">
+                </div>
+            </div>
+
+            <!-- Headset -->
+            <div class="form-group">
+                <label for="input-headset" class="col-sm-3 control-label">%headset%:</label>
+
+                <div class="col-sm-9">
+                    <input type="text" name="headset" class="form-control" id="input-headset" value="$headset">
+                </div>
+            </div>
+
+            <!-- Submit button -->
+            <div class="form-group">
+                <div class="col-xs-12 col-sm-6">%fields_star_required%</div>
+                <div class="col-xs-12 col-sm-6 text-right">
+                    <input type="submit" name="submit" class="btn btn-primary" value="%update_profile%">
+                </div>
+            </div>
+
         </div>
     </div>
 
-    <div class="form-group">
-        <label for="sex" class="col-lg-3 control-label">%sexuality%:</label>
-
-        <div class="col-lg-9">
-            <select id="sex" name="sex" class="form-control">$sex</select>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="icq" class="col-lg-3 control-label">Icq#</label>
-
-        <div class="col-lg-9">
-            <input id="icq" type="text" name="icq" value="$icq" class="form-control">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="homepage" class="col-lg-3 control-label">%homepage%:</label>
-
-        <div class="col-lg-9">
-            <input id="homepage" type="url" name="homepage" value="http://$homepage" autocomplete="url"
-                class="form-control">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="messageabout" class="col-lg-3 control-label">%about_myself%:</label>
-
-        <div class="col-lg-9">
-            <textarea id="messageabout" name="messageabout" cols="70" rows="8" class="form-control">$about</textarea>
-        </div>
-    </div>
-
-    <h2>%options%:</h2>
-
-    <div class="form-group">
-        <label for="newsletter" class="col-lg-3 control-label">%newsletter%:</label>
-
-        <div class="col-lg-9">
-            <select id="newsletter" name="newsletter" class="form-control">$newsletter</select>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="language" class="col-lg-3 control-label">%language%:</label>
-
-        <div class="col-lg-9">
-            <select id="language" name="language" class="form-control">$langdirs</select>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="pm-mail" class="col-lg-3 control-label">%mail_on_new_pm%:</label>
-
-        <div class="col-lg-9">
-            <select id="pm-mail" name="pm_mail" class="form-control">$pm_mail</select>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="mail-hide" class="col-lg-3 control-label">%hide_e-mail%</label>
-
-        <div class="col-lg-9">
-            <input id="mail-hide" type="checkbox" name="mail_hide" value="1" $email_hide>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="pm-format" class="col-lg-3 control-label">%format_date%:</label>
-
-        <div class="col-lg-9">
-            <select id="pm-format" name="date_format" class="form-control">$format_date</select>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="format-time" class="col-lg-3 control-label">%format_time%:</label>
-
-        <div class="col-lg-9">
-            <select id="format-time" name="time_format" class="form-control">$format_time</select>
-        </div>
-    </div>
-
-    $user_gbook_select
-
-    <h2>%clan-info%:</h2>
-
-    <div class="form-group">
-        <label for="clantag" class="col-lg-3 control-label">%clan-tag%:</label>
-
-        <div class="col-lg-9">
-            <input id="clantag" type="text" name="clantag" value="$clantag" class="form-control">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="clanname" class="col-lg-3 control-label">%clan-name%:</label>
-
-        <div class="col-lg-9">
-            <input id="clanname" type="text" name="clanname" value="$clanname" class="form-control">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="clanhp" class="col-lg-3 control-label">%clan-hp%:</label>
-
-        <div class="col-lg-9">
-            <input id="clanhp" type="url" name="clanhp" value="$clanhp" class="form-control">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="clanirc" class="col-lg-3 control-label">%clan-irc%:</label>
-
-        <div class="col-lg-9">
-            <input id="clanirc" type="text" name="clanirc" value="$clanirc" class="form-control">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="clanhistory" class="col-lg-3 control-label">%clan-history%:</label>
-
-        <div class="col-lg-9">
-            <input id="clanhistory" type="text" name="clanhistory" value="$clanhistory" class="form-control">
-        </div>
-    </div>
-
-    <h2>%equipment-info%:</h2>
-
-    <div class="form-group">
-        <label for="cpu" class="col-lg-3 control-label">%cpu%:</label>
-
-        <div class="col-lg-9">
-            <input id="cpu" type="text" name="cpu" value="$cpu" class="form-control">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="mainboard" class="col-lg-3 control-label">%mainboard%:</label>
-
-        <div class="col-lg-9">
-            <input id="mainboard" type="text" name="mainboard" value="$mainboard" class="form-control">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="ram" class="col-lg-3 control-label">%ram%:</label>
-
-        <div class="col-lg-9">
-            <input id="ram" type="text" name="ram" value="$ram" class="form-control">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="hdd" class="col-lg-3 control-label">%hdd%:</label>
-
-        <div class="col-lg-9">
-            <input id="hdd" type="text" name="hdd" value="$hdd" class="form-control">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="monitor" class="col-lg-3 control-label">%monitor%:</label>
-
-        <div class="col-lg-9">
-            <input id="monitor" type="text" name="monitor" value="$monitor" class="form-control">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="graphiccard" class="col-lg-3 control-label">%graphiccard%:</label>
-
-        <div class="col-lg-9">
-            <input id="graphiccard" type="text" name="graphiccard" value="$graphiccard" class="form-control">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="soundcard" class="col-lg-3 control-label">%soundcard%:</label>
-
-        <div class="col-lg-9">
-            <input id="soundcard" type="text" name="soundcard" value="$soundcard" class="form-control">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="connection" class="col-lg-3 control-label">%i-connection%:</label>
-
-        <div class="col-lg-9">
-            <input id="connection" type="text" name="connection" value="$connection" class="form-control">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="keyboard" class="col-lg-3 control-label">%keyboard%:</label>
-
-        <div class="col-lg-9">
-            <input id="keyboard" type="text" name="keyboard" value="$keyboard" class="form-control">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="mouse" class="col-lg-3 control-label">%mouse%:</label>
-
-        <div class="col-lg-9">
-            <input id="mouse" type="text" name="mouse" value="$mouse" class="form-control">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="mousepad" class="col-lg-3 control-label">%mousepad%:</label>
-
-        <div class="col-lg-9">
-            <input id="mousepad" type="text" name="mousepad" value="$mousepad" class="form-control">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="headset" class="col-lg-3 control-label">%headset%:</label>
-
-        <div class="col-lg-9">
-            <input id="headset" type="text" name="headset" value="$headset" class="form-control">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <div class="col-md-6">%fields_star_required%</div>
-        <div class="col-md-6 text-right">
-            <input type="submit" name="submit" value="%update_profile%" class="btn btn-danger">
-        </div>
-    </div>
 </form>

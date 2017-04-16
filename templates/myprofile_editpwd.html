@@ -1,39 +1,50 @@
-<form method="post" action="index.php?site=myprofile" class="form-horizontal" role="form">
-    <h2>%edit_password%</h2>
-
-    <div class="form-group">
-        <label for="oldpwd" class="col-lg-3 control-label">%old_password%:</label>
-
-        <div class="col-lg-9">
-            <input type="password" name="oldpwd" id="oldpwd" class="form-control">
-        </div>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">%edit_password%</h3>
     </div>
+    <div class="panel-body">
+        <form
+                action="index.php?site=myprofile"
+                method="post"
+                role="form"
+                class="form-horizontal">
 
-    <div class="form-group">
-        <label for="pwd1" class="col-lg-3 control-label">%new_password%:</label>
+            <!-- Old password -->
+            <div class="form-group">
+                <label for="input-oldpwd" class="col-xs-12 col-md-4 control-label">%old_password%:</label>
 
-        <div class="col-lg-9">
-            <input type="password" name="pwd1" id="pwd1" class="form-control">
-        </div>
+                <div class="col-xs-12 col-md-8">
+                    <input type="password" name="oldpwd" class="form-control" id="input-oldpwd">
+                </div>
+            </div>
+
+            <!-- New password -->
+            <div class="form-group">
+                <label for="input-pwd1" class="col-xs-12 col-md-4 control-label">%new_password%:</label>
+
+                <div class="col-xs-12 col-md-8">
+                    <input type="password" name="pwd1" class="form-control" id="input-pwd1">
+                </div>
+            </div>
+
+            <!-- Repeat new password -->
+            <div class="form-group">
+                <label for="input-pwd2" class="col-xs-12 col-md-4 control-label">%repeat_new_password%:</label>
+
+                <div class="col-xs-12 col-md-8">
+                    <input type="password" name="pwd2" class="form-control" id="input-pwd2">
+                </div>
+            </div>
+
+            <!-- Submit button -->
+            <div class="form-group">
+                <div class="col-xs-12 col-md-8 col-xs-offset-12 col-md-offset-4">
+                    <input type="hidden" name="id" value="$userID">
+                    <a href="index.php?site=myprofile" class="btn btn-default btn-sm" role="button">%back%</a>
+                    <button type="submit" name="savepwd" class="btn btn-primary btn-sm">%change_password%</button>
+                </div>
+            </div>
+
+        </form>
     </div>
-
-    <div class="form-group">
-        <label for="pwd2" class="col-lg-3 control-label">%repeat_new_password%:</label>
-
-        <div class="col-lg-9">
-            <input type="password" name="pwd2" id="pwd2" class="form-control">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <div class="col-xs-6">
-            <a href="index.php?site=myprofile" class="btn btn-primary">
-                <span class="icon icon-reply"></span> %back%
-            </a>
-        </div>
-        <div class="col-xs-6 text-right">
-            <input type="hidden" name="id" value="$userID">
-            <input type="submit" name="savepwd" value="%change_password%" class="btn btn-danger">
-        </div>
-    </div>
-</form>
+</div>
