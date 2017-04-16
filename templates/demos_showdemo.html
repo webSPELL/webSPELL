@@ -1,55 +1,55 @@
-<form method="post" action="rating.php">
-    <table class="table">
-        <thead>
-        <tr>
-            <th colspan="2">%demo_details%</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>%date%:</td>
-            <td>$date</td>
-        </tr>
-        <tr>
-            <td>%game%:</td>
-            <td>$game</td>
-        </tr>
-        <tr>
-            <td>%clan1%:</td>
-            <td>$clan1</td>
-        </tr>
-        <tr>
-            <td>%clan2%:</td>
-            <td>$clan2</td>
-        </tr>
-        <tr>
-            <td>%league%:</td>
-            <td>$league</td>
-        </tr>
-        <tr>
-            <td>%players%:</td>
-            <td>$player</td>
-        </tr>
-        <tr>
-            <td>%maps%:</td>
-            <td>$maps</td>
-        </tr>
-        <tr>
-            <td>%downloads%:</td>
-            <td>$clicks</td>
-        </tr>
-        <tr>
-            <td>%rating%:</td>
-            <td>$ratingpic</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td class="text-center">$rateform</td>
-        </tr>
-        <tr>
-            <td colspan="2" class="text-center">$download</td>
-        </tr>
-        </tbody>
-    </table>
-    <div class="text-right">$adminaction</div>
-</form>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">%demo_details%</h3>
+    </div>
+    <form method="post" action="rating.php">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td>%date%:</td>
+                    <td>$date</td>
+                </tr>
+                <tr>
+                    <td>%game%:</td>
+                    <td>$game</td>
+                </tr>
+                <tr>
+                    <td>%clan1%:</td>
+                    <td>$clan1</td>
+                </tr>
+                <tr>
+                    <td>%clan2%:</td>
+                    <td>$clan2</td>
+                </tr>
+                <tr>
+                    <td>%league%:</td>
+                    <td>$league</td>
+                </tr>
+                <tr>
+                    <td>%players%:</td>
+                    <td>$player</td>
+                </tr>
+                <tr>
+                    <td>%maps%:</td>
+                    <td>$maps</td>
+                </tr>
+                <tr>
+                    <td>%downloads%:</td>
+                    <td>$clicks</td>
+                </tr>
+                <tr>
+                    <td>%rating%:</td>
+                    <td>$ratingpic</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="text-center">$rateform</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="text-center">$download</td>
+                </tr>
+            </tbody>
+        </table>
+        $adminaction
+    </form>
+</div>

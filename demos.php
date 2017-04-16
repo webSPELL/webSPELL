@@ -311,12 +311,13 @@ if (isset($_POST[ 'save' ])) {
     }
 } elseif ($action == "showdemo") {
     $demoID = $_GET[ 'demoID' ];
+    echo '<div class="form-group">';
     if (isfileadmin($userID)) {
         echo
-            '<a href="index.php?site=demos&amp;action=new" class="btn btn-danger">' . $_language->module[ 'new_demo' ] .
-            '</a>';
+            '<a href="index.php?site=demos&amp;action=new" class="btn btn-primary">' . $_language->module[ 'new_demo' ] .
+            '</a> ';
     }
-    echo '<a href="index.php?site=demos" class="btn btn-primary">' . $_language->module[ 'all_demos' ] . '</a><br><br>';
+    echo '<a href="index.php?site=demos" class="btn btn-default">' . $_language->module[ 'all_demos' ] . '</a></div>';
 
     $result = safe_query("SELECT * FROM `" . PREFIX . "demos` WHERE `demoID` = '" . (int)$demoID . "'");
     $ds = mysqli_fetch_array($result);
@@ -339,9 +340,9 @@ if (isset($_POST[ 'save' ])) {
     for ($i = 0; $i < $ds[ 'rating' ]; $i++) {
         $ratings[ $i ] = 1;
     }
-    $ratingpic = '<img src="images/icons/rating_' . $ratings[ 0 ] . '_start.gif" width="1" height="5" alt="">';
+    $ratingpic = '<img src="images/icons/rating_' . $ratings[ 0 ] . '_start.gif" alt="">';
     foreach ($ratings as $pic) {
-        $ratingpic .= '<img src="images/icons/rating_' . $pic . '.gif" width="4" height="5" alt="">';
+        $ratingpic .= '<img src="images/icons/rating_' . $pic . '.gif" alt="">';
     }
 
     if ($loggedin) {
@@ -398,12 +399,10 @@ value="' . $_language->module[ 'rate' ] . '" class="btn btn-primary">
 
     $adminaction = "";
     if (isfileadmin($userID)) {
-        $adminaction = '<a href="index.php?site=demos&amp;action=edit&amp;demoID=' . $ds[ 'demoID' ] .
-            '" class="btn btn-danger">' . $_language->module[ 'edit' ] . '</a>
-            <input type="button" onclick="MM_confirm(
-                    \'really delete this demo?\',
-                    \'index.php?site=demos&amp;action=delete&amp;demoID=' . $ds[ 'demoID' ] . '\'
-                )" value="' . $_language->module[ 'delete' ] . '" class="btn btn-danger">';
+        $adminaction = '<div class="panel-body text-right">
+            <a href="index.php?site=demos&amp;action=edit&amp;demoID=' . $ds[ 'demoID' ] . '" class="btn btn-warning btn-sm" role="button">' . $_language->module[ 'edit' ] . '</a>
+            <input type="button" onclick="MM_confirm(\'really delete this demo?\', \'index.php?site=demos&amp;action=delete&amp;demoID=' . $ds[ 'demoID' ] . '\')" value="' . $_language->module[ 'delete' ] . '" class="btn btn-danger btn-sm">
+        </div>';
     }
 
     $data_array = array();
@@ -454,8 +453,9 @@ value="' . $_language->module[ 'rate' ] . '" class="btn btn-primary">
 
     if (isfileadmin($userID)) {
         echo
-            '<a href="index.php?site=demos&amp;action=new" class="btn btn-danger">' . $_language->module[ 'new_demo' ] .
-            '</a><br><br>';
+            '<div class="form-group">
+                <a href="index.php?site=demos&amp;action=new" class="btn btn-primary" role="button">' . $_language->module[ 'new_demo' ] . '</a>
+            </div>';
     }
 
     $alle = safe_query("SELECT demoID FROM " . PREFIX . "demos WHERE game='$game'");
@@ -566,18 +566,17 @@ value="' . $_language->module[ 'rate' ] . '" class="btn btn-primary">
         echo '</ul></div>';
         echo '</div>';
 
+        echo '<p>';
         if ($type == "ASC") {
-            echo '<a href="index.php?site=demos&amp;action=showgame&amp;game=' . $game . '&amp;page=' . $page .
-                '&amp;sort=' . $sort . '&amp;type=DESC">' . $_language->module[ 'sort' ] .
-                ':</a> <img src="images/icons/asc.gif" width="9" height="7" alt="">&nbsp;&nbsp;&nbsp;';
+            echo '<a class="btn btn-default btn-xs" href="index.php?site=demos&amp;action=showgame&amp;game=' . $game . '&amp;page=' . $page . '&amp;sort=' . $sort . '&amp;type=DESC">' .
+                $_language->module['sort'] . ' <span class="glyphicon glyphicon-chevron-down"></span></a>';
         } else {
-            echo '<a href="index.php?site=demos&amp;action=showgame&amp;game=' . $game . '&amp;page=' . $page .
-                '&amp;sort=' . $sort . '&amp;type=ASC">' . $_language->module[ 'sort' ] .
-                ':</a> <img src="images/icons/desc.gif" width="9" height="7" alt="">&nbsp;&nbsp;&nbsp;';
+            echo '<a class="btn btn-default btn-xs" href="index.php?site=demos&amp;action=showgame&amp;game=' . $game . '&amp;page=' . $page . '&amp;sort=' . $sort . '&amp;type=ASC">' .
+                $_language->module['sort'] . ' <span class="glyphicon glyphicon-chevron-up"></span></a>';
         }
+        echo '</p>';
 
         echo $page_link;
-        echo '<br><br>';
 
         $headdate =
             '<a class="titlelink" href="index.php?site=demos&amp;action=showgame&amp;game=' . $game . '&amp;page=' .
@@ -603,6 +602,7 @@ value="' . $_language->module[ 'rate' ] . '" class="btn btn-primary">
         echo $demos_head;
         $n = 1;
         while ($ds = mysqli_fetch_array($ergebnis)) {
+            $demoID = $ds[ 'demoID' ];
             $date = getformatdate($ds[ 'date' ]);
             $league = '<a href="' . $ds[ 'leaguehp' ] . '" target="_blank">' . $ds[ 'league' ] . '</a>';
             $country1 = "[flag]" . $ds[ 'country1' ] . "[/flag]";
@@ -618,9 +618,9 @@ value="' . $_language->module[ 'rate' ] . '" class="btn btn-primary">
             for ($i = 0; $i < $ds[ 'rating' ]; $i++) {
                 $ratings[ $i ] = 1;
             }
-            $ratingpic = '<img src="images/icons/rating_' . $ratings[ 0 ] . '_start.gif" width="1" height="5" alt="">';
+            $ratingpic = '<img src="images/icons/rating_' . $ratings[ 0 ] . '_start.gif" alt="">';
             foreach ($ratings as $pic) {
-                $ratingpic .= '<img src="images/icons/rating_' . $pic . '.gif" width="4" height="5" alt="">';
+                $ratingpic .= '<img src="images/icons/rating_' . $pic . '.gif" alt="">';
             }
 
             $data_array = array();
@@ -669,8 +669,9 @@ value="' . $_language->module[ 'rate' ] . '" class="btn btn-primary">
 
     if (isfileadmin($userID)) {
         echo
-            '<a href="index.php?site=demos&amp;action=new" class="btn btn-danger">' . $_language->module[ 'new_demo' ] .
-            '</a><br><br>';
+            '<div class="form-group">
+                <a href="index.php?site=demos&amp;action=new" class="btn btn-primary" role="button">' . $_language->module[ 'new_demo' ] . '</a>
+            </div>';
     }
     $alle = safe_query("SELECT `demoID` FROM `" . PREFIX . "demos`");
     $gesamt = mysqli_num_rows($alle);
@@ -727,9 +728,9 @@ value="' . $_language->module[ 'rate' ] . '" class="btn btn-primary">
             for ($i = 0; $i < $ds[ 'rating' ]; $i++) {
                 $ratings[ $i ] = 1;
             }
-            $ratingpic = '<img src="images/icons/rating_' . $ratings[ 0 ] . '_start.gif" width="1" height="5" alt="">';
+            $ratingpic = '<img src="images/icons/rating_' . $ratings[ 0 ] . '_start.gif" alt="">';
             foreach ($ratings as $pic) {
-                $ratingpic .= '<img src="images/icons/rating_' . $pic . '.gif" width="4" height="5" alt="">';
+                $ratingpic .= '<img src="images/icons/rating_' . $pic . '.gif" alt="">';
             }
 
             $multiTemplateData[] = array('$badge'=>$ratingpic, '$text'=>$n . '. ' . $link);
@@ -765,18 +766,17 @@ value="' . $_language->module[ 'rate' ] . '" class="btn btn-primary">
 
         echo '</div>';
 
+        echo '<p>';
         if ($type == "ASC") {
-            echo '<a href="index.php?site=demos&amp;page=' . $page . '&amp;sort=' . $sort . '&amp;type=DESC">' .
-                $_language->module[ 'sort' ] .
-                ':</a> <img src="images/icons/asc.gif" width="9" height="7" alt="">&nbsp;&nbsp;&nbsp;';
+            echo '<a class="btn btn-default btn-xs" href="index.php?site=demos&amp;page=' . $page . '&amp;sort=' . $sort . '&amp;type=DESC">' .
+                $_language->module['sort'] . ' <span class="glyphicon glyphicon-chevron-down"></span></a>';
         } else {
-            echo '<a href="index.php?site=demos&amp;page=' . $page . '&amp;sort=' . $sort . '&amp;type=ASC">' .
-                $_language->module[ 'sort' ] .
-                ':</a> <img src="images/icons/desc.gif" width="9" height="7" alt="">&nbsp;&nbsp;&nbsp;';
+            echo '<a class="btn btn-default btn-xs" href="index.php?site=demos&amp;page=' . $page . '&amp;sort=' . $sort . '&amp;type=ASC">' .
+                $_language->module['sort'] . ' <span class="glyphicon glyphicon-chevron-up"></span></a>';
         }
+        echo '</p>';
 
         echo $page_link;
-        echo '<br><br>';
 
         $headdate =
             '<a class="titlelink" href="index.php?site=demos&amp;page=' . $page . '&amp;sort=date&amp;type=' . $type .
@@ -804,6 +804,7 @@ value="' . $_language->module[ 'rate' ] . '" class="btn btn-primary">
         echo $demos_head;
         $n = 1;
         while ($ds = mysqli_fetch_array($ergebnis)) {
+            $demoID = $ds[ 'demoID' ];
             $date = getformatdate($ds[ 'date' ]);
             $league = '<a href="' . $ds[ 'leaguehp' ] . '" target="_blank">' . $ds[ 'league' ] . '</a>';
             $country1 = "[flag]" . $ds[ 'country1' ] . "[/flag]";
@@ -820,9 +821,9 @@ value="' . $_language->module[ 'rate' ] . '" class="btn btn-primary">
             for ($i = 0; $i < $ds[ 'rating' ]; $i++) {
                 $ratings[ $i ] = 1;
             }
-            $ratingpic = '<img src="images/icons/rating_' . $ratings[ 0 ] . '_start.gif" width="1" height="5" alt="">';
+            $ratingpic = '<img src="images/icons/rating_' . $ratings[ 0 ] . '_start.gif" alt="">';
             foreach ($ratings as $pic) {
-                $ratingpic .= '<img src="images/icons/rating_' . $pic . '.gif" width="4" height="5" alt="">';
+                $ratingpic .= '<img src="images/icons/rating_' . $pic . '.gif" alt="">';
             }
 
             $data_array = array();
@@ -842,6 +843,6 @@ value="' . $_language->module[ 'rate' ] . '" class="btn btn-primary">
         $demos_foot = $GLOBALS["_template"]->replaceTemplate("demos_foot", array());
         echo $demos_foot;
     } else {
-        echo $_language->module[ 'no_demos' ];
+        echo generateAlert($_language->module[ 'no_demos' ], 'alert-info');
     }
 }
