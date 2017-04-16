@@ -1,153 +1,184 @@
-<form action="index.php?site=demos" method="post" enctype="multipart/form-data" class="form-horizontal">
-    <h2>%new_demo%</h2>
-
-    <div class="form-group">
-        <label for="date" class="col-lg-4 control-label">%date%:</label>
-
-        <div class="col-lg-8">
-            <input id="date" name="date" type="date" placeholder="yyyy-mm-dd" class="form-control">
-        </div>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">%new_demo%</h3>
     </div>
+    <div class="panel-body">
+        <form
+                action="index.php?site=demos"
+                method="post"
+                enctype="multipart/form-data"
+                role="form"
+                class="form-horizontal">
 
-    <div class="form-group">
-        <label for="game" class="col-lg-4 control-label">%game%:</label>
+            <!-- Date -->
+            <div class="form-group">
+                <label for="input-date" class="col-xs-12 col-md-4 control-label">%date%:</label>
 
-        <div class="col-lg-8">
-            <select id="game" name="game" class="form-control">$games</select>
-        </div>
+                <div class="col-xs-12 col-md-8">
+                    <input type="date" name="date" class="form-control" id="input-date" placeholder="yyyy-mm-dd">
+                </div>
+            </div>
+
+            <!-- Game -->
+            <div class="form-group">
+                <label for="input-game" class="col-xs-12 col-md-4 control-label">%game%:</label>
+
+                <div class="col-xs-12 col-md-8">
+                    <select name="game" id="input-game" class="form-control">$games</select>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Clan 1 name -->
+            <div class="form-group">
+                <label for="input-clanname1" class="col-xs-12 col-md-4 control-label">%clan1_name%:</label>
+
+                <div class="col-xs-12 col-md-8">
+                    <input type="text" name="clanname1" class="form-control" id="input-clanname1">
+                </div>
+            </div>
+
+            <!-- Clan 1 tag -->
+            <div class="form-group">
+                <label for="input-clan1" class="col-xs-12 col-md-4 control-label">%clan1_tag%:</label>
+
+                <div class="col-xs-12 col-md-8">
+                    <input type="text" name="clan1" class="form-control" id="input-clan1">
+                </div>
+            </div>
+
+            <!-- Clan 1 country -->
+            <div class="form-group">
+                <label for="input-country1" class="col-xs-12 col-md-4 control-label">%clan1_country%:</label>
+
+                <div class="col-xs-12 col-md-8">
+                    <select name="country1" id="input-country1" class="form-control">$countries</select>
+                </div>
+            </div>
+
+            <!-- Clan 1 hp -->
+            <div class="form-group">
+                <label for="input-hp1" class="col-xs-12 col-md-4 control-label">%clan1_homepage%:</label>
+
+                <div class="col-xs-12 col-md-8">
+                    <input type="url" name="hp1" class="form-control" id="input-hp1" placeholder="http://">
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Clan 2 name -->
+            <div class="form-group">
+                <label for="input-clanname2" class="col-xs-12 col-md-4 control-label">%clan2_name%:</label>
+
+                <div class="col-xs-12 col-md-8">
+                    <input type="text" name="clanname2" class="form-control" id="input-clanname2">
+                </div>
+            </div>
+
+            <!-- Clan 2 tag -->
+            <div class="form-group">
+                <label for="input-clan2" class="col-xs-12 col-md-4 control-label">%clan2_tag%:</label>
+
+                <div class="col-xs-12 col-md-8">
+                    <input type="text" name="clan2" class="form-control" id="input-clan2">
+                </div>
+            </div>
+
+            <!-- Clan 2 country -->
+            <div class="form-group">
+                <label for="input-country2" class="col-xs-12 col-md-4 control-label">%clan2_country%:</label>
+
+                <div class="col-xs-12 col-md-8">
+                    <select name="country2" id="input-country2" class="form-control">$countries</select>
+                </div>
+            </div>
+
+            <!-- Clan 2 hp -->
+            <div class="form-group">
+                <label for="input-hp2" class="col-xs-12 col-md-4 control-label">%clan2_homepage%:</label>
+
+                <div class="col-xs-12 col-md-8">
+                    <input type="url" name="hp2" class="form-control" id="input-hp2" placeholder="http://">
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- League -->
+            <div class="form-group">
+                <label for="input-league" class="col-xs-12 col-md-4 control-label">%league%:</label>
+
+                <div class="col-xs-12 col-md-8">
+                    <input type="text" name="league" class="form-control" id="input-league">
+                </div>
+            </div>
+
+            <!-- Leaguehp -->
+            <div class="form-group">
+                <label for="input-leaguehp" class="col-xs-12 col-md-4 control-label">%league_homepage%:</label>
+
+                <div class="col-xs-12 col-md-8">
+                    <input type="text" name="leaguehp" class="form-control" id="input-leaguehp">
+                </div>
+            </div>
+
+            <!-- Maps -->
+            <div class="form-group">
+                <label for="input-maps" class="col-xs-12 col-md-4 control-label">%maps%:</label>
+
+                <div class="col-xs-12 col-md-8">
+                    <input type="text" name="maps" class="form-control" id="input-maps">
+                </div>
+            </div>
+
+            <!-- Players -->
+            <div class="form-group">
+                <label for="input-player" class="col-xs-12 col-md-4 control-label">%players%:</label>
+
+                <div class="col-xs-12 col-md-8">
+                    <input type="text" name="player" class="form-control" id="input-player">
+                </div>
+            </div>
+
+            <!-- Demo -->
+            <div class="form-group">
+                <label for="input-demo" class="col-xs-12 col-md-4 control-label">%demo_upload%:</label>
+
+                <div class="col-xs-12 col-md-8">
+                    <input type="file" name="demo" id="input-demo">
+                </div>
+            </div>
+
+            <!-- Link -->
+            <div class="form-group">
+                <label for="input-link" class="col-xs-12 col-md-4 control-label">%extern_link%:</label>
+
+                <div class="col-xs-12 col-md-8">
+                    <input type="url" name="link" class="form-control" id="input-link" placeholder="http://">
+                </div>
+            </div>
+
+            <!-- Comments -->
+            <div class="form-group">
+                <div class="col-xs-12 col-md-8 col-xs-offset-12 col-md-offset-4">
+                    <select name="comments" class="form-control">
+                        <option value="0">%disable_comments%</option>
+                        <option value="1">%user_comments%</option>
+                        <option value="2" selected="selected">%visitor_comments%</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Submit button -->
+            <div class="form-group">
+                <div class="col-xs-12 col-md-8 col-xs-offset-12 col-md-offset-4">
+                    <a href="index.php?site=demos" class="btn btn-default btn-sm" role="button">%back%</a>
+                    <button type="submit" name="save" class="btn btn-primary btn-sm">%save_demo%</button>
+                </div>
+            </div>
+
+        </form>
     </div>
-
-    <hr>
-
-    <div class="form-group">
-        <label for="clanname1" class="col-lg-4 control-label">%clan1_name%:</label>
-
-        <div class="col-lg-8">
-            <input id="clanname1" name="clanname1" type="text" size="35" class="form-control">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="clan1" class="col-lg-4 control-label">%clan1_tag%:</label>
-
-        <div class="col-lg-8">
-            <input id="clan1" name="clan1" type="text" size="8" class="form-control">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="country1" class="col-lg-4 control-label">%clan1_country%:</label>
-
-        <div class="col-lg-8">
-            <select id="country1" name="country1" class="form-control">$countries</select>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="hp1" class="col-lg-4 control-label">%clan1_homepage%</label>
-
-        <div class="col-lg-8">
-            <input id="hp1" name="hp1" type="url" value="http://" size="35" class="form-control">
-        </div>
-    </div>
-
-    <hr>
-
-    <div class="form-group">
-        <label for="clanname2" class="col-lg-4 control-label">%clan2_name%:</label>
-
-        <div class="col-lg-8">
-            <input id="clanname2" name="clanname2" type="text" size="35" class="form-control">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="clan2" class="col-lg-4 control-label">%clan2_tag%:</label>
-
-        <div class="col-lg-8">
-            <input id="clan2" name="clan2" type="text" size="8" class="form-control">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="country2" class="col-lg-4 control-label">%clan2_country%:</label>
-
-        <div class="col-lg-8">
-            <select id="country2" name="country2" class="form-control">$countries</select>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="hp2" class="col-lg-4 control-label">%clan2_homepage%</label>
-
-        <div class="col-lg-8">
-            <input id="hp2" name="hp2" type="url" value="http://" size="35" class="form-control">
-        </div>
-    </div>
-
-    <hr>
-
-    <div class="form-group">
-        <label for="league" class="col-lg-4 control-label">%league%:</label>
-
-        <div class="col-lg-8">
-            <input id="league" name="league" type="text" size="35" class="form-control">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="leaguehp" class="col-lg-4 control-label">%league_homepage%</label>
-
-        <div class="col-lg-8">
-            <input id="leaguehp" name="leaguehp" type="url" value="http://" size="35" class="form-control">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="maps" class="col-lg-4 control-label">%maps%:</label>
-
-        <div class="col-lg-8">
-            <input id="maps" name="maps" type="text" size="35" class="form-control">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="player" class="col-lg-4 control-label">%players%:</label>
-
-        <div class="col-lg-8">
-            <input id="player" name="player" type="text" size="35" class="form-control">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="demo" class="col-lg-4 control-label">%demo_upload%:</label>
-
-        <div class="col-lg-8">
-            <input id="demo" name="demo" type="file" size="30" class="form-control">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="link" class="col-lg-4 control-label">%extern_link%:</label>
-
-        <div class="col-lg-8">
-            <input id="link" name="link" type="url" value="http://" size="35" class="form-control">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <div class="col-lg-offset-4 col-lg-8">
-            <select name="comments" class="form-control">
-                <option value="0">%disable_comments%</option>
-                <option value="1">%user_comments%</option>
-                <option value="2" selected="selected">%visitor_comments%</option>
-            </select>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <div class="col-lg-12 text-right">
-            <input name="save" type="submit" value="%save_demo%" class="btn btn-danger">
-        </div>
-    </div>
-</form>
+</div>
